@@ -18,7 +18,7 @@
 </head>
 <body class="h-full text-slate-800 flex flex-col justify-between">
 
-<!-- Header -->
+    <!-- Header -->
     <header class="bg-gradient-to-r from-red-600 via-amber-500 to-red-600 text-white shadow-md">
         <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="flex items-center gap-3">
@@ -333,7 +333,7 @@
             { num: 31, text: "treinta y uno" }
         ];
 
-        // Banque complète de 42 questions pour le QCM Général
+        // Banque complète de questions pour le QCM Général
         const questionsMCQ = [
             {
                 q: "Comment dit-on 'Je m'appelle' en espagnol ?",
@@ -595,7 +595,6 @@
         function loadSpanishVoices() {
             if (!('speechSynthesis' in window)) return;
             const voices = window.speechSynthesis.getVoices();
-            // Filter strictly for Spanish voices (es-ES, es-MX, es-US, etc.)
             spanishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('es'));
         }
 
@@ -606,7 +605,6 @@
             }
         }
 
-        // Helper to convert PCM 16-bit array to WAV Blob for Gemini TTS API
         function pcmToWav(pcm16Array, sampleRate = 24000) {
             const buffer = new ArrayBuffer(44 + pcm16Array.length * 2);
             const view = new DataView(buffer);
@@ -622,8 +620,8 @@
             writeString(8, 'WAVE');
             writeString(12, 'fmt ');
             view.setUint32(16, 16, true);
-            view.setUint16(20, 1, true); // Raw PCM
-            view.setUint16(22, 1, true); // Mono
+            view.setUint16(20, 1, true);
+            view.setUint16(22, 1, true);
             view.setUint32(24, sampleRate, true);
             view.setUint32(28, sampleRate * 2, true);
             view.setUint16(32, 2, true);
@@ -644,13 +642,9 @@
             const rateSelect = document.getElementById('audio-speed');
             const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
 
-            const promptPrefix = speed < 1.0 
-                ? "Di de forma MUY LENTA, pausada, sílaba por sílaba y perfectamente articulada en español de España: " 
-                : "Di con una pronunciación perfecta y natural de España: ";
-
             const payload = {
                 contents: [{
-                    parts: [{ text: `${promptPrefix}${text}` }]
+                    parts: [{ text: text }]
                 }],
                 generationConfig: {
                     responseModalities: ["AUDIO"],
@@ -708,12 +702,9 @@
                 }
             }
 
-            // Web Speech API fallback with explicit Spanish Voice selection
-            if (!('speechSynthesis' in window)) {
-                return;
-            }
+            if (!('speechSynthesis' in window)) return;
 
-            window.speechSynthesis.cancel(); // Stop any ongoing utterance
+            window.speechSynthesis.cancel();
 
             if (spanishVoices.length === 0) {
                 loadSpanishVoices();
@@ -722,7 +713,6 @@
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'es-ES';
 
-            // Find an authentic Spanish voice (prefer es-ES Spain, then any Spanish)
             const chosenVoice = spanishVoices.find(v => v.lang.toLowerCase() === 'es-es')
                              || spanishVoices.find(v => v.lang.toLowerCase().startsWith('es'))
                              || null;
@@ -804,7 +794,6 @@
             container.classList.remove('hidden');
 
             if (mode === 'mcq') {
-                // Tirage aléatoire de 10 questions parmi la banque de 42 questions
                 activeQuestions = [...questionsMCQ].sort(() => 0.5 - Math.random()).slice(0, 10);
             } else if (mode === 'listening') {
                 activeQuestions = generateListeningQuestions();
@@ -817,11 +806,9 @@
         }
 
         function generateListeningQuestions() {
-            // Sélectionne 10 éléments de vocabulaire au hasard
             const shuffledVocab = [...vocabulary].sort(() => 0.5 - Math.random()).slice(0, 10);
             
             return shuffledVocab.map(item => {
-                // Choisit 3 fausses options parmi le reste du vocabulaire
                 const wrongList = vocabulary.filter(v => v.text !== item.text).sort(() => 0.5 - Math.random()).slice(0, 3);
                 const options = [item, ...wrongList].sort(() => 0.5 - Math.random());
                 return {
@@ -836,11 +823,9 @@
         }
 
         function generateNumberQuestions() {
-            // Sélectionne 10 nombres au hasard parmi la banque complète (1 à 31)
             const shuffledNumbers = [...allNumbers].sort(() => 0.5 - Math.random()).slice(0, 10);
 
             return shuffledNumbers.map(item => {
-                // Pièges classiques pour les nombres
                 const distractors = allNumbers.filter(n => n.num !== item.num).map(n => n.text);
                 const wrongChoices = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
                 
@@ -892,7 +877,6 @@
 
             body.innerHTML = html;
 
-            // Auto trigger audio if audio question
             if (q.isAudio) {
                 setTimeout(() => speak(q.audioText), 300);
             }
@@ -904,7 +888,6 @@
             const feedback = document.getElementById('quiz-feedback');
             const nextBtn = document.getElementById('next-q-btn');
 
-            // Disable all buttons
             buttons.forEach(b => b.disabled = true);
 
             if (selectedIndex === q.answer) {
@@ -955,7 +938,6 @@
             `;
         }
 
-        // Initialize default tab
         window.onload = function() {
             switchTab('notes');
         };
