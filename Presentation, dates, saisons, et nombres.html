@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Español 5º! - Révisions & Vocabulaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-fun { font-family: 'Fredoka', cursive; }
+        .tab-btn.active {
+            background-color: #ef4444;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-red-600 via-amber-500 to-red-600 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🇪🇸</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wide">¡Español 5º!</h1>
+                    <p class="text-xs text-amber-100">Révisions : Présentation, Dates & Calendrier</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-white/20 p-1 rounded-xl backdrop-blur-md gap-1 text-sm font-semibold">
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn active px-3 py-1.5 rounded-lg transition-all duration-200">
+                    📖 Leçon
+                </button>
+                <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🔊 Audio & Mots
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🎮 Entraînement
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- TAB 1: REVISION NOTES -->
+        <section id="sec-notes" class="space-y-6">
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl shadow-sm">
+                <h2 class="text-lg font-bold text-amber-900 font-fun">💡 Astuce Révision 5ème</h2>
+                <p class="text-sm text-amber-800">Révise régulièrement les tournures de phrases pour dire la date et te présenter. Utilise l'onglet Audio pour perfectionner ton accent espagnol !</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Présentation -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">🙋‍♂️</span>
+                        <h3 class="text-xl font-bold font-fun">1. Se presentar (Se présenter)</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="p-2 bg-slate-50 rounded-lg"><strong class="text-red-600">Me llamo...</strong> → Je m'appelle...</li>
+                        <li class="p-2 bg-slate-50 rounded-lg"><strong class="text-red-600">Tengo [12] años.</strong> → J'ai [12] ans.</li>
+                        <li class="p-2 bg-slate-50 rounded-lg"><strong class="text-red-600">Vivo en...</strong> → J'habite à...</li>
+                        <li class="p-2 bg-slate-50 rounded-lg"><strong class="text-red-600">Estoy en 5º (quinto).</strong> → Je suis en 5ème.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Dire la date -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">📅</span>
+                        <h3 class="text-xl font-bold font-fun">2. Decir la fecha (La date)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-2">Formule magique à retenir :</p>
+                    <div class="p-3 bg-red-50 border border-red-200 rounded-xl font-medium text-sm text-red-900 mb-3 text-center">
+                        Hoy es <span class="underline decoration-red-400 font-bold">[Jour]</span> <span class="underline decoration-red-400 font-bold">[Chiffre]</span> <strong class="text-red-600">de</strong> <span class="underline decoration-red-400 font-bold">[Mois]</span> <strong class="text-red-600">de</strong> <span class="underline decoration-red-400 font-bold">[Année]</strong>
+                    </div>
+                    <p class="text-xs text-slate-600 bg-slate-100 p-2 rounded-lg">
+                        <strong>Exemple :</strong> Hoy es <em>Viernes cuatro de Septiembre de dos mil veintiséis</em>.
+                    </p>
+                </div>
+
+                <!-- Card 3: Les Saisons -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">🍂</span>
+                        <h3 class="text-xl font-bold font-fun">3. Las estaciones (Les saisons)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-2">On utilise la formule : <strong>Estamos en...</strong> (Nous sommes en...)</p>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div class="p-2 bg-emerald-50 text-emerald-800 rounded-lg font-medium flex items-center gap-2">🌸 Primavera <span class="text-xs text-slate-500">(Printemps)</span></div>
+                        <div class="p-2 bg-amber-50 text-amber-800 rounded-lg font-medium flex items-center gap-2">☀️ Verano <span class="text-xs text-slate-500">(Été)</span></div>
+                        <div class="p-2 bg-orange-50 text-orange-800 rounded-lg font-medium flex items-center gap-2">🍁 Otoño <span class="text-xs text-slate-500">(Automne)</span></div>
+                        <div class="p-2 bg-blue-50 text-blue-800 rounded-lg font-medium flex items-center gap-2">❄️ Invierno <span class="text-xs text-slate-500">(Hiver)</span></div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Astuce Chiffres 1-31 -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">🔢</span>
+                        <h3 class="text-xl font-bold font-fun">4. Los números (1 à 31)</h3>
+                    </div>
+                    <ul class="space-y-1.5 text-xs text-slate-700">
+                        <li>• De <strong>1 à 15</strong> : Mots uniques (uno, dos... quince)</li>
+                        <li>• De <strong>16 à 29</strong> : Écrits en un seul mot avec "i" (dieciséis, veintidós, veinticuatro...)</li>
+                        <li>• De <strong>30 à 31</strong> : Deux mots séparés par "y" (treinta, treinta y uno)</li>
+                        <li>• ⚠️ Attention aux accents : <em>dieciséis, veintiuno, veintidós, veintitrés, veintiséis</em></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: VOCABULARY & AUDIO -->
+        <section id="sec-vocab" class="hidden space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                <div>
+                    <h2 class="text-xl font-bold font-fun text-slate-800">Écoute et Prononciation</h2>
+                    <p class="text-xs text-slate-500">Clique sur l'icône 🔊 pour entendre la prononciation authentique en espagnol.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Voix :</label>
+                        <select id="audio-engine" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="native" selected>🇪🇸 Voix Espagnole Natifs</option>
+                            <option value="gemini">✨ Voix Studio IA (Haute Qualité)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Vitesse :</label>
+                        <select id="audio-speed" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="0.6">Lente (0.6x)</option>
+                            <option value="1" selected>Normale (1x)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Accordion / Filter -->
+            <div class="flex flex-wrap gap-2 mb-4" id="vocab-category-filters">
+                <button onclick="filterVocab('all')" class="vocab-filter-btn bg-red-600 text-white px-3 py-1.5 rounded-full text-xs font-semibold">Tous</button>
+                <button onclick="filterVocab('present')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Présentation</button>
+                <button onclick="filterVocab('days')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Jours</button>
+                <button onclick="filterVocab('months')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Mois</button>
+                <button onclick="filterVocab('seasons')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Saisons</button>
+                <button onclick="filterVocab('numbers')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Nombres (0-31)</button>
+            </div>
+
+            <!-- Vocab Cards Grid -->
+            <div id="vocab-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- TAB 3: QUIZ & PRACTICE -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <!-- Game Mode Picker -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button onclick="startQuizMode('mcq')" class="p-4 bg-white hover:bg-red-50 border-2 border-slate-200 hover:border-red-500 rounded-2xl text-left transition flex flex-col justify-between group">
+                    <div>
+                        <span class="text-3xl mb-2 block">📝</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-red-600">QCM Général</h3>
+                        <p class="text-xs text-slate-500">Test de grammaire, date et vocabulaire.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-red-600">Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('listening')" class="p-4 bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-500 rounded-2xl text-left transition flex flex-col justify-between group">
+                    <div>
+                        <span class="text-3xl mb-2 block">🎧</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-amber-600">Dictée Audio</h3>
+                        <p class="text-xs text-slate-500">Écoute l'audio espagnol et sélectionne la bonne réponse.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-amber-600">Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('numbers')" class="p-4 bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-500 rounded-2xl text-left transition flex flex-col justify-between group">
+                    <div>
+                        <span class="text-3xl mb-2 block">🔢</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-emerald-600">Master des Nombres</h3>
+                        <p class="text-xs text-slate-500">Retrouve l'écriture exacte des nombres de 1 à 31.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-emerald-600">Jouer →</span>
+                </button>
+            </div>
+
+            <!-- Quiz Box Display Container -->
+            <div id="quiz-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hidden">
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <span id="quiz-progress" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Question 1/5</span>
+                    <span id="quiz-score" class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Score : 0</span>
+                </div>
+
+                <div id="quiz-body">
+                    <!-- Dynamic question content injected via JS -->
+                </div>
+
+                <div id="quiz-feedback" class="mt-4 p-3 rounded-xl hidden text-sm font-medium"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-q-btn" onclick="nextQuestion()" class="hidden bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow transition">
+                        Question suivante ➔
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        ¡Español 5º! - Application de révision basée sur le programme de 5ème (LV2 / A1)
+    </footer>
+
+    <script>
+        // --- DATA STRUCTURES ---
+        const vocabulary = [
+            // Présentation
+            { text: "Me llamo", translation: "Je m'appelle", cat: "present" },
+            { text: "Tengo doce años", translation: "J'ai 12 ans", cat: "present" },
+            { text: "Vivo en Francia", translation: "J'habite en France", cat: "present" },
+            { text: "Estoy en quinto", translation: "Je suis en 5ème", cat: "present" },
+            { text: "Hoy es", translation: "Aujourd'hui c'est", cat: "present" },
+            { text: "Estamos en", translation: "Nous sommes en", cat: "present" },
+
+            // Jours
+            { text: "lunes", translation: "lundi", cat: "days" },
+            { text: "martes", translation: "mardi", cat: "days" },
+            { text: "miércoles", translation: "mercredi", cat: "days" },
+            { text: "jueves", translation: "jeudi", cat: "days" },
+            { text: "viernes", translation: "vendredi", cat: "days" },
+            { text: "sábado", translation: "samedi", cat: "days" },
+            { text: "domingo", translation: "dimanche", cat: "days" },
+
+            // Mois
+            { text: "enero", translation: "janvier", cat: "months" },
+            { text: "febrero", translation: "février", cat: "months" },
+            { text: "marzo", translation: "mars", cat: "months" },
+            { text: "abril", translation: "avril", cat: "months" },
+            { text: "mayo", translation: "mai", cat: "months" },
+            { text: "junio", translation: "juin", cat: "months" },
+            { text: "julio", translation: "juillet", cat: "months" },
+            { text: "agosto", translation: "août", cat: "months" },
+            { text: "septiembre", translation: "septembre", cat: "months" },
+            { text: "octubre", translation: "octobre", cat: "months" },
+            { text: "noviembre", translation: "novembre", cat: "months" },
+            { text: "diciembre", translation: "décembre", cat: "months" },
+
+            // Saisons
+            { text: "la primavera", translation: "le printemps", cat: "seasons" },
+            { text: "el verano", translation: "l'été", cat: "seasons" },
+            { text: "el otoño", translation: "l'automne", cat: "seasons" },
+            { text: "el invierno", translation: "l'hiver", cat: "seasons" },
+
+            // Nombres de 0 à 31 au complet
+            { text: "cero", translation: "0", cat: "numbers" },
+            { text: "uno", translation: "1", cat: "numbers" },
+            { text: "dos", translation: "2", cat: "numbers" },
+            { text: "tres", translation: "3", cat: "numbers" },
+            { text: "cuatro", translation: "4", cat: "numbers" },
+            { text: "cinco", translation: "5", cat: "numbers" },
+            { text: "seis", translation: "6", cat: "numbers" },
+            { text: "siete", translation: "7", cat: "numbers" },
+            { text: "ocho", translation: "8", cat: "numbers" },
+            { text: "nueve", translation: "9", cat: "numbers" },
+            { text: "diez", translation: "10", cat: "numbers" },
+            { text: "once", translation: "11", cat: "numbers" },
+            { text: "doce", translation: "12", cat: "numbers" },
+            { text: "trece", translation: "13", cat: "numbers" },
+            { text: "catorce", translation: "14", cat: "numbers" },
+            { text: "quince", translation: "15", cat: "numbers" },
+            { text: "dieciséis", translation: "16", cat: "numbers" },
+            { text: "diecisiete", translation: "17", cat: "numbers" },
+            { text: "dieciocho", translation: "18", cat: "numbers" },
+            { text: "diecinueve", translation: "19", cat: "numbers" },
+            { text: "veinte", translation: "20", cat: "numbers" },
+            { text: "veintiuno", translation: "21", cat: "numbers" },
+            { text: "veintidós", translation: "22", cat: "numbers" },
+            { text: "veintitrés", translation: "23", cat: "numbers" },
+            { text: "veinticuatro", translation: "24", cat: "numbers" },
+            { text: "veinticinco", translation: "25", cat: "numbers" },
+            { text: "veintiséis", translation: "26", cat: "numbers" },
+            { text: "veintisiete", translation: "27", cat: "numbers" },
+            { text: "veintiocho", translation: "28", cat: "numbers" },
+            { text: "veintinueve", translation: "29", cat: "numbers" },
+            { text: "treinta", translation: "30", cat: "numbers" },
+            { text: "treinta y uno", translation: "31", cat: "numbers" }
+        ];
+
+        // Banque complète des nombres 0 à 31
+        const allNumbers = [
+            { num: 0, text: "cero" },
+            { num: 1, text: "uno" },
+            { num: 2, text: "dos" },
+            { num: 3, text: "tres" },
+            { num: 4, text: "cuatro" },
+            { num: 5, text: "cinco" },
+            { num: 6, text: "seis" },
+            { num: 7, text: "siete" },
+            { num: 8, text: "ocho" },
+            { num: 9, text: "nueve" },
+            { num: 10, text: "diez" },
+            { num: 11, text: "once" },
+            { num: 12, text: "doce" },
+            { num: 13, text: "trece" },
+            { num: 14, text: "catorce" },
+            { num: 15, text: "quince" },
+            { num: 16, text: "dieciséis" },
+            { num: 17, text: "diecisiete" },
+            { num: 18, text: "dieciocho" },
+            { num: 19, text: "diecinueve" },
+            { num: 20, text: "veinte" },
+            { num: 21, text: "veintiuno" },
+            { num: 22, text: "veintidós" },
+            { num: 23, text: "veintitrés" },
+            { num: 24, text: "veinticuatro" },
+            { num: 25, text: "veinticinco" },
+            { num: 26, text: "veintiséis" },
+            { num: 27, text: "veintisiete" },
+            { num: 28, text: "veintiocho" },
+            { num: 29, text: "veintinueve" },
+            { num: 30, text: "treinta" },
+            { num: 31, text: "treinta y uno" }
+        ];
+
+        // Banque complète de 42 questions pour le QCM Général
+        const questionsMCQ = [
+            {
+                q: "Comment dit-on 'Je m'appelle' en espagnol ?",
+                options: ["Me llamo", "Me llamas", "Tengo", "Vivo"],
+                answer: 0,
+                explain: "'Je m'appelle' se dit 'Me llamo'."
+            },
+            {
+                q: "Quelle est la formule correcte pour dire son âge ?",
+                options: ["Soy 12 años", "Tengo 12 años", "Estoy 12 años", "Me llamo 12 años"],
+                answer: 1,
+                explain: "En espagnol, on utilise le verbe tener : 'Tengo ... años'."
+            },
+            {
+                q: "Comment dit-on 'J'habite à...' ?",
+                options: ["Vivo en...", "Estoy en...", "Voy a...", "Hablo en..."],
+                answer: 0,
+                explain: "Pour la résidence, on dit 'Vivo en...'."
+            },
+            {
+                q: "Comment traduit-on 'Je suis en 5ème' ?",
+                options: ["Estoy en cinco", "Estoy en quinto", "Soy en quinto", "Tengo quinto"],
+                answer: 1,
+                explain: "5ème se dit 'quinto' (ordinal) : 'Estoy en quinto'."
+            },
+            {
+                q: "Quelle est la bonne préposition dans la date : 'cuatro ___ septiembre' ?",
+                options: ["en", "de", "con", "por"],
+                answer: 1,
+                explain: "On met la préposition 'de' entre le chiffre et le mois ('cuatro de septiembre')."
+            },
+            {
+                q: "Comment écrit-on correctement 'aujourd'hui c'est' ?",
+                options: ["Hoy es", "Hoy esta", "Ayer es", "Hoy son"],
+                answer: 0,
+                explain: "'Aujourd'hui c'est' se traduit par 'Hoy es'."
+            },
+            {
+                q: "Pour indiquer la saison actuelle, on utilise la structure :",
+                options: ["Es en...", "Estamos en...", "Tenemos en...", "Vivimos en..."],
+                answer: 1,
+                explain: "On dit 'Estamos en...' suivi de la saison (ex: 'Estamos en verano')."
+            },
+            {
+                q: "Quel est le premier jour de la semaine en espagnol ?",
+                options: ["domingo", "lunes", "martes", "viernes"],
+                answer: 1,
+                explain: "En espagnol, la semaine commence par 'lunes' (lundi)."
+            },
+            {
+                q: "Comment dit-on 'mercredi' ?",
+                options: ["martes", "miércoles", "jueves", "sábado"],
+                answer: 1,
+                explain: "'Mercredi' se dit 'miércoles' (avec un accent sur le e)."
+            },
+            {
+                q: "Quel jour vient juste après 'jueves' ?",
+                options: ["miércoles", "sábado", "viernes", "domingo"],
+                answer: 2,
+                explain: "Après 'jueves' (jeudi) vient 'viernes' (vendredi)."
+            },
+            {
+                q: "Comment traduit-on 'samedi' ?",
+                options: ["sábado", "domingo", "viernes", "lunes"],
+                answer: 0,
+                explain: "'Samedi' se traduit par 'sábado'."
+            },
+            {
+                q: "Quel jour vient juste avant 'domingo' ?",
+                options: ["viernes", "sábado", "lunes", "martes"],
+                answer: 1,
+                explain: "Avant 'domingo' (dimanche), c'est 'sábado' (samedi)."
+            },
+            {
+                q: "Quel est le 3ème mois de l'année en espagnol ?",
+                options: ["enero", "febrero", "marzo", "abril"],
+                answer: 2,
+                explain: "Le 3ème mois est 'marzo' (mars)."
+            },
+            {
+                q: "Comment écrit-on 'septembre' en espagnol ?",
+                options: ["septiembre", "setiembre", "septembre", "septembro"],
+                answer: 0,
+                explain: "'Septembre' s'écrit 'septiembre' avec un 'i'."
+            },
+            {
+                q: "Comment dit-on 'août' ?",
+                options: ["julio", "agosto", "octubre", "mayo"],
+                answer: 1,
+                explain: "'Août' se dit 'agosto'."
+            },
+            {
+                q: "Comment dit-on 'janvier' ?",
+                options: ["enero", "febrero", "junio", "diciembre"],
+                answer: 0,
+                explain: "'Janvier' se dit 'enero'."
+            },
+            {
+                q: "Comment traduit-on 'l'été' ?",
+                options: ["el invierno", "el verano", "el otoño", "la primavera"],
+                answer: 1,
+                explain: "'L'été' se dit 'el verano'."
+            },
+            {
+                q: "Comment dit-on 'le printemps' ?",
+                options: ["la primavera", "el verano", "el otoño", "el invierno"],
+                answer: 0,
+                explain: "'Le printemps' se traduit par 'la primavera'."
+            },
+            {
+                q: "Comment s'écrit le nombre 16 en un seul mot ?",
+                options: ["dieciséis", "diez y seis", "dieziseis", "diesiséis"],
+                answer: 0,
+                explain: "De 16 à 29, les nombres s'écrivent en un mot avec 'i'. 16 s'écrit 'dieciséis' (avec accent)."
+            },
+            {
+                q: "Comment s'écrit le nombre 22 ?",
+                options: ["veinte y dos", "veintidós", "veintidos", "veintidós"],
+                answer: 1,
+                explain: "22 s'écrit 'veintidós' en un seul mot avec un accent sur le o."
+            },
+            {
+                q: "Comment s'écrit le nombre 31 ?",
+                options: ["treintayuno", "treinta y uno", "treintaiuno", "treinta uno"],
+                answer: 1,
+                explain: "À partir de 30, on sépare les mots par 'y' : 'treinta y uno'."
+            },
+            {
+                q: "Quelle est l'écriture exacte du chiffre 15 ?",
+                options: ["cinco", "diecinco", "quince", "catorce"],
+                answer: 2,
+                explain: "15 s'écrit 'quince'."
+            },
+            {
+                q: "Quelle est l'écriture exacte du chiffre 14 ?",
+                options: ["trece", "catorce", "quince", "cuatro"],
+                answer: 1,
+                explain: "14 s'écrit 'catorce'."
+            },
+            {
+                q: "Comment s'écrit le nombre 25 ?",
+                options: ["veinte y cinco", "veinticinco", "veintecinco", "veintisinco"],
+                answer: 1,
+                explain: "25 s'écrit 'veinticinco' en un seul mot."
+            },
+            {
+                q: "Quel mot signifie 'l'automne' ?",
+                options: ["el invierno", "el otoño", "el verano", "la primavera"],
+                answer: 1,
+                explain: "'L'automne' se traduit par 'el otoño'."
+            },
+            {
+                q: "Quel mot signifie 'l'hiver' ?",
+                options: ["el invierno", "el verano", "el otoño", "la primavera"],
+                answer: 0,
+                explain: "'L'hiver' se traduit par 'el invierno'."
+            },
+            {
+                q: "Dans la phrase 'Hoy es viernes cuatro de septiembre de 2026', combien de fois le mot 'de' est-il utilisé ?",
+                options: ["Une fois", "Deux fois", "Trois fois", "Aucune"],
+                answer: 1,
+                explain: "Le mot 'de' est utilisé deux fois : avant le mois et avant l'année."
+            },
+            {
+                q: "Comment écrit-on le nombre 21 ?",
+                options: ["veintiuno", "veinte y uno", "veintiun", "veinteuno"],
+                answer: 0,
+                explain: "21 s'écrit 'veintiuno'."
+            },
+            {
+                q: "Comment écrit-on le nombre 23 ?",
+                options: ["veinte y tres", "veintitrés", "veintitres", "veinti-tres"],
+                answer: 1,
+                explain: "23 s'écrit 'veintitrés' avec un accent sur le e."
+            },
+            {
+                q: "Comment écrit-on le nombre 26 ?",
+                options: ["veintiséis", "veinte y seis", "veintisies", "dieciséis"],
+                answer: 0,
+                explain: "26 s'écrit 'veintiséis' avec un accent sur le e."
+            },
+            {
+                q: "Comment écrit-on 'mardi' en espagnol ?",
+                options: ["martes", "miércoles", "jueves", "lunes"],
+                answer: 0,
+                explain: "'Mardi' s'écrit 'martes'."
+            },
+            {
+                q: "Comment dit-on 'jeudi' ?",
+                options: ["jueves", "viernes", "martes", "sábado"],
+                answer: 0,
+                explain: "'Jeudi' se dit 'jueves'."
+            },
+            {
+                q: "Comment dit-on 'vendredi' ?",
+                options: ["viernes", "jueves", "miércoles", "domingo"],
+                answer: 0,
+                explain: "'Vendredi' se dit 'viernes'."
+            },
+            {
+                q: "Quel est le dernier mois de l'année ?",
+                options: ["noviembre", "diciembre", "enero", "octubre"],
+                answer: 1,
+                explain: "Le 12ème et dernier mois est 'diciembre' (décembre)."
+            },
+            {
+                q: "Comment dit-on 'février' ?",
+                options: ["febrero", "enero", "marzo", "abril"],
+                answer: 0,
+                explain: "'Février' se dit 'febrero'."
+            },
+            {
+                q: "Comment dit-on 'mai' ?",
+                options: ["mayo", "marzo", "junio", "julio"],
+                answer: 0,
+                explain: "'Mai' se dit 'mayo'."
+            },
+            {
+                q: "Comment dit-on 'juin' ?",
+                options: ["junio", "julio", "juliet", "mayo"],
+                answer: 0,
+                explain: "'Juin' se dit 'junio'."
+            },
+            {
+                q: "Comment dit-on 'juillet' ?",
+                options: ["julio", "junio", "agosto", "septiembre"],
+                answer: 0,
+                explain: "'Juillet' se dit 'julio'."
+            },
+            {
+                q: "Comment traduit-on 'novembre' ?",
+                options: ["noviembre", "diciembre", "octubre", "septiembre"],
+                answer: 0,
+                explain: "'Novembre' se traduit par 'noviembre'."
+            },
+            {
+                q: "Comment écrit-on le nombre 11 ?",
+                options: ["once", "doce", "trece", "uno"],
+                answer: 0,
+                explain: "11 s'écrit 'once'."
+            },
+            {
+                q: "Comment écrit-on le nombre 12 ?",
+                options: ["doce", "once", "trece", "quince"],
+                answer: 0,
+                explain: "12 s'écrit 'doce'."
+            },
+            {
+                q: "Comment écrit-on le nombre 13 ?",
+                options: ["trece", "catorce", "doce", "quince"],
+                answer: 0,
+                explain: "13 s'écrit 'trece'."
+            }
+        ];
+
+        // --- AUDIO ENGINE ---
+        let spanishVoices = [];
+
+        function loadSpanishVoices() {
+            if (!('speechSynthesis' in window)) return;
+            const voices = window.speechSynthesis.getVoices();
+            // Filter strictly for Spanish voices (es-ES, es-MX, es-US, etc.)
+            spanishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('es'));
+        }
+
+        if ('speechSynthesis' in window) {
+            loadSpanishVoices();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = loadSpanishVoices;
+            }
+        }
+
+        // Helper to convert PCM 16-bit array to WAV Blob for Gemini TTS API
+        function pcmToWav(pcm16Array, sampleRate = 24000) {
+            const buffer = new ArrayBuffer(44 + pcm16Array.length * 2);
+            const view = new DataView(buffer);
+
+            function writeString(offset, string) {
+                for (let i = 0; i < string.length; i++) {
+                    view.setUint8(offset + i, string.charCodeAt(i));
+                }
+            }
+
+            writeString(0, 'RIFF');
+            view.setUint32(4, 36 + pcm16Array.length * 2, true);
+            writeString(8, 'WAVE');
+            writeString(12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true); // Raw PCM
+            view.setUint16(22, 1, true); // Mono
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2, true);
+            view.setUint16(32, 2, true);
+            view.setUint16(34, 16, true);
+            writeString(36, 'data');
+            view.setUint32(40, pcm16Array.length * 2, true);
+
+            for (let i = 0; i < pcm16Array.length; i++) {
+                view.setInt16(44 + i * 2, pcm16Array[i], true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        async function speakGeminiTTS(text) {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+
+            const promptPrefix = speed < 1.0 
+                ? "Di de forma MUY LENTA, pausada, sílaba por sílaba y perfectamente articulada en español de España: " 
+                : "Di con una pronunciación perfecta y natural de España: ";
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: `${promptPrefix}${text}` }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            prebuiltVoiceConfig: { voiceName: "Kore" }
+                        }
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            const part = result?.candidates?.[0]?.content?.parts?.[0];
+            const base64Data = part?.inlineData?.data;
+            const mimeType = part?.inlineData?.mimeType || "";
+
+            if (base64Data) {
+                const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+                
+                const binaryString = atob(base64Data);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                const pcm16 = new Int16Array(bytes.buffer);
+                const wavBlob = pcmToWav(pcm16, sampleRate);
+                const audioUrl = URL.createObjectURL(wavBlob);
+                const audio = new Audio(audioUrl);
+                audio.preservesPitch = true;
+                audio.playbackRate = speed;
+                audio.play();
+                return true;
+            }
+            return false;
+        }
+
+        async function speak(text) {
+            const engineSelect = document.getElementById('audio-engine');
+            const selectedEngine = engineSelect ? engineSelect.value : 'native';
+
+            if (selectedEngine === 'gemini') {
+                try {
+                    const success = await speakGeminiTTS(text);
+                    if (success) return;
+                } catch (err) {
+                    console.warn("Gemini TTS fallback to native voice:", err);
+                }
+            }
+
+            // Web Speech API fallback with explicit Spanish Voice selection
+            if (!('speechSynthesis' in window)) {
+                return;
+            }
+
+            window.speechSynthesis.cancel(); // Stop any ongoing utterance
+
+            if (spanishVoices.length === 0) {
+                loadSpanishVoices();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'es-ES';
+
+            // Find an authentic Spanish voice (prefer es-ES Spain, then any Spanish)
+            const chosenVoice = spanishVoices.find(v => v.lang.toLowerCase() === 'es-es')
+                             || spanishVoices.find(v => v.lang.toLowerCase().startsWith('es'))
+                             || null;
+
+            if (chosenVoice) {
+                utterance.voice = chosenVoice;
+            }
+
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+            utterance.rate = speed;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // --- NAVIGATION ---
+        function switchTab(tabId) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            if(tabId === 'vocab') {
+                renderVocab('all');
+            }
+        }
+
+        // --- VOCABULARY RENDERER ---
+        function renderVocab(category) {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? vocabulary 
+                : vocabulary.filter(v => v.cat === category);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-3.5 rounded-xl border border-slate-100 shadow-sm flex items-center justify-between hover:border-red-200 transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-800 text-base flex items-center gap-1.5">
+                            ${item.text}
+                        </div>
+                        <div class="text-xs text-slate-400 capitalize">${item.translation}</div>
+                    </div>
+                    <button onclick="speak('${item.text.replace(/'/g, "\\'")}')" class="p-2.5 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition" title="Écouter">
+                        🔊
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterVocab(cat) {
+            document.querySelectorAll('.vocab-filter-btn').forEach(b => {
+                b.classList.remove('bg-red-600', 'text-white');
+                b.classList.add('bg-slate-200', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-slate-200', 'text-slate-700');
+            event.target.classList.add('bg-red-600', 'text-white');
+
+            renderVocab(cat);
+        }
+
+        // --- QUIZ SYSTEM ---
+        let currentQuizMode = null;
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let activeQuestions = [];
+
+        function startQuizMode(mode) {
+            currentQuizMode = mode;
+            currentQuestionIndex = 0;
+            score = 0;
+
+            const container = document.getElementById('quiz-container');
+            container.classList.remove('hidden');
+
+            if (mode === 'mcq') {
+                // Tirage aléatoire de 10 questions parmi la banque de 42 questions
+                activeQuestions = [...questionsMCQ].sort(() => 0.5 - Math.random()).slice(0, 10);
+            } else if (mode === 'listening') {
+                activeQuestions = generateListeningQuestions();
+            } else if (mode === 'numbers') {
+                activeQuestions = generateNumberQuestions();
+            }
+
+            updateScoreDisplay();
+            renderCurrentQuestion();
+        }
+
+        function generateListeningQuestions() {
+            // Sélectionne 10 éléments de vocabulaire au hasard
+            const shuffledVocab = [...vocabulary].sort(() => 0.5 - Math.random()).slice(0, 10);
+            
+            return shuffledVocab.map(item => {
+                // Choisit 3 fausses options parmi le reste du vocabulaire
+                const wrongList = vocabulary.filter(v => v.text !== item.text).sort(() => 0.5 - Math.random()).slice(0, 3);
+                const options = [item, ...wrongList].sort(() => 0.5 - Math.random());
+                return {
+                    isAudio: true,
+                    audioText: item.text,
+                    q: "Écoute le mot parlé et clique sur sa traduction :",
+                    options: options.map(o => o.translation),
+                    answer: options.findIndex(o => o.text === item.text),
+                    explain: `L'audio disait : "${item.text}" (${item.translation}).`
+                };
+            });
+        }
+
+        function generateNumberQuestions() {
+            // Sélectionne 10 nombres au hasard parmi la banque complète (1 à 31)
+            const shuffledNumbers = [...allNumbers].sort(() => 0.5 - Math.random()).slice(0, 10);
+
+            return shuffledNumbers.map(item => {
+                // Pièges classiques pour les nombres
+                const distractors = allNumbers.filter(n => n.num !== item.num).map(n => n.text);
+                const wrongChoices = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
+                
+                const options = [item.text, ...wrongChoices].sort(() => 0.5 - Math.random());
+                return {
+                    q: `Comment s'écrit le chiffre ${item.num} en espagnol ?`,
+                    options: options,
+                    answer: options.indexOf(item.text),
+                    explain: `${item.num} s'écrit exactement "${item.text}".`
+                };
+            });
+        }
+
+        function updateScoreDisplay() {
+            document.getElementById('quiz-score').innerText = `Score : ${score}/${activeQuestions.length}`;
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuestionIndex + 1}/${activeQuestions.length}`;
+        }
+
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const body = document.getElementById('quiz-body');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            let html = `<h3 class="text-lg font-bold text-slate-800 mb-4">${q.q}</h3>`;
+
+            if (q.isAudio) {
+                html += `
+                    <div class="mb-4">
+                        <button onclick="speak('${q.audioText}')" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-medium shadow inline-flex items-center gap-2">
+                            🔊 Écouter l'audio
+                        </button>
+                    </div>
+                `;
+            }
+
+            html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">`;
+            q.options.forEach((opt, idx) => {
+                html += `
+                    <button onclick="checkAnswer(${idx})" class="quiz-opt-btn text-left p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium transition">
+                        ${opt}
+                    </button>
+                `;
+            });
+            html += `</div>`;
+
+            body.innerHTML = html;
+
+            // Auto trigger audio if audio question
+            if (q.isAudio) {
+                setTimeout(() => speak(q.audioText), 300);
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            const q = activeQuestions[currentQuestionIndex];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            // Disable all buttons
+            buttons.forEach(b => b.disabled = true);
+
+            if (selectedIndex === q.answer) {
+                score++;
+                buttons[selectedIndex].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `✅ <strong>Bravo !</strong> ${q.explain}`;
+            } else {
+                buttons[selectedIndex].classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                buttons[q.answer].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200";
+                feedback.innerHTML = `❌ <strong>Dommage...</strong> ${q.explain}`;
+            }
+
+            feedback.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            updateScoreDisplay();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < activeQuestions.length) {
+                updateScoreDisplay();
+                renderCurrentQuestion();
+            } else {
+                renderFinalScore();
+            }
+        }
+
+        function renderFinalScore() {
+            const body = document.getElementById('quiz-body');
+            document.getElementById('next-q-btn').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const percentage = Math.round((score / activeQuestions.length) * 100);
+            let message = percentage >= 80 ? "¡Excelente! 🎉 Tu maîtrises parfaitement la leçon." : "Bon travail ! Revois encore un peu les mots difficiles.";
+
+            body.innerHTML = `
+                <div class="text-center py-6">
+                    <span class="text-5xl mb-3 block">${percentage >= 80 ? '🏆' : '👍'}</span>
+                    <h3 class="text-2xl font-bold font-fun text-slate-800">Test Terminé !</h3>
+                    <p class="text-lg font-semibold text-red-600 mt-1">Ton score : ${score} / ${activeQuestions.length} (${percentage}%)</p>
+                    <p class="text-sm text-slate-600 mt-2">${message}</p>
+                    <button onclick="startQuizMode('${currentQuizMode}')" class="mt-6 bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow transition">
+                        Recommencer ce test
+                    </button>
+                </div>
+            `;
+        }
+
+        // Initialize default tab
+        window.onload = function() {
+            switchTab('notes');
+        };
+    </script>
+</body>
+</html>
