@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-amber-50/50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Yo y mi identidad! - Espagnol 5º (Secuencia 1)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, .font-fun { font-family: 'Fredoka', cursive; }
+        .tab-btn.active {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-red-600 via-amber-500 to-yellow-500 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🇪🇸</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wide">¡Yo y mi identidad!</h1>
+                    <p class="text-xs text-amber-100">Espagnol 5ème - Secuencia 1 : Retrato y Autorretrato</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-black/15 p-1 rounded-xl backdrop-blur-md gap-1 text-sm font-semibold">
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn active px-3 py-1.5 rounded-lg transition-all duration-200">
+                    📖 Leçon
+                </button>
+                <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🔊 Audio & Vocab
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🎮 Entraînement
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- TAB 1: REVISION NOTES -->
+        <section id="sec-notes" class="space-y-6">
+            <div class="bg-amber-100 border-l-4 border-amber-600 p-4 rounded-r-xl shadow-sm">
+                <h2 class="text-lg font-bold text-amber-900 font-fun">💡 Proyecto Final : Expresión Oral</h2>
+                <p class="text-sm text-amber-800">
+                    Tu vas rencontrer un élève espagnol pendant tes vacances. Tu dois savoir te présenter (nom, âge, collège, ville) et lui poser des questions !
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Saludar durante el día -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">☀️</span>
+                        <h3 class="text-xl font-bold font-fun">1. Saludar durante el día (Les Salutations)</h3>
+                    </div>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-amber-900 text-sm">Buenos días ☀️</strong>
+                                <p class="text-slate-600">Bonjour (le matin)</p>
+                            </div>
+                            <button onclick="speak('Buenos días')" class="p-2 bg-amber-200 rounded-lg">🔊</button>
+                        </div>
+                        <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-amber-900 text-sm">Buenas tardes 🌤️</strong>
+                                <p class="text-slate-600">Bon après-midi / Bonsoir (l'après-midi)</p>
+                            </div>
+                            <button onclick="speak('Buenas tardes')" class="p-2 bg-amber-200 rounded-lg">🔊</button>
+                        </div>
+                        <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-amber-900 text-sm">Buenas noches 🌙</strong>
+                                <p class="text-slate-600">Bonsoir / Bonne nuit</p>
+                            </div>
+                            <button onclick="speak('Buenas noches')" class="p-2 bg-amber-200 rounded-lg">🔊</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Documento 1 - Mi Poema / Se Presentar -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">📝</span>
+                        <h3 class="text-xl font-bold font-fun">2. Presentarse (Modèle du cours)</h3>
+                    </div>
+                    <div class="p-3 bg-red-50 rounded-xl border border-red-100 text-xs space-y-1.5 mb-3">
+                        <p><strong>Buenos días.</strong></p>
+                        <p><strong>Me llamo</strong> Nathanaël.</p>
+                        <p><strong>Soy un alumno</strong> del colegio Les Mille Étangs.</p>
+                        <p><strong>Tengo</strong> doce años.</p>
+                        <p><strong>Vivo en</strong> Ternuay.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs space-y-1">
+                        <p>📌 <strong>Vocabulaire Léxico :</strong></p>
+                        <p>• <strong>Un alumno</strong> (un élève) ≠ <strong>Una alumna</strong> (une élève)</p>
+                        <p>• <strong>El colegio</strong> = Le collège</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Conjugaison des verbes clés -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition md:col-span-2">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-xl font-bold font-fun">3. Verbos de la presentación (Présent de l'indicatif)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                        <!-- SER -->
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-red-600 text-sm block mb-1">SER (Être)</strong>
+                            <p>• Yo <strong>soy</strong></p>
+                            <p>• Tú <strong>eres</strong></p>
+                            <p>• Él / Ella / Ud <strong>es</strong></p>
+                            <p>• Ellos / Ellas / Uds <strong>son</strong></p>
+                        </div>
+                        <!-- TENER -->
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-red-600 text-sm block mb-1">TENER (Avoir)</strong>
+                            <p>• Yo <strong>tengo</strong></p>
+                            <p>• Tú <strong>tienes</strong></p>
+                            <p>• Él / Ella / Ud <strong>tiene</strong></p>
+                            <p>• Ellos / Ellas / Uds <strong>tienen</strong></p>
+                        </div>
+                        <!-- VIVIR -->
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-red-600 text-sm block mb-1">VIVIR (Habiter)</strong>
+                            <p>• Yo <strong>vivo</strong></p>
+                            <p>• Tú <strong>vives</strong></p>
+                            <p>• Él / Ella / Ud <strong>vive</strong></p>
+                            <p>• Ellos / Ellas / Uds <strong>viven</strong></p>
+                        </div>
+                        <!-- LLAMARSE -->
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-red-600 text-sm block mb-1">LLAMARSE (S'appeler)</strong>
+                            <p>• Yo <strong>me llamo</strong></p>
+                            <p>• Tú <strong>te llamas</strong></p>
+                            <p>• Él / Ella / Ud <strong>se llama</strong></p>
+                            <p>• Ellos / Ellas <strong>se llaman</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Preguntas y Pronombres Interrogativos -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition md:col-span-2">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">❓</span>
+                        <h3 class="text-xl font-bold font-fun">4. Formular preguntas (Poser des questions)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-2.5 bg-blue-50 rounded-xl border border-blue-100">
+                            <strong>¿Cómo te llamas?</strong> → Me llamo...
+                        </div>
+                        <div class="p-2.5 bg-blue-50 rounded-xl border border-blue-100">
+                            <strong>¿Cuántos años tienes?</strong> → Tengo doce años.
+                        </div>
+                        <div class="p-2.5 bg-blue-50 rounded-xl border border-blue-100">
+                            <strong>¿Dónde vives?</strong> → Vivo en...
+                        </div>
+                        <div class="p-2.5 bg-blue-50 rounded-xl border border-blue-100">
+                            <strong>¿Eres alumno o alumna?</strong> → Soy un alumno / una alumna.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: VOCABULARY & AUDIO -->
+        <section id="sec-vocab" class="hidden space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+                <div>
+                    <h2 class="text-xl font-bold font-fun text-slate-800">Audio en Español Nativo</h2>
+                    <p class="text-xs text-slate-500">Écoute et répète les mots du cours Secuencia 1.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Voz / Voix :</label>
+                        <select id="audio-engine" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="gemini-Aoede" selected>✨ Voix IA - Aoede (Naturelle)</option>
+                            <option value="gemini-Zephyr">✨ Voix IA - Zephyr (Claire)</option>
+                            <option value="native">🇪🇸 Voix Espagnole Native (Navigateur)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Velocidad / Vitesse :</label>
+                        <select id="audio-speed" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="0.6">Lenta / Lente (0.6x)</option>
+                            <option value="1" selected>Normal / Normale (1x)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="flex flex-wrap gap-2 mb-4" id="vocab-category-filters">
+                <button onclick="filterVocab('all')" class="vocab-filter-btn bg-red-600 text-white px-3 py-1.5 rounded-full text-xs font-semibold">Tous</button>
+                <button onclick="filterVocab('saludos')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Salutations</button>
+                <button onclick="filterVocab('presentacion')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Présentation</button>
+                <button onclick="filterVocab('verbos')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Verbes</button>
+                <button onclick="filterVocab('preguntas')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Questions</button>
+            </div>
+
+            <!-- Vocab Cards Grid -->
+            <div id="vocab-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- TAB 3: QUIZ & PRACTICE -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <!-- Game Mode Picker -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button onclick="startQuizMode('mcq')" class="p-4 bg-white hover:bg-red-50 border-2 border-slate-200 hover:border-red-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">📝</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-red-600">QCM Secuencia 1</h3>
+                        <p class="text-xs text-slate-500">10 questions tirées au sort sur les salutations, verbes et présentation.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-red-600">Start / Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('listening')" class="p-4 bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">🎧</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-amber-600">Dictée Audio Espagnole</h3>
+                        <p class="text-xs text-slate-500">Écoute la phrase prononcée en espagnol et trouve la traduction.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-amber-600">Start / Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('verbs')" class="p-4 bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">⚡</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-emerald-600">Challenge Conjugaison</h3>
+                        <p class="text-xs text-slate-500">Complète rapidement les formes des verbes SER, TENER, VIVIR et LLAMARSE.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-emerald-600">Start / Jouer →</span>
+                </button>
+            </div>
+
+            <!-- Quiz Box Display Container -->
+            <div id="quiz-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hidden">
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <span id="quiz-progress" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Question 1/10</span>
+                    <span id="quiz-score" class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Score : 0</span>
+                </div>
+
+                <div id="quiz-body">
+                    <!-- Dynamic question content -->
+                </div>
+
+                <div id="quiz-feedback" class="mt-4 p-3 rounded-xl hidden text-sm font-medium"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-q-btn" onclick="nextQuestion()" class="hidden bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow transition">
+                        Siguiente / Suivante ➔
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        ¡Yo y mi identidad! - Espagnol 5º (Secuencia 1)
+    </footer>
+
+    <script>
+        const vocabulary = [
+            // Saludos
+            { text: "Buenos días", translation: "Bonjour (le matin)", cat: "saludos" },
+            { text: "Buenas tardes", translation: "Bon après-midi / Bonsoir", cat: "saludos" },
+            { text: "Buenas noches", translation: "Bonne nuit / Bonsoir", cat: "saludos" },
+            { text: "Hola", translation: "Salut / Bonjour", cat: "saludos" },
+
+            // Presentación & Léxico
+            { text: "Me llamo", translation: "Je m'appelle", cat: "presentacion" },
+            { text: "Soy un alumno", translation: "Je suis un élève (garçon)", cat: "presentacion" },
+            { text: "Soy una alumna", translation: "Je suis une élève (fille)", cat: "presentacion" },
+            { text: "el colegio", translation: "le collège", cat: "presentacion" },
+            { text: "Tengo doce años", translation: "J'ai 12 ans", cat: "presentacion" },
+            { text: "Vivo en Ternuay", translation: "J'habite à Ternuay", cat: "presentacion" },
+            { text: "un alumno", translation: "un élève", cat: "presentacion" },
+            { text: "una alumna", translation: "une élève", cat: "presentacion" },
+            { text: "el poema", translation: "le poème", cat: "presentacion" },
+            { text: "la identidad", translation: "l'identité", cat: "presentacion" },
+
+            // Verbos
+            { text: "Yo soy", translation: "Je suis", cat: "verbos" },
+            { text: "Tú eres", translation: "Tu es", cat: "verbos" },
+            { text: "Él es", translation: "Il est", cat: "verbos" },
+            { text: "Ella es", translation: "Elle est", cat: "verbos" },
+            { text: "Yo tengo", translation: "J'ai", cat: "verbos" },
+            { text: "Tú tienes", translation: "Tu as", cat: "verbos" },
+            { text: "Él tiene", translation: "Il a", cat: "verbos" },
+            { text: "Yo vivo", translation: "J'habite / Je vis", cat: "verbos" },
+            { text: "Tú vives", translation: "Tu habites", cat: "verbos" },
+            { text: "aprender", translation: "apprendre", cat: "verbos" },
+            { text: "hablar", translation: "parler", cat: "verbos" },
+            { text: "poder", translation: "pouvoir", cat: "verbos" },
+
+            // Preguntas
+            { text: "¿Cómo te llamas?", translation: "Comment t'appelles-tu ?", cat: "preguntas" },
+            { text: "¿Cuántos años tienes?", translation: "Quel âge as-tu ?", cat: "preguntas" },
+            { text: "¿Dónde vives?", translation: "Où habites-tu ?", cat: "preguntas" },
+            { text: "¿De dónde eres?", translation: "D'où viens-tu ?", cat: "preguntas" }
+        ];
+
+        const questionsMCQ = [
+            {
+                q: "Comment salue-t-on le matin en espagnol ?",
+                options: ["Buenos días", "Buenas tardes", "Buenas noches", "Hasta luego"],
+                answer: 0,
+                explain: "'Buenos días' s'utilise le matin !"
+            },
+            {
+                q: "Comment salue-t-on l'après-midi en espagnol ?",
+                options: ["Buenos días", "Buenas tardes", "Buenas noches", "Hola"],
+                answer: 1,
+                explain: "'Buenas tardes' s'utilise l'après-midi !"
+            },
+            {
+                q: "Comment salue-t-on le soir / la nuit en espagnol ?",
+                options: ["Buenos días", "Buenas tardes", "Buenas noches", "Adíos"],
+                answer: 2,
+                explain: "'Buenas noches' s'utilise le soir et la nuit."
+            },
+            {
+                q: "Comment dit un garçon 'Je suis un élève' ?",
+                options: ["Soy un alumno", "Soy una alumna", "Tengo un alumno", "Vivo alumno"],
+                answer: 0,
+                explain: "Un garçon dit 'Soy un alumno' (masculin)."
+            },
+            {
+                q: "Comment dit une fille 'Je suis une élève' ?",
+                options: ["Soy un alumno", "Soy una alumna", "Soy un colegio", "Me llamo alumna"],
+                answer: 1,
+                explain: "Une fille dit 'Soy una alumna' (féminin)."
+            },
+            {
+                q: "Comment traduit-on 'Le collège' en espagnol ?",
+                options: ["el colegio", "la escuela", "el instituto", "el alumno"],
+                answer: 0,
+                explain: "'Le collège' se dit 'el colegio'."
+            },
+            {
+                q: "Comment dit-on 'J'ai 12 ans' ?",
+                options: ["Tengo doce años", "Soy doce años", "Vivo doce años", "Me llamo doce años"],
+                answer: 0,
+                explain: "En espagnol, on utilise le verbe TENER pour l'âge : 'Tengo doce años'."
+            },
+            {
+                q: "Quelle est la traduction de 'J'habite à Ternuay' ?",
+                options: ["Vivo en Ternuay", "Tengo en Ternuay", "Soy en Ternuay", "Me llamo Ternuay"],
+                answer: 0,
+                explain: "Le verbe VIVIR s'utilise pour le lieu d'habitation : 'Vivo en Ternuay'."
+            },
+            {
+                q: "Quelle est la forme du verbe SER avec 'Yo' ?",
+                options: ["soy", "eres", "es", "somos"],
+                answer: 0,
+                explain: "Yo + soy (Je suis)."
+            },
+            {
+                q: "Quelle est la forme du verbe SER avec 'Tú' ?",
+                options: ["soy", "eres", "es", "son"],
+                answer: 1,
+                explain: "Tú + eres (Tu es)."
+            },
+            {
+                q: "Quelle est la forme du verbe TENER avec 'Yo' ?",
+                options: ["tengo", "tienes", "tiene", "tenemos"],
+                answer: 0,
+                explain: "Yo + tengo (J'ai)."
+            },
+            {
+                q: "Quelle est la forme du verbe TENER avec 'Tú' ?",
+                options: ["tengo", "tienes", "tiene", "tienen"],
+                answer: 1,
+                explain: "Tú + tienes (Tu as)."
+            },
+            {
+                q: "Quelle question pose-t-on pour demander le nom ?",
+                options: ["¿Cómo te llamas?", "¿Cuántos años tienes?", "¿Dónde vives?", "¿De dónde eres?"],
+                answer: 0,
+                explain: "'¿Cómo te llamas?' signifie 'Comment t'appelles-tu ?'."
+            },
+            {
+                q: "Quelle question pose-t-on pour demander l'âge ?",
+                options: ["¿Cuántos años tienes?", "¿Cómo te llamas?", "¿Dónde vives?", "¿Qué tal?"],
+                answer: 0,
+                explain: "'¿Cuántos años tienes?' permet de demander l'âge."
+            },
+            {
+                q: "Quelle question pose-t-on pour demander la ville où l'on habite ?",
+                options: ["¿Dónde vives?", "¿De dónde eres?", "¿Cómo te llamas?", "¿Cuántos años tienes?"],
+                answer: 0,
+                explain: "'¿Dónde vives?' signifie 'Où habites-tu ?'."
+            },
+            {
+                q: "Complète : 'Él ___ un alumno del colegio.'",
+                options: ["es", "soy", "eres", "son"],
+                answer: 0,
+                explain: "Él (il) s'utilise avec 'es'."
+            },
+            {
+                q: "Complète : 'Ella ___ doce años.'",
+                options: ["tiene", "tengo", "tienes", "tienen"],
+                answer: 0,
+                explain: "Ella (elle) s'utilise avec 'tiene'."
+            },
+            {
+                q: "Que signifie le mot 'léxico' ?",
+                options: ["Le vocabulaire", "La grammaire", "La prononciation", "La poésie"],
+                answer: 0,
+                explain: "'Léxico' désigne le vocabulaire !"
+            },
+            {
+                q: "Complète : 'Yo ___ en Ternuay.'",
+                options: ["vivo", "vives", "vive", "viven"],
+                answer: 0,
+                explain: "Yo + vivo (J'habite)."
+            },
+            {
+                q: "Comment se traduit le verbe 'LLAMARSE' ?",
+                options: ["S'appeler", "Être", "Avoir", "Habiter"],
+                answer: 0,
+                explain: "'Llamarse' signifie 'S'appeler'."
+            },
+            {
+                q: "Comment dit-on 'Tu habites' en espagnol ?",
+                options: ["Tú vives", "Yo vivo", "Él vive", "Ellos viven"],
+                answer: 0,
+                explain: "Tú + vives."
+            },
+            {
+                q: "Que signifie 'un poema' ?",
+                options: ["Un poème", "Un problème", "Un portrait", "Un livre"],
+                answer: 0,
+                explain: "'Un poema' signifie un poème !"
+            },
+            {
+                q: "Quelle est la forme du verbe LLAMARSE avec 'Yo' ?",
+                options: ["me llamo", "te llamas", "se llama", "nos llamamos"],
+                answer: 0,
+                explain: "Yo + me llamo (Je m'appelle)."
+            },
+            {
+                q: "Quelle est la forme du verbe LLAMARSE avec 'Tú' ?",
+                options: ["te llamas", "me llamo", "se llama", "se llaman"],
+                answer: 0,
+                explain: "Tú + te llamas (Tu t'appelles)."
+            },
+            {
+                q: "Quelle est la forme du verbe LLAMARSE avec 'Él / Ella' ?",
+                options: ["se llama", "me llamo", "te llamas", "os llamáis"],
+                answer: 0,
+                explain: "Él / Ella + se llama."
+            },
+            {
+                q: "Comment traduit-on le verbe 'aprender' ?",
+                options: ["apprendre", "parler", "pouvoir", "comprendre"],
+                answer: 0,
+                explain: "'Aprender' signifie 'apprendre'."
+            },
+            {
+                q: "Comment traduit-on le verbe 'hablar' ?",
+                options: ["parler", "écouter", "habiter", "aimer"],
+                answer: 0,
+                explain: "'Hablar' signifie 'parler'."
+            },
+            {
+                q: "Comment traduit-on le verbe 'poder' ?",
+                options: ["pouvoir", "vouloir", "devoir", "savoir"],
+                answer: 0,
+                explain: "'Poder' signifie 'pouvoir'."
+            },
+            {
+                q: "Complète : 'Ellos ___ en España.'",
+                options: ["viven", "vivo", "vives", "vive"],
+                answer: 0,
+                explain: "Ellos (ils) + viven."
+            },
+            {
+                q: "Complète : 'Ellas ___ alumnas del colegio.'",
+                options: ["son", "es", "soy", "eres"],
+                answer: 0,
+                explain: "Ellas (elles) + son."
+            }
+        ];
+
+        let spanishVoices = [];
+
+        function loadSpanishVoices() {
+            if (!('speechSynthesis' in window)) return;
+            const voices = window.speechSynthesis.getVoices();
+            spanishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('es')).sort((a, b) => {
+                const nameA = a.name.toLowerCase();
+                const nameB = b.name.toLowerCase();
+                const priority = ['google', 'mónica', 'jorge', 'monica', 'paulina', 'diego', 'natural', 'es-es', 'es-mx'];
+                const scoreA = priority.reduce((acc, kw) => acc + (nameA.includes(kw) ? 10 : 0), 0);
+                const scoreB = priority.reduce((acc, kw) => acc + (nameB.includes(kw) ? 10 : 0), 0);
+                return scoreB - scoreA;
+            });
+        }
+
+        if ('speechSynthesis' in window) {
+            loadSpanishVoices();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = loadSpanishVoices;
+            }
+        }
+
+        function pcmToWav(pcm16Array, sampleRate = 24000) {
+            const buffer = new ArrayBuffer(44 + pcm16Array.length * 2);
+            const view = new DataView(buffer);
+
+            function writeString(offset, string) {
+                for (let i = 0; i < string.length; i++) {
+                    view.setUint8(offset + i, string.charCodeAt(i));
+                }
+            }
+
+            writeString(0, 'RIFF');
+            view.setUint32(4, 36 + pcm16Array.length * 2, true);
+            writeString(8, 'WAVE');
+            writeString(12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true);
+            view.setUint16(22, 1, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2, true);
+            view.setUint16(32, 2, true);
+            view.setUint16(34, 16, true);
+            writeString(36, 'data');
+            view.setUint32(40, pcm16Array.length * 2, true);
+
+            for (let i = 0; i < pcm16Array.length; i++) {
+                view.setInt16(44 + i * 2, pcm16Array[i], true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        async function speakGeminiTTS(text, voiceName = "Aoede") {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+
+            const promptInstruction = speed < 1.0 
+                ? `Di esto con pronunciación nativa de España, marcando bien cada palabra de forma pausada y muy clara: "${text}"`
+                : `Di esto con una voz en español nativo, cálida, fluida y natural: "${text}"`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: promptInstruction }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            prebuiltVoiceConfig: { voiceName: voiceName }
+                        }
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            const part = result?.candidates?.[0]?.content?.parts?.[0];
+            const base64Data = part?.inlineData?.data;
+            const mimeType = part?.inlineData?.mimeType || "";
+
+            if (base64Data) {
+                const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+                
+                const binaryString = atob(base64Data);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                const pcm16 = new Int16Array(bytes.buffer);
+                const wavBlob = pcmToWav(pcm16, sampleRate);
+                const audioUrl = URL.createObjectURL(wavBlob);
+                const audio = new Audio(audioUrl);
+                audio.play();
+                return true;
+            }
+            return false;
+        }
+
+        async function speak(text) {
+            const engineSelect = document.getElementById('audio-engine');
+            const selectedVal = engineSelect ? engineSelect.value : 'gemini-Aoede';
+
+            if (selectedVal.startsWith('gemini-')) {
+                const voiceName = selectedVal.replace('gemini-', '');
+                try {
+                    const success = await speakGeminiTTS(text, voiceName);
+                    if (success) return;
+                } catch (err) {
+                    console.warn("Gemini TTS fallback to native voice:", err);
+                }
+            }
+
+            if (!('speechSynthesis' in window)) return;
+
+            window.speechSynthesis.cancel();
+
+            if (spanishVoices.length === 0) {
+                loadSpanishVoices();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'es-ES';
+
+            if (spanishVoices.length > 0) {
+                utterance.voice = spanishVoices[0];
+            }
+
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+            utterance.rate = speed;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // --- NAVIGATION ---
+        function switchTab(tabId) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            if(tabId === 'vocab') {
+                renderVocab('all');
+            }
+        }
+
+        // --- VOCABULARY RENDERER ---
+        function renderVocab(category) {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? vocabulary 
+                : vocabulary.filter(v => v.cat === category);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between hover:border-red-200 transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-800 text-base flex items-center gap-1.5">
+                            ${item.text}
+                        </div>
+                        <div class="text-xs text-slate-500 capitalize">${item.translation}</div>
+                    </div>
+                    <button onclick="speak('${item.text.replace(/'/g, "\\'")}')" class="p-2.5 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition" title="Escuchar">
+                        🔊
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterVocab(cat) {
+            document.querySelectorAll('.vocab-filter-btn').forEach(b => {
+                b.classList.remove('bg-red-600', 'text-white');
+                b.classList.add('bg-slate-200', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-slate-200', 'text-slate-700');
+            event.target.classList.add('bg-red-600', 'text-white');
+
+            renderVocab(cat);
+        }
+
+        let currentQuizMode = null;
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let activeQuestions = [];
+
+        function startQuizMode(mode) {
+            currentQuizMode = mode;
+            currentQuestionIndex = 0;
+            score = 0;
+
+            const container = document.getElementById('quiz-container');
+            container.classList.remove('hidden');
+
+            if (mode === 'mcq') {
+                activeQuestions = [...questionsMCQ].sort(() => 0.5 - Math.random()).slice(0, 10);
+            } else if (mode === 'listening') {
+                activeQuestions = generateListeningQuestions();
+            } else if (mode === 'verbs') {
+                activeQuestions = generateVerbQuestions();
+            }
+
+            updateScoreDisplay();
+            renderCurrentQuestion();
+        }
+
+        function generateListeningQuestions() {
+            const shuffledVocab = [...vocabulary].sort(() => 0.5 - Math.random()).slice(0, 10);
+            
+            return shuffledVocab.map(item => {
+                const wrongList = vocabulary.filter(v => v.text !== item.text).sort(() => 0.5 - Math.random()).slice(0, 3);
+                const options = [item, ...wrongList].sort(() => 0.5 - Math.random());
+                return {
+                    isAudio: true,
+                    audioText: item.text,
+                    q: "Écoute le mot ou la phrase en espagnol et choisis la traduction :",
+                    options: options.map(o => o.translation),
+                    answer: options.findIndex(o => o.text === item.text),
+                    explain: `L'enregistrement disait : "${item.text}" (${item.translation}).`
+                };
+            });
+        }
+
+        function generateVerbQuestions() {
+            const verbData = [
+                { text: "Yo ___ Nathanaël. (S'appeler)", options: ["me llamo", "te llamas", "se llama", "soy"], answer: 0, exp: "Yo me llamo" },
+                { text: "Tú ___ doce años. (Avoir)", options: ["tienes", "tengo", "tiene", "eres"], answer: 0, exp: "Tú tienes" },
+                { text: "Yo ___ un alumno del colegio. (Être)", options: ["soy", "eres", "es", "tengo"], answer: 0, exp: "Yo soy" },
+                { text: "Él ___ en Ternuay. (Habiter)", options: ["vive", "vivo", "vives", "viven"], answer: 0, exp: "Él vive" },
+                { text: "Tú ___ un alumno del colegio. (Être)", options: ["eres", "soy", "es", "son"], answer: 0, exp: "Tú eres" },
+                { text: "Ella ___ doce años. (Avoir)", options: ["tiene", "tengo", "tienes", "son"], answer: 0, exp: "Ella tiene" },
+                { text: "Yo ___ en Ternuay. (Habiter)", options: ["vivo", "vives", "vive", "viven"], answer: 0, exp: "Yo vivo" },
+                { text: "Ellos ___ del colegio. (Être)", options: ["son", "es", "soy", "somos"], answer: 0, exp: "Ellos son" },
+                { text: "Tú ___ en Francia. (Habiter)", options: ["vives", "vivo", "vive", "viven"], answer: 0, exp: "Tú vives" },
+                { text: "Él ___ un alumno muy simpático. (Être)", options: ["es", "soy", "eres", "son"], answer: 0, exp: "Él es" }
+            ];
+
+            return verbData.sort(() => 0.5 - Math.random());
+        }
+
+        function updateScoreDisplay() {
+            document.getElementById('quiz-score').innerText = `Score : ${score}/${activeQuestions.length}`;
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuestionIndex + 1}/${activeQuestions.length}`;
+        }
+
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const body = document.getElementById('quiz-body');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            let html = `<h3 class="text-lg font-bold text-slate-800 mb-4">${q.q}</h3>`;
+
+            if (q.isAudio) {
+                html += `
+                    <div class="mb-4">
+                        <button onclick="speak('${q.audioText.replace(/'/g, "\\'")}')" class="px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl font-medium shadow inline-flex items-center gap-2">
+                            🔊 Escuchar / Écouter
+                        </button>
+                    </div>
+                `;
+            } else if (q.text) {
+                html += `
+                    <div class="mb-4 p-4 bg-amber-50 rounded-xl text-center text-xl font-bold text-amber-900 border border-amber-200">
+                        ${q.text}
+                    </div>
+                `;
+            }
+
+            html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">`;
+            q.options.forEach((opt, idx) => {
+                html += `
+                    <button onclick="checkAnswer(${idx})" class="quiz-opt-btn text-left p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium transition">
+                        ${opt}
+                    </button>
+                `;
+            });
+            html += `</div>`;
+
+            body.innerHTML = html;
+
+            if (q.isAudio) {
+                setTimeout(() => speak(q.audioText), 300);
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            const q = activeQuestions[currentQuestionIndex];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            buttons.forEach(b => b.disabled = true);
+
+            if (selectedIndex === q.answer) {
+                score++;
+                buttons[selectedIndex].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `✅ <strong>¡Muy bien!</strong> ${q.explain || q.exp || ''}`;
+            } else {
+                buttons[selectedIndex].classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                buttons[q.answer].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200";
+                feedback.innerHTML = `❌ <strong>¡Casi!</strong> ${q.explain || q.exp || ''}`;
+            }
+
+            feedback.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            updateScoreDisplay();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < activeQuestions.length) {
+                updateScoreDisplay();
+                renderCurrentQuestion();
+            } else {
+                renderFinalScore();
+            }
+        }
+
+        function renderFinalScore() {
+            const body = document.getElementById('quiz-body');
+            document.getElementById('next-q-btn').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const percentage = Math.round((score / activeQuestions.length) * 100);
+            let message = percentage >= 80 ? "¡Excelente! 🏆 ¡Dominas la Secuencia 1!" : "¡Sigue practicando! Revisa las notas de la lección.";
+
+            body.innerHTML = `
+                <div class="text-center py-6">
+                    <span class="text-5xl mb-3 block">${percentage >= 80 ? '🏆' : '👍'}</span>
+                    <h3 class="text-2xl font-bold font-fun text-slate-800">¡Test Finalizado!</h3>
+                    <p class="text-lg font-semibold text-red-600 mt-1">Score : ${score} / ${activeQuestions.length} (${percentage}%)</p>
+                    <p class="text-sm text-slate-600 mt-2">${message}</p>
+                    <button onclick="startQuizMode('${currentQuizMode}')" class="mt-6 bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow transition">
+                        Recommencer le quiz 🔄
+                    </button>
+                </div>
+            `;
+        }
+
+        window.onload = function() {
+            switchTab('notes');
+        };
+    </script>
+</body>
+</html>
