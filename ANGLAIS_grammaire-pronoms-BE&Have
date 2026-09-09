@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡English 5º! - Grammar, BE & HAVE, Audio & Quizzes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-fun { font-family: 'Fredoka', cursive; }
+        .tab-btn.active {
+            background-color: #2563eb;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-700 via-indigo-600 to-red-600 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🇬🇧</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wide">English 5º!</h1>
+                    <p class="text-xs text-blue-100">Grammar: Pronouns, BE & HAVE at Present Simple</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-white/20 p-1 rounded-xl backdrop-blur-md gap-1 text-sm font-semibold">
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn active px-3 py-1.5 rounded-lg transition-all duration-200">
+                    📖 Lesson
+                </button>
+                <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🔊 Audio & Words
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🎮 Practice
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- TAB 1: REVISION NOTES -->
+        <section id="sec-notes" class="space-y-6">
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-xl shadow-sm">
+                <h2 class="text-lg font-bold text-blue-900 font-fun">💡 Astuce Révision 5ème - Anglais</h2>
+                <p class="text-sm text-blue-800">Retiens bien la différence entre <strong>BE</strong> (pour être, se présenter, donner son âge/nationalité) et <strong>HAVE</strong> (pour posséder, décrire le physique et la famille) !</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Pronoms Personnels -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-blue-600">
+                        <span class="text-2xl">👤</span>
+                        <h3 class="text-xl font-bold font-fun">1. Subject Pronouns (Pronoms Sujets)</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">I</strong> = Je (⚠️ Toujours majuscule !)</div>
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">You</strong> = Tu / Vous (Masculin & Féminin)</div>
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">He</strong> = Il (Garçon / Homme)</div>
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">She</strong> = Elle (Fille / Femme)</div>
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">It</strong> = Il / Elle (Objet, Animal)</div>
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">We</strong> = Nous</div>
+                        <div class="p-2 bg-slate-50 rounded-lg"><strong class="text-blue-600">They</strong> = Ils / Elles</div>
+                    </div>
+                    <p class="text-xs text-amber-800 bg-amber-50 p-2 rounded-lg border border-amber-200">
+                        📌 <strong>À retenir :</strong> L'anglais ne fait pas la différence entre "tu" et "vous", on utilise toujours <strong>you</strong>.
+                    </p>
+                </div>
+
+                <!-- Card 2: Le Verbe BE -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-blue-600">
+                        <span class="text-2xl">✨</span>
+                        <h3 class="text-xl font-bold font-fun">2. Verb BE (Être)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-2">Pour se présenter, donner son âge, sa nationalité, sa personnalité :</p>
+                    <ul class="space-y-1.5 text-xs text-slate-700 mb-3">
+                        <li class="p-1.5 bg-blue-50 rounded-lg flex justify-between"><span>I <strong>am</strong> (12 years old)</span><span class="text-blue-600 font-bold">I'm</span></li>
+                        <li class="p-1.5 bg-blue-50 rounded-lg flex justify-between"><span>You <strong>are</strong> (very tall)</span><span class="text-blue-600 font-bold">You're</span></li>
+                        <li class="p-1.5 bg-blue-50 rounded-lg flex justify-between"><span>He / She / It <strong>is</strong> (happy)</span><span class="text-blue-600 font-bold">He's / She's / It's</span></li>
+                        <li class="p-1.5 bg-blue-50 rounded-lg flex justify-between"><span>We / You / They <strong>are</strong> (ready)</span><span class="text-blue-600 font-bold">We're / They're</span></li>
+                    </ul>
+                    <p class="text-xs text-slate-600 bg-slate-100 p-2 rounded-lg">
+                        ⚠️ <strong>Attention :</strong> Pour l'âge, on dit <em>I am 12 years old</em> (et NON "I have").
+                    </p>
+                </div>
+
+                <!-- Card 3: Le Verbe HAVE -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-blue-600">
+                        <span class="text-2xl">🎒</span>
+                        <h3 class="text-xl font-bold font-fun">3. Verb HAVE (Avoir)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-2">Pour parler de ce que l'on possède, décrire le physique ou la famille :</p>
+                    <ul class="space-y-1.5 text-xs text-slate-700 mb-3">
+                        <li class="p-1.5 bg-emerald-50 rounded-lg">I <strong>have</strong> a dog and two cats.</li>
+                        <li class="p-1.5 bg-emerald-50 rounded-lg">You <strong>have</strong> a blue backpack.</li>
+                        <li class="p-1.5 bg-amber-50 rounded-lg font-medium">He / She / It <strong>HAS</strong> dark eyes. <span class="text-red-500 font-bold">(Attention au 's' !)</span></li>
+                        <li class="p-1.5 bg-emerald-50 rounded-lg">We / You / They <strong>have</strong> good manners.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Études de Cas (Paddington & Wednesday) -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-blue-600">
+                        <span class="text-2xl">🐻</span>
+                        <h3 class="text-xl font-bold font-fun">4. Practice Examples (Modèles)</h3>
+                    </div>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong>Paddington:</strong> He <em>is</em> a bear from Peru. He <em>is</em> polite. He <em>has</em> a blue coat and a red hat.
+                        </div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong>Wednesday Addams:</strong> She <em>is</em> a student at Nevermore. She <em>is</em> serious. She <em>has</em> black hair and 1 brother.
+                        </div>
+                        <div class="p-2 bg-indigo-50 text-indigo-900 rounded-lg text-center font-medium">
+                            ✔ "It's true!" (C'est vrai !) / ✖ "It's false!" (C'est faux !)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: VOCABULARY & AUDIO -->
+        <section id="sec-vocab" class="hidden space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                <div>
+                    <h2 class="text-xl font-bold font-fun text-slate-800">English Audio & Pronunciation</h2>
+                    <p class="text-xs text-slate-500">Clique sur l'icône 🔊 pour écouter la prononciation authentique en anglais.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Voice / Voix :</label>
+                        <select id="audio-engine" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="gemini-Aoede" selected>✨ Voix IA - Aoede (Douce & Naturelle)</option>
+                            <option value="gemini-Zephyr">✨ Voix IA - Zephyr (Claire & Lumineuse)</option>
+                            <option value="gemini-Achird">✨ Voix IA - Achird (Chaleureuse)</option>
+                            <option value="gemini-Leda">✨ Voix IA - Leda (Expressive)</option>
+                            <option value="native">🇬🇧 Voix Système (Navigateur)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Speed / Vitesse :</label>
+                        <select id="audio-speed" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="0.6">Slow / Lente (0.6x)</option>
+                            <option value="1" selected>Normal / Normale (1x)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="flex flex-wrap gap-2 mb-4" id="vocab-category-filters">
+                <button onclick="filterVocab('all')" class="vocab-filter-btn bg-blue-600 text-white px-3 py-1.5 rounded-full text-xs font-semibold">Tous</button>
+                <button onclick="filterVocab('pronouns')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Pronoms Sujets</button>
+                <button onclick="filterVocab('verbs')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Formes BE & HAVE</button>
+                <button onclick="filterVocab('lesson')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Mots du cours</button>
+                <button onclick="filterVocab('sentences')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Phrases type</button>
+            </div>
+
+            <!-- Vocab Cards Grid -->
+            <div id="vocab-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- TAB 3: QUIZ & PRACTICE -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <!-- Game Mode Picker -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button onclick="startQuizMode('mcq')" class="p-4 bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-500 rounded-2xl text-left transition flex flex-col justify-between group">
+                    <div>
+                        <span class="text-3xl mb-2 block">📝</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-blue-600">QCM Grammaire</h3>
+                        <p class="text-xs text-slate-500">BE, HAVE, pronoms et contractions (10 questions tirées au sort).</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-blue-600">Start / Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('listening')" class="p-4 bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-500 rounded-2xl text-left transition flex flex-col justify-between group">
+                    <div>
+                        <span class="text-3xl mb-2 block">🎧</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-amber-600">Dictée / Écoute Audio</h3>
+                        <p class="text-xs text-slate-500">Écoute la phrase anglaise et trouve la bonne traduction.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-amber-600">Start / Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('express')" class="p-4 bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-500 rounded-2xl text-left transition flex flex-col justify-between group">
+                    <div>
+                        <span class="text-3xl mb-2 block">⚡</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-emerald-600">Speed Challenge: BE or HAVE</h3>
+                        <p class="text-xs text-slate-500">Choisis instantanément entre AM, IS, ARE, HAVE ou HAS.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-emerald-600">Start / Jouer →</span>
+                </button>
+            </div>
+
+            <!-- Quiz Box Display Container -->
+            <div id="quiz-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hidden">
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <span id="quiz-progress" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Question 1/10</span>
+                    <span id="quiz-score" class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Score : 0</span>
+                </div>
+
+                <div id="quiz-body">
+                    <!-- Dynamic question content -->
+                </div>
+
+                <div id="quiz-feedback" class="mt-4 p-3 rounded-xl hidden text-sm font-medium"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-q-btn" onclick="nextQuestion()" class="hidden bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow transition">
+                        Next Question / Suivante ➔
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        English 5º! - Application de révision conforme au programme d'Anglais 5ème (A1-A2)
+    </footer>
+
+    <script>
+        // --- DATA STRUCTURES ---
+        const vocabulary = [
+            // Pronouns
+            { text: "I", translation: "Je (toujours majuscule)", cat: "pronouns" },
+            { text: "You", translation: "Tu / Vous", cat: "pronouns" },
+            { text: "He", translation: "Il (garçon / homme)", cat: "pronouns" },
+            { text: "She", translation: "Elle (fille / femme)", cat: "pronouns" },
+            { text: "It", translation: "Il / Elle (chose, animal)", cat: "pronouns" },
+            { text: "We", translation: "Nous", cat: "pronouns" },
+            { text: "They", translation: "Ils / Elles", cat: "pronouns" },
+
+            // Verb BE & HAVE forms
+            { text: "I am", translation: "Je suis (contracté: I'm)", cat: "verbs" },
+            { text: "You are", translation: "Tu es / Vous êtes (contracté: You're)", cat: "verbs" },
+            { text: "He is", translation: "Il est (contracté: He's)", cat: "verbs" },
+            { text: "She is", translation: "Elle est (contracté: She's)", cat: "verbs" },
+            { text: "It is", translation: "C'est / Il est (contracté: It's)", cat: "verbs" },
+            { text: "We are", translation: "Nous sommes (contracté: We're)", cat: "verbs" },
+            { text: "They are", translation: "Ils/Elles sont (contracté: They're)", cat: "verbs" },
+            { text: "I have", translation: "J'ai", cat: "verbs" },
+            { text: "He has", translation: "Il a", cat: "verbs" },
+            { text: "She has", translation: "Elle a", cat: "verbs" },
+
+            // Words from Lesson
+            { text: "bear", translation: "un ours", cat: "lesson" },
+            { text: "student", translation: "un élève / étudiant", cat: "lesson" },
+            { text: "polite", translation: "poli(e)", cat: "lesson" },
+            { text: "kind", translation: "gentil(le)", cat: "lesson" },
+            { text: "good manners", translation: "de bonnes manières", cat: "lesson" },
+            { text: "blue coat", translation: "un manteau bleu", cat: "lesson" },
+            { text: "red hat", translation: "un chapeau rouge", cat: "lesson" },
+            { text: "dark eyes", translation: "des yeux foncés", cat: "lesson" },
+            { text: "black hair", translation: "des cheveux noirs", cat: "lesson" },
+            { text: "serious", translation: "sérieux / sérieuse", cat: "lesson" },
+            { text: "backpack", translation: "un sac à dos", cat: "lesson" },
+            { text: "marmalade", translation: "de la marmelade", cat: "lesson" },
+
+            // Sentences
+            { text: "I am twelve years old", translation: "J'ai 12 ans", cat: "sentences" },
+            { text: "She has two brothers", translation: "Elle a deux frères", cat: "sentences" },
+            { text: "We are ready for school", translation: "Nous sommes prêts pour l'école", cat: "sentences" },
+            { text: "I have a dog and two cats", translation: "J'ai un chien et deux chats", cat: "sentences" },
+            { text: "You are very tall", translation: "Tu es très grand(e)", cat: "sentences" },
+            { text: "I am super happy today", translation: "Je suis super content aujourd'hui", cat: "sentences" },
+            { text: "My classmates are very nice", translation: "Mes camarades de classe sont très gentils", cat: "sentences" },
+            { text: "He has a new blue backpack", translation: "Il a un nouveau sac à dos bleu", cat: "sentences" },
+            { text: "It's true!", translation: "C'est vrai !", cat: "sentences" },
+            { text: "It's false!", translation: "C'est faux !", cat: "sentences" }
+        ];
+
+        // Banque complète de 40+ questions de grammaire
+        const questionsMCQ = [
+            {
+                q: "Comment dit-on 'Je suis prêts pour la rentrée' ?",
+                options: ["I am ready", "I have ready", "I is ready", "I are ready"],
+                answer: 0,
+                explain: "Avec le pronom 'I', on utilise la forme 'am' du verbe BE."
+            },
+            {
+                q: "Quelle est la forme correcte : 'She ___ two brothers' ?",
+                options: ["have", "has", "is", "are"],
+                answer: 1,
+                explain: "Pour la 3ème personne du singulier (he/she/it), le verbe HAVE devient 'has'."
+            },
+            {
+                q: "Comment exprime-t-on l'âge en anglais ('J'ai 12 ans') ?",
+                options: ["I have 12 years old", "I am 12 years old", "I got 12 years old", "I has 12 years old"],
+                answer: 1,
+                explain: "En anglais, on utilise le verbe BE (être) pour exprimer l'âge !"
+            },
+            {
+                q: "Quelle est la contraction de 'we are' ?",
+                options: ["we's", "we'is", "we're", "we'm"],
+                answer: 2,
+                explain: "'we are' se contracte en 'we're'."
+            },
+            {
+                q: "Quelle est la forme du verbe BE avec 'My classmates' (plural) ?",
+                options: ["is", "am", "are", "has"],
+                answer: 2,
+                explain: "'My classmates' correspond au pronom 'they' (ils), donc on utilise 'are'."
+            },
+            {
+                q: "Complète : 'Paddington ___ a bear from Peru.'",
+                options: ["has", "is", "are", "have"],
+                answer: 1,
+                explain: "Paddington est un ours ('he is')."
+            },
+            {
+                q: "Complète : 'Paddington ___ good manners.'",
+                options: ["is", "are", "has", "have"],
+                answer: 2,
+                explain: "Pour parler d'une qualité ou possession, on dit 'he has good manners'."
+            },
+            {
+                q: "Quelle est la forme contractée de 'it is' ?",
+                options: ["it'are", "it's", "it'm", "its'"],
+                answer: 1,
+                explain: "'it is' devient 'it's'."
+            },
+            {
+                q: "Complète : 'You ___ very tall.'",
+                options: ["is", "are", "am", "has"],
+                answer: 1,
+                explain: "Le pronom 'you' s'utilise toujours avec 'are'."
+            },
+            {
+                q: "Quel pronom utilise-t-on pour parler d'un objet ou d'un animal ?",
+                options: ["he", "she", "it", "they"],
+                answer: 2,
+                explain: "Pour un objet ou un animal au singulier, on utilise 'it'."
+            },
+            {
+                q: "Complète : 'Wednesday Addams ___ black hair and dark eyes.'",
+                options: ["is", "are", "has", "have"],
+                answer: 2,
+                explain: "Pour décrire les caractéristiques physiques, on utilise 'has' (she has)."
+            },
+            {
+                q: "Comment traduit-on 'C'est vrai !' ?",
+                options: ["It's true!", "It's false!", "It have true!", "Is true!"],
+                answer: 0,
+                explain: "'C'est vrai !' se traduit par 'It's true!'."
+            },
+            {
+                q: "Quel est le pronom personnel sujet pour 'nous' ?",
+                options: ["you", "they", "we", "he"],
+                answer: 2,
+                explain: "'Nous' se traduit par 'we'."
+            },
+            {
+                q: "Le pronom 'I' (je) s'écrit-il toujours en majuscule ?",
+                options: ["Oui, toujours !", "Non, seulement en début de phrase", "Seulement dans les questions", "Jamais"],
+                answer: 0,
+                explain: "En anglais, le pronom 'I' prend TOUJOURS une majuscule !"
+            },
+            {
+                q: "Complète : 'He ___ a new blue backpack.'",
+                options: ["have", "is", "has", "are"],
+                answer: 2,
+                explain: "Il possède un sac à dos : 'He has'."
+            },
+            {
+                q: "Quelle est la contraction de 'I am' ?",
+                options: ["I'is", "I're", "I'm", "Im'"],
+                answer: 2,
+                explain: "'I am' se contracte en 'I'm'."
+            },
+            {
+                q: "Complète : 'They ___ very kind to him.'",
+                options: ["is", "are", "has", "am"],
+                answer: 1,
+                explain: "Avec 'they', le verbe BE devient 'are'."
+            },
+            {
+                q: "Complète : 'I ___ a dog and two cats.'",
+                options: ["am", "is", "have", "has"],
+                answer: 2,
+                explain: "J'ai (possession) : 'I have'."
+            },
+            {
+                q: "Comment se traduit 'Ils / Elles' en anglais ?",
+                options: ["we", "you", "they", "he"],
+                answer: 2,
+                explain: "'They' sert à la fois pour le masculin et le féminin pluriel."
+            },
+            {
+                q: "Complète : 'She ___ a student at Nevermore Academy.'",
+                options: ["are", "is", "have", "has"],
+                answer: 1,
+                explain: "Pour dire sa fonction/métier : 'She is a student'."
+            },
+            {
+                q: "Quelle est la forme correcte du verbe HAVE pour 'you' ?",
+                options: ["has", "have", "is", "are"],
+                answer: 1,
+                explain: "Avec 'you', la forme est 'have' (you have)."
+            },
+            {
+                q: "Complète : 'I ___ super happy today.'",
+                options: ["have", "is", "am", "are"],
+                answer: 2,
+                explain: "Pour exprimer un sentiment : 'I am super happy'."
+            },
+            {
+                q: "Comment traduit-on 'C'est faux !' ?",
+                options: ["It's false!", "It's true!", "It has false!", "Is false!"],
+                answer: 0,
+                explain: "'C'est faux !' se dit 'It's false!'."
+            },
+            {
+                q: "Quelle est la 3ème personne du singulier féminin ?",
+                options: ["he", "she", "it", "they"],
+                answer: 1,
+                explain: "'Elle' se dit 'she'."
+            },
+            {
+                q: "Complète : 'Paddington and the Browns ___ in London.'",
+                options: ["is", "are", "has", "am"],
+                answer: 1,
+                explain: "Paddington et les Browns représentent 'ils' (they), donc 'are'."
+            },
+            {
+                q: "Quelle est la forme du verbe HAVE avec 'we' ?",
+                options: ["has", "have", "is", "are"],
+                answer: 1,
+                explain: "Nous avons = 'We have'."
+            },
+            {
+                q: "Quelle est la forme du verbe HAVE avec 'he' ?",
+                options: ["have", "has", "is", "are"],
+                answer: 1,
+                explain: "Il a = 'He has'."
+            },
+            {
+                q: "Complète : 'He ___ a blue coat and a red hat.'",
+                options: ["is", "are", "has", "have"],
+                answer: 2,
+                explain: "Il porte / possède un manteau bleu : 'He has'."
+            },
+            {
+                q: "Quel mot signifie 'de bonnes manières' ?",
+                options: ["polite", "good manners", "kind", "serious"],
+                answer: 1,
+                explain: "'Good manners' signifie 'de bonnes manières'."
+            },
+            {
+                q: "Quel pronom signifie à la fois 'tu' et 'vous' ?",
+                options: ["I", "we", "they", "you"],
+                answer: 3,
+                explain: "En anglais, 'you' s'utilise aussi bien pour le tutoiement (tu) que le vouvoiement (vous)."
+            }
+        ];
+
+        // --- AUDIO ENGINE (HIGH QUALITY HUMAN SOUNDING VOICES) ---
+        let englishVoices = [];
+
+        function loadEnglishVoices() {
+            if (!('speechSynthesis' in window)) return;
+            const voices = window.speechSynthesis.getVoices();
+            // Prioritize high quality / natural english voices
+            englishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('en')).sort((a, b) => {
+                const nameA = a.name.toLowerCase();
+                const nameB = b.name.toLowerCase();
+                const premiumKeywords = ['google', 'natural', 'premium', 'enhanced', 'samantha', 'daniel', 'karen', 'serena'];
+                const scoreA = premiumKeywords.reduce((acc, kw) => acc + (nameA.includes(kw) ? 10 : 0), 0);
+                const scoreB = premiumKeywords.reduce((acc, kw) => acc + (nameB.includes(kw) ? 10 : 0), 0);
+                return scoreB - scoreA;
+            });
+        }
+
+        if ('speechSynthesis' in window) {
+            loadEnglishVoices();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = loadEnglishVoices;
+            }
+        }
+
+        // Helper to convert PCM 16-bit array to WAV Blob for Gemini TTS API
+        function pcmToWav(pcm16Array, sampleRate = 24000) {
+            const buffer = new ArrayBuffer(44 + pcm16Array.length * 2);
+            const view = new DataView(buffer);
+
+            function writeString(offset, string) {
+                for (let i = 0; i < string.length; i++) {
+                    view.setUint8(offset + i, string.charCodeAt(i));
+                }
+            }
+
+            writeString(0, 'RIFF');
+            view.setUint32(4, 36 + pcm16Array.length * 2, true);
+            writeString(8, 'WAVE');
+            writeString(12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true); // Raw PCM
+            view.setUint16(22, 1, true); // Mono
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2, true);
+            view.setUint16(32, 2, true);
+            view.setUint16(34, 16, true);
+            writeString(36, 'data');
+            view.setUint32(40, pcm16Array.length * 2, true);
+
+            for (let i = 0; i < pcm16Array.length; i++) {
+                view.setInt16(44 + i * 2, pcm16Array[i], true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        async function speakGeminiTTS(text, voiceName = "Aoede") {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+
+            // Natural human voice prompt without artificial robot stretching
+            const promptInstruction = speed < 1.0 
+                ? `Say this slowly, with clear articulation and a warm, natural human English pronunciation: "${text}"`
+                : `Say this with a warm, natural, fluent and friendly human English voice: "${text}"`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: promptInstruction }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            prebuiltVoiceConfig: { voiceName: voiceName }
+                        }
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            const part = result?.candidates?.[0]?.content?.parts?.[0];
+            const base64Data = part?.inlineData?.data;
+            const mimeType = part?.inlineData?.mimeType || "";
+
+            if (base64Data) {
+                const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+                
+                const binaryString = atob(base64Data);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                const pcm16 = new Int16Array(bytes.buffer);
+                const wavBlob = pcmToWav(pcm16, sampleRate);
+                const audioUrl = URL.createObjectURL(wavBlob);
+                const audio = new Audio(audioUrl);
+                audio.play();
+                return true;
+            }
+            return false;
+        }
+
+        async function speak(text) {
+            const engineSelect = document.getElementById('audio-engine');
+            const selectedVal = engineSelect ? engineSelect.value : 'gemini-Aoede';
+
+            if (selectedVal.startsWith('gemini-')) {
+                const voiceName = selectedVal.replace('gemini-', '');
+                try {
+                    const success = await speakGeminiTTS(text, voiceName);
+                    if (success) return;
+                } catch (err) {
+                    console.warn("Gemini TTS fallback to native voice:", err);
+                }
+            }
+
+            // Web Speech API fallback with high quality voice priority
+            if (!('speechSynthesis' in window)) return;
+
+            window.speechSynthesis.cancel(); // Cancel ongoing speech
+
+            if (englishVoices.length === 0) {
+                loadEnglishVoices();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+
+            const chosenVoice = englishVoices[0] || null;
+
+            if (chosenVoice) {
+                utterance.voice = chosenVoice;
+            }
+
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+            utterance.rate = speed;
+            utterance.pitch = 1.0;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // --- NAVIGATION ---
+        function switchTab(tabId) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            if(tabId === 'vocab') {
+                renderVocab('all');
+            }
+        }
+
+        // --- VOCABULARY RENDERER ---
+        function renderVocab(category) {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? vocabulary 
+                : vocabulary.filter(v => v.cat === category);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-3.5 rounded-xl border border-slate-100 shadow-sm flex items-center justify-between hover:border-blue-200 transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-800 text-base flex items-center gap-1.5">
+                            ${item.text}
+                        </div>
+                        <div class="text-xs text-slate-400 capitalize">${item.translation}</div>
+                    </div>
+                    <button onclick="speak('${item.text.replace(/'/g, "\\'")}')" class="p-2.5 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-lg transition" title="Listen / Écouter">
+                        🔊
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterVocab(cat) {
+            document.querySelectorAll('.vocab-filter-btn').forEach(b => {
+                b.classList.remove('bg-blue-600', 'text-white');
+                b.classList.add('bg-slate-200', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-slate-200', 'text-slate-700');
+            event.target.classList.add('bg-blue-600', 'text-white');
+
+            renderVocab(cat);
+        }
+
+        // --- QUIZ SYSTEM ---
+        let currentQuizMode = null;
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let activeQuestions = [];
+
+        function startQuizMode(mode) {
+            currentQuizMode = mode;
+            currentQuestionIndex = 0;
+            score = 0;
+
+            const container = document.getElementById('quiz-container');
+            container.classList.remove('hidden');
+
+            if (mode === 'mcq') {
+                // Tirage au sort de 10 questions parmi la banque de 30+ questions
+                activeQuestions = [...questionsMCQ].sort(() => 0.5 - Math.random()).slice(0, 10);
+            } else if (mode === 'listening') {
+                activeQuestions = generateListeningQuestions();
+            } else if (mode === 'express') {
+                activeQuestions = generateExpressQuestions();
+            }
+
+            updateScoreDisplay();
+            renderCurrentQuestion();
+        }
+
+        function generateListeningQuestions() {
+            // Sélectionne 10 éléments de vocabulaire au hasard
+            const shuffledVocab = [...vocabulary].sort(() => 0.5 - Math.random()).slice(0, 10);
+            
+            return shuffledVocab.map(item => {
+                const wrongList = vocabulary.filter(v => v.text !== item.text).sort(() => 0.5 - Math.random()).slice(0, 3);
+                const options = [item, ...wrongList].sort(() => 0.5 - Math.random());
+                return {
+                    isAudio: true,
+                    audioText: item.text,
+                    q: "Listen to the audio and pick the correct translation / Écoute l'anglais :",
+                    options: options.map(o => o.translation),
+                    answer: options.findIndex(o => o.text === item.text),
+                    explain: `The audio said : "${item.text}" (${item.translation}).`
+                };
+            });
+        }
+
+        function generateExpressQuestions() {
+            const expressData = [
+                { text: "I ___ a student.", options: ["am", "is", "are", "has"], answer: 0, exp: "I + am" },
+                { text: "She ___ two brothers.", options: ["have", "has", "is", "are"], answer: 1, exp: "She + has" },
+                { text: "We ___ ready for school.", options: ["is", "are", "am", "has"], answer: 1, exp: "We + are" },
+                { text: "Paddington ___ a blue coat.", options: ["is", "are", "has", "have"], answer: 2, exp: "Paddington (he) + has" },
+                { text: "They ___ very polite.", options: ["is", "are", "has", "am"], answer: 1, exp: "They + are" },
+                { text: "He ___ a new backpack.", options: ["have", "has", "am", "are"], answer: 1, exp: "He + has" },
+                { text: "Wednesday ___ dark eyes.", options: ["is", "has", "are", "have"], answer: 1, exp: "Wednesday (she) + has" },
+                { text: "You ___ very tall.", options: ["is", "am", "are", "has"], answer: 2, exp: "You + are" },
+                { text: "I ___ twelve years old.", options: ["have", "has", "am", "is"], answer: 2, exp: "Pour l'âge : I am" },
+                { text: "It ___ true!", options: ["is", "are", "has", "have"], answer: 0, exp: "It + is" }
+            ];
+
+            return expressData.sort(() => 0.5 - Math.random());
+        }
+
+        function updateScoreDisplay() {
+            document.getElementById('quiz-score').innerText = `Score : ${score}/${activeQuestions.length}`;
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuestionIndex + 1}/${activeQuestions.length}`;
+        }
+
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const body = document.getElementById('quiz-body');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            let html = `<h3 class="text-lg font-bold text-slate-800 mb-4">${q.q}</h3>`;
+
+            if (q.isAudio) {
+                html += `
+                    <div class="mb-4">
+                        <button onclick="speak('${q.audioText.replace(/'/g, "\\'")}')" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-medium shadow inline-flex items-center gap-2">
+                            🔊 Play Audio / Écouter
+                        </button>
+                    </div>
+                `;
+            } else if (q.text) {
+                html += `
+                    <div class="mb-4 p-4 bg-slate-100 rounded-xl text-center text-xl font-bold text-blue-900 border border-slate-200">
+                        ${q.text}
+                    </div>
+                `;
+            }
+
+            html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">`;
+            q.options.forEach((opt, idx) => {
+                html += `
+                    <button onclick="checkAnswer(${idx})" class="quiz-opt-btn text-left p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium transition">
+                        ${opt}
+                    </button>
+                `;
+            });
+            html += `</div>`;
+
+            body.innerHTML = html;
+
+            if (q.isAudio) {
+                setTimeout(() => speak(q.audioText), 300);
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            const q = activeQuestions[currentQuestionIndex];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            buttons.forEach(b => b.disabled = true);
+
+            if (selectedIndex === q.answer) {
+                score++;
+                buttons[selectedIndex].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `✅ <strong>Well done!</strong> ${q.explain || q.exp || ''}`;
+            } else {
+                buttons[selectedIndex].classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                buttons[q.answer].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200";
+                feedback.innerHTML = `❌ <strong>Not quite...</strong> ${q.explain || q.exp || ''}`;
+            }
+
+            feedback.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            updateScoreDisplay();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < activeQuestions.length) {
+                updateScoreDisplay();
+                renderCurrentQuestion();
+            } else {
+                renderFinalScore();
+            }
+        }
+
+        function renderFinalScore() {
+            const body = document.getElementById('quiz-body');
+            document.getElementById('next-q-btn').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const percentage = Math.round((score / activeQuestions.length) * 100);
+            let message = percentage >= 80 ? "Great job! 🏆 You master BE, HAVE and pronouns!" : "Keep practicing! Review the lesson notes and try again.";
+
+            body.innerHTML = `
+                <div class="text-center py-6">
+                    <span class="text-5xl mb-3 block">${percentage >= 80 ? '🏆' : '👍'}</span>
+                    <h3 class="text-2xl font-bold font-fun text-slate-800">Test Completed!</h3>
+                    <p class="text-lg font-semibold text-blue-600 mt-1">Your Score : ${score} / ${activeQuestions.length} (${percentage}%)</p>
+                    <p class="text-sm text-slate-600 mt-2">${message}</p>
+                    <button onclick="startQuizMode('${currentQuizMode}')" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow transition">
+                        Restart Quiz / Recommencer
+                    </button>
+                </div>
+            `;
+        }
+
+        // Initialize default tab
+        window.onload = function() {
+            switchTab('notes');
+        };
+    </script>
+</body>
+</html>
