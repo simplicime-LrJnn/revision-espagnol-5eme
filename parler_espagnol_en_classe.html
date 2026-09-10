@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Hablar español en clase! - Espagnol 5º</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, .font-fun { font-family: 'Fredoka', cursive; }
+        .tab-btn.active {
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🎒</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wide">¡Hablar español en clase!</h1>
+                    <p class="text-xs text-emerald-100">Espagnol 5ème - Comunicar en clase y El material escolar</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-black/20 p-1 rounded-xl backdrop-blur-md gap-1 text-sm font-semibold">
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn active px-3 py-1.5 rounded-lg transition-all duration-200">
+                    📖 Leçon
+                </button>
+                <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🔊 Audio & Vocab
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🎮 Entraînement
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- TAB 1: REVISION NOTES -->
+        <section id="sec-notes" class="space-y-6">
+            
+            <!-- Banner Intro -->
+            <div class="bg-emerald-100 border-l-4 border-emerald-600 p-4 rounded-r-xl shadow-sm">
+                <h2 class="text-lg font-bold text-emerald-900 font-fun">💡 Objetivo : Comunicarse en la clase de español</h2>
+                <p class="text-sm text-emerald-800">
+                    Savoir demander de l'aide, exprimer une permission avec <strong>« ¿Puedo...? »</strong>, connaître le matériel scolaire et comprendre toutes les consignes prof !
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1: Necesito Ayuda -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-emerald-700">
+                        <span class="text-2xl">🙋‍♂️</span>
+                        <h3 class="text-xl font-bold font-fun">1. Necesito ayuda (Demander de l'aide)</h3>
+                    </div>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-emerald-950 text-sm">¿Cómo se dice... en español?</strong>
+                                <p class="text-slate-600">Comment dit-on... en espagnol ?</p>
+                            </div>
+                            <button onclick="speak('¿Cómo se dice en español?')" class="p-2 bg-emerald-200 rounded-lg hover:bg-emerald-300">🔊</button>
+                        </div>
+                        <div class="p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-emerald-950 text-sm">¿Qué significa... en francés?</strong>
+                                <p class="text-slate-600">Que signifie... en français ?</p>
+                            </div>
+                            <button onclick="speak('¿Qué significa en francés?')" class="p-2 bg-emerald-200 rounded-lg hover:bg-emerald-300">🔊</button>
+                        </div>
+                        <div class="p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-emerald-950 text-sm">¡No entiendo! / ¡No comprendo!</strong>
+                                <p class="text-slate-600">Je ne comprends pas !</p>
+                            </div>
+                            <button onclick="speak('¡No entiendo! ¡No comprendo!')" class="p-2 bg-emerald-200 rounded-lg hover:bg-emerald-300">🔊</button>
+                        </div>
+                        <div class="p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 flex justify-between items-center">
+                            <div>
+                                <strong class="text-emerald-950 text-sm">¿Puede(s) repetir por favor?</strong>
+                                <p class="text-slate-600">Pouvez-vous / Peux-tu répéter s'il vous/te plaît ?</p>
+                            </div>
+                            <button onclick="speak('¿Puedes repetir por favor?')" class="p-2 bg-emerald-200 rounded-lg hover:bg-emerald-300">🔊</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Comunico en Clase (¿Puedo...?) -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-teal-700">
+                        <span class="text-2xl">✋</span>
+                        <h3 class="text-xl font-bold font-fun">2. Comunico en clase (Demander une autorisation)</h3>
+                    </div>
+                    <div class="space-y-1.5 text-xs">
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo corregir?</strong> = Puis-je corriger ?</p>
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo salir a la pizarra?</strong> = Puis-je aller au tableau ?</p>
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo abrir / cerrar la ventana?</strong> = Puis-je ouvrir / fermer la fenêtre ?</p>
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo abrir / cerrar la cortina?</strong> = Puis-je ouvrir / fermer le rideau ?</p>
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo encender / apagar la luz?</strong> = Puis-je allumer / éteindre la lumière ?</p>
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo tirar... a la papelera?</strong> = Puis-je jeter... à la poubelle ?</p>
+                        <p class="p-2 bg-slate-50 rounded-lg border">🔹 <strong>¿Puedo tener un pañuelo?</strong> = Puis-je avoir un mouchoir ?</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Mi Material Escolar -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition md:col-span-2">
+                    <div class="flex items-center gap-2 mb-3 text-cyan-700">
+                        <span class="text-2xl">✏️</span>
+                        <h3 class="text-xl font-bold font-fun">3. Mi material escolar (Les fournitures de classe)</h3>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 text-xs">
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">🎒 <strong>la mochila</strong> <span class="block text-slate-500 font-normal">le sac à dos</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">📖 <strong>el libro</strong> <span class="block text-slate-500 font-normal">le livre</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">📓 <strong>el cuaderno</strong> <span class="block text-slate-500 font-normal">le cahier</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">👝 <strong>el estuche</strong> <span class="block text-slate-500 font-normal">la trousse</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">🖊️ <strong>el bolígrafo</strong> <span class="block text-slate-500 font-normal">le stylo</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">✏️ <strong>el lápiz</strong> <span class="block text-slate-500 font-normal">le crayon</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">🖌️ <strong>el rotulador</strong> <span class="block text-slate-500 font-normal">le feutre</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">🧪 <strong>el pegamento</strong> <span class="block text-slate-500 font-normal">la colle</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">🏷️ <strong>el corrector</strong> <span class="block text-slate-500 font-normal">le blanc / tipex</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">✂️ <strong>las tijeras</strong> <span class="block text-slate-500 font-normal">les ciseaux</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">🧹 <strong>la goma</strong> <span class="block text-slate-500 font-normal">la gomme</span></div>
+                        <div class="p-2 bg-cyan-50 rounded-xl border border-cyan-200 font-medium">📏 <strong>la regla</strong> <span class="block text-slate-500 font-normal">la règle</span></div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Instrucciones / Consignes -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition md:col-span-2">
+                    <div class="flex items-center justify-between mb-3 text-indigo-700">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">📋</span>
+                            <h3 class="text-xl font-bold font-fun">4. Instrucciones en clase (Consignes du professeur)</h3>
+                        </div>
+                        <span class="text-xs bg-indigo-100 text-indigo-800 px-2.5 py-1 rounded-full font-semibold">A la izquierda ⬅️ | A la derecha ➡️</span>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs">
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">👀 MIRA</strong>
+                            <span class="text-slate-600">Regarde</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">📖 LEE</strong>
+                            <span class="text-slate-600">Lis</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">🎧 ESCUCHA</strong>
+                            <span class="text-slate-600">Écoute</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">✍️ ESCRIBE</strong>
+                            <span class="text-slate-600">Écris</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">❌ MARCA CON UNA CRUZ</strong>
+                            <span class="text-slate-600">Coche</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">🖊️ SUBRAYA</strong>
+                            <span class="text-slate-600">Souligne</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">🚫 TACHA</strong>
+                            <span class="text-slate-600">Barre</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">⭕ RODEA</strong>
+                            <span class="text-slate-600">Entoure</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">🔗 RELACIONA</strong>
+                            <span class="text-slate-600">Relie</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">✂️ CORTA</strong>
+                            <span class="text-slate-600">Coupe</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">🧪 PEGA</strong>
+                            <span class="text-slate-600">Colle</span>
+                        </div>
+                        <div class="p-2.5 bg-indigo-50/70 text-center rounded-xl border border-indigo-100">
+                            <strong class="block text-indigo-900 font-bold text-sm">🎨 PINTA</strong>
+                            <span class="text-slate-600">Colorie / Peins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: El Asistente & Disculparse -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-amber-700">
+                        <span class="text-2xl">🎓</span>
+                        <h3 class="text-xl font-bold font-fun">5. El asistente (L'assistant de classe)</h3>
+                    </div>
+                    <div class="space-y-1.5 text-xs">
+                        <p class="p-2 bg-amber-50 rounded-lg border border-amber-200">📌 <strong>¿Puedo escribir la fecha de hoy?</strong><br>Puis-je écrire la date d'aujourd'hui ?</p>
+                        <p class="p-2 bg-amber-50 rounded-lg border border-amber-200">📌 <strong>¿Puedo repartir los documentos?</strong><br>Puis-je distribuer les documents ?</p>
+                        <p class="p-2 bg-amber-50 rounded-lg border border-amber-200">📌 <strong>¿Puedo borrar la pizarra?</strong><br>Puis-je effacer le tableau ?</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Disculparse -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-red-600">
+                        <span class="text-2xl">🏃</span>
+                        <h3 class="text-xl font-bold font-fun">6. Disculparse (S'excuser)</h3>
+                    </div>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2.5 bg-red-50 rounded-xl border border-red-200">
+                            <strong class="text-red-900 text-sm">Siento llegar tarde. 🏃💨</strong>
+                            <p class="text-slate-600">Désolé(e) d'arriver en retard.</p>
+                        </div>
+                        <div class="p-2.5 bg-red-50 rounded-xl border border-red-200">
+                            <strong class="text-red-900 text-sm">Lo siento, no tengo mi cuaderno. 📓❌</strong>
+                            <p class="text-slate-600">Désolé(e), je n'ai pas mon cahier.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 2: VOCABULARY & AUDIO -->
+        <section id="sec-vocab" class="hidden space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+                <div>
+                    <h2 class="text-xl font-bold font-fun text-slate-800">Audio en Español Nativo</h2>
+                    <p class="text-xs text-slate-500">Écoute et répète les phrases de la classe, le matériel et les consignes.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Voz / Voix :</label>
+                        <select id="audio-engine" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="gemini-Aoede" selected>✨ Voix IA Studio - Aoede (Fluide)</option>
+                            <option value="gemini-Zephyr">✨ Voix IA Studio - Zephyr (Claire)</option>
+                            <option value="native">🇪🇸 Voix Espagnole Native (Système)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs text-slate-600 font-medium block sm:inline mr-1">Velocidad / Vitesse :</label>
+                        <select id="audio-speed" class="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1.5 font-medium text-slate-700">
+                            <option value="0.6">Lenta / Lente (0.6x)</option>
+                            <option value="1" selected>Normal / Normale (1x)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="flex flex-wrap gap-2 mb-4" id="vocab-category-filters">
+                <button onclick="filterVocab('all')" class="vocab-filter-btn bg-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-semibold">Tous</button>
+                <button onclick="filterVocab('ayuda')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Demander de l'aide</button>
+                <button onclick="filterVocab('permiso')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Autorisations (¿Puedo?)</button>
+                <button onclick="filterVocab('material')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Matériel Scolaire</button>
+                <button onclick="filterVocab('instrucciones')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Consignes / Ordres</button>
+                <button onclick="filterVocab('asistente')" class="vocab-filter-btn bg-slate-200 text-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold">Assistant & Excuses</button>
+            </div>
+
+            <!-- Vocab Cards Grid -->
+            <div id="vocab-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- TAB 3: QUIZ & PRACTICE -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <!-- Game Mode Picker -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button onclick="startQuizMode('mcq')" class="p-4 bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">📝</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-emerald-600">QCM Hablar en clase</h3>
+                        <p class="text-xs text-slate-500">10 questions tirées au sort parmi 40+ sur les demandes, consignes et fournitures.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-emerald-600">Start / Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('listening')" class="p-4 bg-white hover:bg-teal-50 border-2 border-slate-200 hover:border-teal-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">🎧</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-teal-600">Dictée Audio Espagnole</h3>
+                        <p class="text-xs text-slate-500">Écoute l'expression ou la consigne prononcée et trouve la bonne traduction.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-teal-600">Start / Jouer →</span>
+                </button>
+
+                <button onclick="startQuizMode('material')" class="p-4 bg-white hover:bg-cyan-50 border-2 border-slate-200 hover:border-cyan-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">✏️</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-cyan-600">Challenge Matériel & Consignes</h3>
+                        <p class="text-xs text-slate-500">Test rapide de vocabulaire sur les fournitures et verbes d'action.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-cyan-600">Start / Jouer →</span>
+                </button>
+            </div>
+
+            <!-- Quiz Box Display Container -->
+            <div id="quiz-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hidden">
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <span id="quiz-progress" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Question 1/10</span>
+                    <span id="quiz-score" class="text-xs font-bold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">Score : 0</span>
+                </div>
+
+                <div id="quiz-body">
+                    <!-- Dynamic question content -->
+                </div>
+
+                <div id="quiz-feedback" class="mt-4 p-3 rounded-xl hidden text-sm font-medium"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-q-btn" onclick="nextQuestion()" class="hidden bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow transition">
+                        Siguiente / Suivante ➔
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        ¡Hablar español en clase! - Espagnol 5º (Ficha de clase)
+    </footer>
+
+    <script>
+        const vocabulary = [
+            // Ayuda
+            { text: "¿Cómo se dice... en español?", translation: "Comment dit-on... en espagnol ?", cat: "ayuda" },
+            { text: "¿Qué significa... en francés?", translation: "Que signifie... en français ?", cat: "ayuda" },
+            { text: "¡No entiendo!", translation: "Je ne comprends pas !", cat: "ayuda" },
+            { text: "¡No comprendo!", translation: "Je ne comprends pas !", cat: "ayuda" },
+            { text: "¿Puedes repetir por favor?", translation: "Peux-tu répéter s'il te plaît ?", cat: "ayuda" },
+
+            // Permiso / Comunico
+            { text: "¿Puedo corregir?", translation: "Puis-je corriger ?", cat: "permiso" },
+            { text: "¿Puedo salir a la pizarra?", translation: "Puis-je aller au tableau ?", cat: "permiso" },
+            { text: "¿Puedo abrir la ventana?", translation: "Puis-je ouvrir la fenêtre ?", cat: "permiso" },
+            { text: "¿Puedo cerrar la ventana?", translation: "Puis-je fermer la fenêtre ?", cat: "permiso" },
+            { text: "¿Puedo abrir la cortina?", translation: "Puis-je ouvrir le rideau ?", cat: "permiso" },
+            { text: "¿Puedo cerrar la cortina?", translation: "Puis-je fermer le rideau ?", cat: "permiso" },
+            { text: "¿Puedo encender la luz?", translation: "Puis-je allumer la lumière ?", cat: "permiso" },
+            { text: "¿Puedo apagar la luz?", translation: "Puis-je éteindre la lumière ?", cat: "permiso" },
+            { text: "¿Puedo tirar a la papelera?", translation: "Puis-je jeter à la poubelle ?", cat: "permiso" },
+            { text: "¿Puedo tener un pañuelo?", translation: "Puis-je avoir un mouchoir ?", cat: "permiso" },
+
+            // Material Escolar
+            { text: "la mochila", translation: "le sac à dos", cat: "material" },
+            { text: "el libro", translation: "le livre", cat: "material" },
+            { text: "el cuaderno", translation: "le cahier", cat: "material" },
+            { text: "el estuche", translation: "la trousse", cat: "material" },
+            { text: "el pegamento", translation: "la colle", cat: "material" },
+            { text: "el lápiz", translation: "le crayon", cat: "material" },
+            { text: "el bolígrafo", translation: "le stylo", cat: "material" },
+            { text: "el corrector", translation: "le blanco / tipex", cat: "material" },
+            { text: "las tijeras", translation: "les ciseaux", cat: "material" },
+            { text: "el rotulador", translation: "le feutre", cat: "material" },
+            { text: "la goma", translation: "la gomme", cat: "material" },
+            { text: "la regla", translation: "la règle", cat: "material" },
+
+            // Instrucciones
+            { text: "Mira", translation: "Regarde", cat: "instrucciones" },
+            { text: "Lee", translation: "Lis", cat: "instrucciones" },
+            { text: "Escucha", translation: "Écoute", cat: "instrucciones" },
+            { text: "Escribe", translation: "Écris", cat: "instrucciones" },
+            { text: "Marca con una cruz", translation: "Coche / Marque d'une croix", cat: "instrucciones" },
+            { text: "Subraya", translation: "Souligne", cat: "instrucciones" },
+            { text: "Tacha", translation: "Barre", cat: "instrucciones" },
+            { text: "Rodea", translation: "Entoure", cat: "instrucciones" },
+            { text: "Relaciona", translation: "Relie", cat: "instrucciones" },
+            { text: "Corta", translation: "Coupe", cat: "instrucciones" },
+            { text: "Pega", translation: "Colle", cat: "instrucciones" },
+            { text: "Pinta", translation: "Colorie / Peins", cat: "instrucciones" },
+            { text: "A la izquierda", translation: "À gauche", cat: "instrucciones" },
+            { text: "A la derecha", translation: "À droite", cat: "instrucciones" },
+
+            // Asistente & Disculparse
+            { text: "¿Puedo escribir la fecha de hoy?", translation: "Puis-je écrire la date d'aujourd'hui ?", cat: "asistente" },
+            { text: "¿Puedo repartir los documentos?", translation: "Puis-je distribuer les documents ?", cat: "asistente" },
+            { text: "¿Puedo borrar la pizarra?", translation: "Puis-je effacer le tableau ?", cat: "asistente" },
+            { text: "Siento llegar tarde", translation: "Désolé(e) d'arriver en retard", cat: "asistente" },
+            { text: "Lo siento, no tengo mi cuaderno", translation: "Désolé(e), je n'ai pas mon cahier", cat: "asistente" }
+        ];
+
+        const questionsMCQ = [
+            {
+                q: "Comment demande-t-on 'Comment dit-on... en espagnol ?'",
+                options: ["¿Cómo se dice... en español?", "¿Qué significa... en francés?", "¿Puedes repetir por favor?", "¿Puedo salir?"],
+                answer: 0,
+                explain: "'¿Cómo se dice... en español?' permet de demander un mot en espagnol."
+            },
+            {
+                q: "Que signifie '¿Qué significa... en francés?'",
+                options: ["Que signifie... en français ?", "Comment dit-on... en espagnol ?", "Peux-tu répéter ?", "Je ne comprends pas !"],
+                answer: 0,
+                explain: "'¿Qué significa...?' demande le sens d'un mot espagnol en français."
+            },
+            {
+                q: "Comment dit-on 'Je ne comprends pas !' en espagnol ?",
+                options: ["¡No entiendo! / ¡No comprendo!", "¡No tengo mi cuaderno!", "¡No puedo salir!", "¡Siento llegar tarde!"],
+                answer: 0,
+                explain: "On peut dire '¡No entiendo!' ou '¡No comprendo!'."
+            },
+            {
+                q: "Quelle est la bonne formule pour demander 'Puis-je effacer le tableau ?'",
+                options: ["¿Puedo borrar la pizarra?", "¿Puedo salir a la pizarra?", "¿Puedo escribir la fecha?", "¿Puedo repartir los documentos?"],
+                answer: 0,
+                explain: "'Borrar' signifie effacer et 'la pizarra' le tableau."
+            },
+            {
+                q: "Comment demande-t-on 'Puis-je aller au tableau ?'",
+                options: ["¿Puedo salir a la pizarra?", "¿Puedo borrar la pizarra?", "¿Puedo abrir la ventana?", "¿Puedo corregir?"],
+                answer: 0,
+                explain: "'Salir a la pizarra' signifie passer / aller au tableau."
+            },
+            {
+                q: "Que veut dire '¿Puedo encender la luz?'",
+                options: ["Puis-je allumer la lumière ?", "Puis-je éteindre la lumière ?", "Puis-je ouvrir le rideau ?", "Puis-je fermer la fenêtre ?"],
+                answer: 0,
+                explain: "'Encender' signifie allumer."
+            },
+            {
+                q: "Que veut dire '¿Puedo apagar la luz?'",
+                options: ["Puis-je éteindre la lumière ?", "Puis-je allumer la lumière ?", "Puis-je jeter à la poubelle ?", "Puis-je avoir un mouchoir ?"],
+                answer: 0,
+                explain: "'Apagar' signifie éteindre."
+            },
+            {
+                q: "Comment demande-t-on 'Puis-je jeter à la poubelle ?'",
+                options: ["¿Puedo tirar a la papelera?", "¿Puedo tener un pañuelo?", "¿Puedo repartir los documentos?", "¿Puedo abrir la cortina?"],
+                answer: 0,
+                explain: "'La papelera' signifie la poubelle."
+            },
+            {
+                q: "Comment dit-on 'les ciseaux' en espagnol ?",
+                options: ["las tijeras", "el estuche", "el pegamento", "la regla"],
+                answer: 0,
+                explain: "'Las tijeras' est un nom féminin pluriel signifiant les ciseaux."
+            },
+            {
+                q: "Comment traduit-on 'le sac à dos' ?",
+                options: ["la mochila", "el cuaderno", "el libro", "la goma"],
+                answer: 0,
+                explain: "'La mochila' désigne le sac à dos."
+            },
+            {
+                q: "Que signifie la consigne 'MARCA CON UNA CRUZ' ?",
+                options: ["Coche / Marque d'une croix", "Souligne", "Entoure", "Barre"],
+                answer: 0,
+                explain: "'Marca con una cruz' demande de cocher d'une croix."
+            },
+            {
+                q: "Que signifie la consigne 'SUBRAYA' ?",
+                options: ["Souligne", "Surligne", "Entoure", "Efface"],
+                answer: 0,
+                explain: "'Subraya' vient du verbe subrayar (souligner)."
+            },
+            {
+                q: "Que signifie la consigne 'RODEA' ?",
+                options: ["Entoure", "Souligne", "Barre", "Relie"],
+                answer: 0,
+                explain: "'Rodea' signifie entoure !"
+            },
+            {
+                q: "Que signifie la consigne 'TACHA' ?",
+                options: ["Barre", "Coche", "Colle", "Lis"],
+                answer: 0,
+                explain: "'Tacha' veut dire barre / raye."
+            },
+            {
+                q: "Que signifie la consigne 'RELACIONA' ?",
+                options: ["Relie", "Raconte", "Trouve", "Colorie"],
+                answer: 0,
+                explain: "'Relaciona' signifie relie (les éléments entre eux)."
+            },
+            {
+                q: "Que veut dire 'CORTA' et 'PEGA' ?",
+                options: ["Coupe et Colle", "Coche et Souligne", "Lis et Écris", "Regarde et Écoute"],
+                answer: 0,
+                explain: "Cortar = couper, Pegar = coller."
+            },
+            {
+                q: "Que signifie 'PINTA' ?",
+                options: ["Colorie / Peins", "Dessine", "Découpe", "Coche"],
+                answer: 0,
+                explain: "'Pinta' signifie colorie ou peins !"
+            },
+            {
+                q: "Comment s'excuse-t-on d'être en retard ?",
+                options: ["Siento llegar tarde.", "Lo siento, no tengo mi cuaderno.", "No comprendo nada.", "Puedo salir tarde."],
+                answer: 0,
+                explain: "'Siento llegar tarde' = Désolé d'arriver en retard."
+            },
+            {
+                q: "Comment dit un élève s'il a oublié son cahier ?",
+                options: ["Lo siento, no tengo mi cuaderno.", "Siento llegar tarde.", "No entiendo mi libro.", "¿Puedo borrar el cuaderno?"],
+                answer: 0,
+                explain: "'Lo siento, no tengo mi cuaderno' est la formule exacte."
+            },
+            {
+                q: "Quelle est la traduction de 'A la izquierda' ?",
+                options: ["À gauche", "À droite", "En haut", "Au milieu"],
+                answer: 0,
+                explain: "'A la izquierda' signifie à gauche."
+            },
+            {
+                q: "Quelle est la traduction de 'A la derecha' ?",
+                options: ["À droite", "À gauche", "Derrière", "Devant"],
+                answer: 0,
+                explain: "'A la derecha' signifie à droite."
+            },
+            {
+                q: "Comment dit-on 'le blanc / tipex' en espagnol ?",
+                options: ["el corrector", "el pegamento", "el rotulador", "la goma"],
+                answer: 0,
+                explain: "'El corrector' est le blanc ou tipex."
+            },
+            {
+                q: "Comment dit-on 'la colle' en espagnol ?",
+                options: ["el pegamento", "el estuche", "el rotulador", "la regla"],
+                answer: 0,
+                explain: "'El pegamento' désigne la colle."
+            },
+            {
+                q: "Comment dit-on 'le feutre' ?",
+                options: ["el rotulador", "el lápiz", "el bolígrafo", "el libro"],
+                answer: 0,
+                explain: "'El rotulador' est le feutre."
+            },
+            {
+                q: "Que propose l'assistant avec '¿Puedo repartir los documentos?'",
+                options: ["Puis-je distribuer les documents ?", "Puis-je ramasser les devoirs ?", "Puis-je effacer le tableau ?", "Puis-je lire le texte ?"],
+                answer: 0,
+                explain: "'Repartir los documentos' = distribuer les documents."
+            },
+            {
+                q: "Que propose l'assistant avec '¿Puedo escribir la fecha de hoy?'",
+                options: ["Puis-je écrire la date d'aujourd'hui ?", "Puis-je lire la date ?", "Puis-je écrire mon nom ?", "Puis-je effacer la date ?"],
+                answer: 0,
+                explain: "'Escribir la fecha de hoy' = écrire la date d'aujourd'hui."
+            },
+            {
+                q: "Que signifie '¿Puedo abrir / cerrar la cortina?'",
+                options: ["Puis-je ouvrir / fermer le rideau ?", "Puis-je ouvrir / fermer la porte ?", "Puis-je ouvrir / fermer la fenêtre ?", "Puis-je allumer la lumière ?"],
+                answer: 0,
+                explain: "'La cortina' signifie le rideau."
+            },
+            {
+                q: "Complète la phrase : '¿Puedo salir a la ___?'",
+                options: ["pizarra", "papelera", "ventana", "mochila"],
+                answer: 0,
+                explain: "'Salir a la pizarra' = aller au tableau."
+            },
+            {
+                q: "Complète la phrase : '¿Puedo tirar a la ___?'",
+                options: ["papelera", "pizarra", "cortina", "luz"],
+                answer: 0,
+                explain: "'Tirar a la papelera' = jeter à la poubelle."
+            },
+            {
+                q: "Que signifie 'ESCUCHA' ?",
+                options: ["Écoute", "Regarde", "Lis", "Écris"],
+                answer: 0,
+                explain: "'Escucha' vient du verbe escuchar (écouter)."
+            },
+            {
+                q: "Que signifie 'LEE' ?",
+                options: ["Lis", "Écris", "Regarde", "Souligne"],
+                answer: 0,
+                explain: "'Lee' vient du verbe leer (lire)."
+            },
+            {
+                q: "Que signifie 'MIRA' ?",
+                options: ["Regarde", "Écoute", "Dessine", "Cherche"],
+                answer: 0,
+                explain: "'Mira' vient du verbe mirar (regarder)."
+            },
+            {
+                q: "Que signifie 'ESCRIBE' ?",
+                options: ["Écris", "Lis", "Entoure", "Souligne"],
+                answer: 0,
+                explain: "'Escribe' vient du verbe escribir (écrire)."
+            },
+            {
+                q: "Comment dit-on 'la trousse' en espagnol ?",
+                options: ["el estuche", "la mochila", "el cuaderno", "la regla"],
+                answer: 0,
+                explain: "'El estuche' désigne la trousse."
+            },
+            {
+                q: "Comment dit-on 'la gomme' en espagnol ?",
+                options: ["la goma", "el pegamento", "la regla", "las tijeras"],
+                answer: 0,
+                explain: "'La goma' est la gomme."
+            },
+            {
+                q: "Comment dit-on 'la règle' en espagnol ?",
+                options: ["la regla", "el lápiz", "el bolígrafo", "el cuaderno"],
+                answer: 0,
+                explain: "'La regla' désigne la règle."
+            },
+            {
+                q: "Quelle est la différence entre 'abrir' et 'cerrar' ?",
+                options: ["Ouvrir vs Fermer", "Allumer vs Éteindre", "Monter vs Descendre", "Écrire vs Effacer"],
+                answer: 0,
+                explain: "Abrir = ouvrir, Cerrar = fermer."
+            },
+            {
+                q: "Quelle est la différence entre 'encender' et 'apagar' ?",
+                options: ["Allumer vs Éteindre", "Ouvrir vs Fermer", "Entrer vs Sortir", "Prendre vs Jeter"],
+                answer: 0,
+                explain: "Encender = allumer, Apagar = éteindre."
+            },
+            {
+                q: "Que signifie '¿Puedo tener un pañuelo?'",
+                options: ["Puis-je avoir un mouchoir ?", "Puis-je avoir un stylo ?", "Puis-je emprunter une règle ?", "Puis-je avoir de l'eau ?"],
+                answer: 0,
+                explain: "'Un pañuelo' est un mouchoir."
+            },
+            {
+                q: "Comment dit-on 'le crayon' (de bois) en espagnol ?",
+                options: ["el lápiz", "el bolígrafo", "el rotulador", "el pegamento"],
+                answer: 0,
+                explain: "'El lápiz' est le crayon à papier."
+            }
+        ];
+
+        let spanishVoices = [];
+
+        function loadSpanishVoices() {
+            if (!('speechSynthesis' in window)) return;
+            const voices = window.speechSynthesis.getVoices();
+            spanishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('es')).sort((a, b) => {
+                const nameA = a.name.toLowerCase();
+                const nameB = b.name.toLowerCase();
+                const priority = ['google', 'mónica', 'jorge', 'monica', 'paulina', 'diego', 'natural', 'es-es', 'es-mx'];
+                const scoreA = priority.reduce((acc, kw) => acc + (nameA.includes(kw) ? 10 : 0), 0);
+                const scoreB = priority.reduce((acc, kw) => acc + (nameB.includes(kw) ? 10 : 0), 0);
+                return scoreB - scoreA;
+            });
+        }
+
+        if ('speechSynthesis' in window) {
+            loadSpanishVoices();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = loadSpanishVoices;
+            }
+        }
+
+        function pcmToWav(pcm16Array, sampleRate = 24000) {
+            const buffer = new ArrayBuffer(44 + pcm16Array.length * 2);
+            const view = new DataView(buffer);
+
+            function writeString(offset, string) {
+                for (let i = 0; i < string.length; i++) {
+                    view.setUint8(offset + i, string.charCodeAt(i));
+                }
+            }
+
+            writeString(0, 'RIFF');
+            view.setUint32(4, 36 + pcm16Array.length * 2, true);
+            writeString(8, 'WAVE');
+            writeString(12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true);
+            view.setUint16(22, 1, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2, true);
+            view.setUint16(32, 2, true);
+            view.setUint16(34, 16, true);
+            writeString(36, 'data');
+            view.setUint32(40, pcm16Array.length * 2, true);
+
+            for (let i = 0; i < pcm16Array.length; i++) {
+                view.setInt16(44 + i * 2, pcm16Array[i], true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        async function speakGeminiTTS(text, voiceName = "Aoede") {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+
+            const promptInstruction = speed < 1.0 
+                ? `Di esto con pronunciación nativa de España, marcando bien cada palabra de forma pausada y muy clara: "${text}"`
+                : `Di esto con una voz en español nativo, cálida, fluida y natural: "${text}"`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: promptInstruction }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            prebuiltVoiceConfig: { voiceName: voiceName }
+                        }
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            const part = result?.candidates?.[0]?.content?.parts?.[0];
+            const base64Data = part?.inlineData?.data;
+            const mimeType = part?.inlineData?.mimeType || "";
+
+            if (base64Data) {
+                const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+                
+                const binaryString = atob(base64Data);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                const pcm16 = new Int16Array(bytes.buffer);
+                const wavBlob = pcmToWav(pcm16, sampleRate);
+                const audioUrl = URL.createObjectURL(wavBlob);
+                const audio = new Audio(audioUrl);
+                audio.playbackRate = speed;
+                audio.play();
+                return true;
+            }
+            return false;
+        }
+
+        async function speak(text) {
+            const engineSelect = document.getElementById('audio-engine');
+            const selectedVal = engineSelect ? engineSelect.value : 'gemini-Aoede';
+
+            if (selectedVal.startsWith('gemini-')) {
+                const voiceName = selectedVal.replace('gemini-', '');
+                try {
+                    const success = await speakGeminiTTS(text, voiceName);
+                    if (success) return;
+                } catch (err) {
+                    console.warn("Gemini TTS fallback to native voice:", err);
+                }
+            }
+
+            if (!('speechSynthesis' in window)) return;
+
+            window.speechSynthesis.cancel();
+
+            if (spanishVoices.length === 0) {
+                loadSpanishVoices();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'es-ES';
+
+            if (spanishVoices.length > 0) {
+                utterance.voice = spanishVoices[0];
+            }
+
+            const rateSelect = document.getElementById('audio-speed');
+            const speed = parseFloat(rateSelect ? rateSelect.value : 1.0);
+            utterance.rate = speed;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            if(tabId === 'vocab') {
+                renderVocab('all');
+            }
+        }
+
+        function renderVocab(category) {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? vocabulary 
+                : vocabulary.filter(v => v.cat === category);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between hover:border-emerald-300 transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-800 text-base flex items-center gap-1.5">
+                            ${item.text}
+                        </div>
+                        <div class="text-xs text-slate-500 capitalize">${item.translation}</div>
+                    </div>
+                    <button onclick="speak('${item.text.replace(/'/g, "\\'")}')" class="p-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg transition" title="Escuchar">
+                        🔊
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterVocab(cat) {
+            document.querySelectorAll('.vocab-filter-btn').forEach(b => {
+                b.classList.remove('bg-emerald-600', 'text-white');
+                b.classList.add('bg-slate-200', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-slate-200', 'text-slate-700');
+            event.target.classList.add('bg-emerald-600', 'text-white');
+
+            renderVocab(cat);
+        }
+
+        let currentQuizMode = null;
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let activeQuestions = [];
+
+        function startQuizMode(mode) {
+            currentQuizMode = mode;
+            currentQuestionIndex = 0;
+            score = 0;
+
+            const container = document.getElementById('quiz-container');
+            container.classList.remove('hidden');
+
+            if (mode === 'mcq') {
+                activeQuestions = [...questionsMCQ].sort(() => 0.5 - Math.random()).slice(0, 10);
+            } else if (mode === 'listening') {
+                activeQuestions = generateListeningQuestions();
+            } else if (mode === 'material') {
+                activeQuestions = generateMaterialQuestions();
+            }
+
+            updateScoreDisplay();
+            renderCurrentQuestion();
+        }
+
+        function generateListeningQuestions() {
+            const shuffledVocab = [...vocabulary].sort(() => 0.5 - Math.random()).slice(0, 10);
+            
+            return shuffledVocab.map(item => {
+                const wrongList = vocabulary.filter(v => v.text !== item.text).sort(() => 0.5 - Math.random()).slice(0, 3);
+                const options = [item, ...wrongList].sort(() => 0.5 - Math.random());
+                return {
+                    isAudio: true,
+                    audioText: item.text,
+                    q: "Écoute l'expression ou la consigne en espagnol et choisis sa traduction :",
+                    options: options.map(o => o.translation),
+                    answer: options.findIndex(o => o.text === item.text),
+                    explain: `L'enregistrement disait : "${item.text}" (${item.translation}).`
+                };
+            });
+        }
+
+        function generateMaterialQuestions() {
+            const matList = vocabulary.filter(v => v.cat === 'material' || v.cat === 'instrucciones');
+            const shuffled = [...matList].sort(() => 0.5 - Math.random()).slice(0, 10);
+
+            return shuffled.map(item => {
+                const wrongList = matList.filter(v => v.text !== item.text).sort(() => 0.5 - Math.random()).slice(0, 3);
+                const options = [item, ...wrongList].sort(() => 0.5 - Math.random());
+                return {
+                    text: item.text,
+                    q: `Quelle est la traduction française de : « ${item.text} » ?`,
+                    options: options.map(o => o.translation),
+                    answer: options.findIndex(o => o.text === item.text),
+                    explain: `« ${item.text} » se traduit par : ${item.translation}.`
+                };
+            });
+        }
+
+        function updateScoreDisplay() {
+            document.getElementById('quiz-score').innerText = `Score : ${score}/${activeQuestions.length}`;
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuestionIndex + 1}/${activeQuestions.length}`;
+        }
+
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const body = document.getElementById('quiz-body');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            let html = `<h3 class="text-lg font-bold text-slate-800 mb-4">${q.q}</h3>`;
+
+            if (q.isAudio) {
+                html += `
+                    <div class="mb-4">
+                        <button onclick="speak('${q.audioText.replace(/'/g, "\\'")}')" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium shadow inline-flex items-center gap-2">
+                            🔊 Escuchar / Écouter
+                        </button>
+                    </div>
+                `;
+            } else if (q.text) {
+                html += `
+                    <div class="mb-4 p-4 bg-emerald-50 rounded-xl text-center text-xl font-bold text-emerald-950 border border-emerald-200">
+                        ${q.text}
+                    </div>
+                `;
+            }
+
+            html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">`;
+            q.options.forEach((opt, idx) => {
+                html += `
+                    <button onclick="checkAnswer(${idx})" class="quiz-opt-btn text-left p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium transition">
+                        ${opt}
+                    </button>
+                `;
+            });
+            html += `</div>`;
+
+            body.innerHTML = html;
+
+            if (q.isAudio) {
+                setTimeout(() => speak(q.audioText), 300);
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            const q = activeQuestions[currentQuestionIndex];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            buttons.forEach(b => b.disabled = true);
+
+            if (selectedIndex === q.answer) {
+                score++;
+                buttons[selectedIndex].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `✅ <strong>¡Muy bien!</strong> ${q.explain || ''}`;
+            } else {
+                buttons[selectedIndex].classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                buttons[q.answer].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-3 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200";
+                feedback.innerHTML = `❌ <strong>¡Casi!</strong> ${q.explain || ''}`;
+            }
+
+            feedback.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            updateScoreDisplay();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < activeQuestions.length) {
+                updateScoreDisplay();
+                renderCurrentQuestion();
+            } else {
+                renderFinalScore();
+            }
+        }
+
+        function renderFinalScore() {
+            const body = document.getElementById('quiz-body');
+            document.getElementById('next-q-btn').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const percentage = Math.round((score / activeQuestions.length) * 100);
+            let message = percentage >= 80 ? "¡Excelente! 🏆 ¡Dominas las expresiones de clase!" : "¡Sigue practicando! Revisa la lección y el material escolar.";
+
+            body.innerHTML = `
+                <div class="text-center py-6">
+                    <span class="text-5xl mb-3 block">${percentage >= 80 ? '🏆' : '👍'}</span>
+                    <h3 class="text-2xl font-bold font-fun text-slate-800">¡Test Finalizado!</h3>
+                    <p class="text-lg font-semibold text-emerald-600 mt-1">Score : ${score} / ${activeQuestions.length} (${percentage}%)</p>
+                    <p class="text-sm text-slate-600 mt-2">${message}</p>
+                    <button onclick="startQuizMode('${currentQuizMode}')" class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow transition">
+                        Recommencer le quiz 🔄
+                    </button>
+                </div>
+            `;
+        }
+
+        window.onload = function() {
+            switchTab('notes');
+        };
+    </script>
+</body>
+</html>
