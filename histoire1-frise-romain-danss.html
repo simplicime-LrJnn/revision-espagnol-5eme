@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire-Géo : Frise, Chiffres Romains & Méthode DANSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, .font-fun { font-family: 'Fredoka', cursive; }
+        .tab-btn.active {
+            background-color: #0284c7;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-sky-700 via-indigo-700 to-amber-700 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="text-4xl">🏛️</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wide">Histoire-Géographie : Repères & Méthodes</h1>
+                    <p class="text-xs text-sky-100">Frise chronologique, Chiffres romains & Présentation de document (DANSS)</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-black/20 p-1 rounded-xl backdrop-blur-md gap-1 text-sm font-semibold">
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn active px-3 py-1.5 rounded-lg transition-all duration-200">
+                    📖 Leçons & Repères
+                </button>
+                <button onclick="switchTab('tools')" id="tab-tools" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🛠️ Outils Interactifs
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🎯 Tests & Quizzes
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- TAB 1: REVISION NOTES -->
+        <section id="sec-notes" class="space-y-6">
+            
+            <!-- Intro Banner -->
+            <div class="bg-sky-100 border-l-4 border-sky-600 p-4 rounded-r-xl shadow-sm">
+                <h2 class="text-lg font-bold text-sky-900 font-fun">📜 Les Outils Fondamentaux de l'Historien</h2>
+                <p class="text-sm text-sky-800">
+                    Pour réussir en histoire, il faut savoir <strong>se repérer dans le temps</strong> (frise & chiffres romains) et savoir <strong>présenter un document historique</strong> grâce à la méthode <strong>DANSS</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1: La Frise Chronologique -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition md:col-span-2">
+                    <div class="flex items-center gap-2 mb-3 text-sky-700">
+                        <span class="text-2xl">⏳</span>
+                        <h3 class="text-xl font-bold font-fun">1. La Frise Chronologique et les 5 Périodes</h3>
+                    </div>
+                    
+                    <p class="text-xs text-slate-600 mb-4">
+                        La frise est un outil pour se repérer dans le temps. Elle se lit toujours <strong>de gauche à droite</strong> (du plus ancien au plus récent).
+                    </p>
+
+                    <!-- Figurés explanation -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs mb-5">
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-sky-900 block font-bold">🎨 Figurés de surface (Couleur)</strong>
+                            <span>Utilisés pour représenter les <strong>périodes</strong>.</span>
+                        </div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-sky-900 block font-bold">➡️ Figurés linéaires (Flèches)</strong>
+                            <span>Utilisés pour indiquer les <strong>temps longs</strong>.</span>
+                        </div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-sky-900 block font-bold">📍 Figurés ponctuels (Tirets/Points)</strong>
+                            <span>Utilisés pour marquer une <strong>date précise</strong>.</span>
+                        </div>
+                    </div>
+
+                    <!-- Visual Timeline representation -->
+                    <div class="overflow-x-auto pb-2">
+                        <div class="min-w-[650px] space-y-2">
+                            <div class="grid grid-cols-5 text-center font-bold text-xs text-white rounded-xl overflow-hidden shadow-sm">
+                                <div class="bg-amber-700 p-3">Préhistoire</div>
+                                <div class="bg-red-600 p-3">Antiquité</div>
+                                <div class="bg-sky-600 p-3">Moyen Âge</div>
+                                <div class="bg-emerald-600 p-3">Temps Modernes</div>
+                                <div class="bg-purple-600 p-3">Époque Contemporaine</div>
+                            </div>
+                            <div class="grid grid-cols-5 text-[11px] text-slate-600 text-center font-semibold">
+                                <div>Avant -3300</div>
+                                <div>-3300 à 476</div>
+                                <div>476 à 1492</div>
+                                <div>1492 à 1789</div>
+                                <div>1789 à nos jours</div>
+                            </div>
+                            <!-- Repères de dates -->
+                            <div class="grid grid-cols-4 gap-1 text-[11px] bg-slate-100 p-3 rounded-xl border border-slate-200 font-medium text-slate-700">
+                                <div><strong class="text-red-700 font-bold block">-3300 BC :</strong> Naissance de l'écriture</div>
+                                <div><strong class="text-sky-700 font-bold block">476 AD :</strong> Chute de l'Empire Romain d'Occident</div>
+                                <div><strong class="text-emerald-700 font-bold block">1492 :</strong> Découverte de l'Amérique</div>
+                                <div><strong class="text-purple-700 font-bold block">1789 :</strong> Révolution Française</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Les Chiffres Romains -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-amber-600">
+                        <span class="text-2xl">🏛️</span>
+                        <h3 class="text-xl font-bold font-fun">2. Les Chiffres Romains</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-3">
+                        Ce sont des lettres ayant une valeur numérique : <strong class="text-slate-900">I = 1, V = 5, X = 10</strong>.
+                    </p>
+
+                    <div class="space-y-2.5 text-xs">
+                        <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-200">
+                            <strong class="text-amber-950 font-bold text-sm">Règles de répétition :</strong>
+                            <p class="text-slate-700">On peut répéter <strong>3 fois maximum</strong> les chiffres I et X (ex: III = 3, XXX = 30). V ne se répète qu'une seule fois.</p>
+                        </div>
+                        <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-200">
+                            <strong class="text-amber-950 font-bold text-sm">Règle de Soustraction & Addition :</strong>
+                            <ul class="list-disc pl-4 mt-1 text-slate-700 space-y-1">
+                                <li>Si <strong>I</strong> est <u>devant</u> V ou X ➔ <strong>Soustraction</strong> (IV = 4, IX = 9).</li>
+                                <li>Si <strong>I</strong> est <u>derrière</u> V ou X ➔ <strong>Addition</strong> (VI = 6, XI = 11).</li>
+                            </ul>
+                        </div>
+                        <div class="p-2.5 bg-slate-100 rounded-xl border border-slate-200">
+                            <strong class="text-slate-900 font-bold text-xs block mb-1">Tableau de 1 à 21 :</strong>
+                            <div class="grid grid-cols-4 gap-1 text-center font-mono text-[11px] text-slate-800">
+                                <span>1 = <strong>I</strong></span>
+                                <span>2 = <strong>II</strong></span>
+                                <span>3 = <strong>III</strong></span>
+                                <span>4 = <strong>IV</strong></span>
+                                <span>5 = <strong>V</strong></span>
+                                <span>6 = <strong>VI</strong></span>
+                                <span>7 = <strong>VII</strong></span>
+                                <span>8 = <strong>VIII</strong></span>
+                                <span>9 = <strong>IX</strong></span>
+                                <span>10 = <strong>X</strong></span>
+                                <span>11 = <strong>XI</strong></span>
+                                <span>12 = <strong>XII</strong></span>
+                                <span>13 = <strong>XIII</strong></span>
+                                <span>14 = <strong>XIV</strong></span>
+                                <span>15 = <strong>XV</strong></span>
+                                <span>16 = <strong>XVI</strong></span>
+                                <span>17 = <strong>XVII</strong></span>
+                                <span>18 = <strong>XVIII</strong></span>
+                                <span>19 = <strong>XIX</strong></span>
+                                <span>20 = <strong>XX</strong></span>
+                                <span>21 = <strong>XXI</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: La Méthode DANSS -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center gap-2 mb-3 text-indigo-600">
+                        <span class="text-2xl">📝</span>
+                        <h3 class="text-xl font-bold font-fun">3. Présenter un document (DANSS)</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-3">
+                        Pour identifier et présenter un document historique, il faut toujours fournir <strong>5 informations (D.A.N.S.S)</strong> :
+                    </p>
+
+                    <div class="space-y-2 text-xs mb-4">
+                        <div class="flex items-center gap-2 p-1.5 bg-indigo-50 rounded-lg border border-indigo-200">
+                            <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">D</span>
+                            <div><strong>Date :</strong> C'est la date ou le siècle où le document a été fait.</div>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 bg-indigo-50 rounded-lg border border-indigo-200">
+                            <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">A</span>
+                            <div><strong>Auteur :</strong> C'est la personne qui a réalisé le document.</div>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 bg-indigo-50 rounded-lg border border-indigo-200">
+                            <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">N</span>
+                            <div><strong>Nature :</strong> Le type de document (texte, photo, carte, graphique, sculpture...).</div>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 bg-indigo-50 rounded-lg border border-indigo-200">
+                            <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">S</span>
+                            <div><strong>Source :</strong> D'où vient le document (livre, musée, journal, site internet...).</div>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 bg-indigo-50 rounded-lg border border-indigo-200">
+                            <span class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">S</span>
+                            <div><strong>Sujet :</strong> De quoi parle l'auteur dans ce document.</div>
+                        </div>
+                    </div>
+
+                    <!-- Modèle de phrase -->
+                    <div class="bg-indigo-900 text-indigo-50 p-3 rounded-xl text-xs space-y-1">
+                        <strong class="text-amber-300 font-fun text-sm block">📌 Modèle de rédaction idéal :</strong>
+                        <p class="italic leading-relaxed">
+                            « Le document <span class="text-amber-300 font-semibold">(N)</span> est un <strong>[Nature]</strong> écrit par <strong>[Auteur]</strong> au <strong>[Date]</strong>. Il est extrait de <strong>[Source]</strong>. L'auteur parle de <strong>[Sujet]</strong>. »
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 2: INTERACTIVE TOOLS -->
+        <section id="sec-tools" class="hidden space-y-6">
+
+            <!-- Tool 1: Convertisseur et Entraîneur Chiffres Romains -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                <div class="flex items-center gap-2 text-amber-700">
+                    <span class="text-2xl">🔢</span>
+                    <div>
+                        <h2 class="text-xl font-bold font-fun">Convertisseur & Entraîneur de Chiffres Romains</h2>
+                        <p class="text-xs text-slate-500">Transforme n'importe quel nombre arabe (ex: 14) en chiffre romain (ex: XIV) et trouve son siècle !</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-amber-50 p-4 rounded-xl border border-amber-200">
+                    <div>
+                        <label class="block text-xs font-bold text-amber-950 mb-1">Entrez un nombre (ex: 1 à 30 ou une année comme 1492) :</label>
+                        <input type="number" id="roman-input" value="14" min="1" max="3000" oninput="convertRoman()" class="w-full p-2.5 border border-amber-300 rounded-xl font-mono text-base font-bold text-slate-800 bg-white">
+                    </div>
+                    <div class="flex flex-col justify-center space-y-1">
+                        <div class="text-xs text-slate-600">En chiffres romains : <strong id="roman-result" class="text-xl font-mono text-amber-700">XIV</strong></div>
+                        <div class="text-xs text-slate-600">Siècle correspondant : <strong id="century-result" class="text-sm font-mono text-indigo-700">Ier siècle</strong></div>
+                    </div>
+                </div>
+
+                <!-- Exercice rapide interactif -->
+                <div class="border-t pt-4">
+                    <h3 class="text-sm font-bold text-slate-800 font-fun mb-2">⚡ Exercice rapide : Écris en Chiffres Romains</h3>
+                    <div id="roman-practice-container" class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 2: Atelier interactif DANSS -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                <div class="flex items-center gap-2 text-indigo-700">
+                    <span class="text-2xl">🔎</span>
+                    <div>
+                        <h2 class="text-xl font-bold font-fun">Atelier de Présentation de Document (Méthode DANSS)</h2>
+                        <p class="text-xs text-slate-500">Étudie l'exemple de ton cahier et replace chaque élément dans la bonne case.</p>
+                    </div>
+                </div>
+
+                <!-- Document Exemple du cours (Eginhard / Charlemagne) -->
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <span class="font-bold text-slate-700">📜 Document d'étude : « Charlemagne et la construction de la chapelle du palais »</span>
+                    </div>
+                    <p class="italic text-slate-700 bg-white p-3 rounded-lg border border-slate-200">
+                        « Charlemagne pratiquait scrupuleusement la religion chrétienne. Ainsi construisit-il à Aix une chapelle d'une extrême beauté, qu'il orna d'or et d'argent et de chandeliers... »
+                    </p>
+                    <p class="text-[11px] text-slate-500 text-right">D'après <strong>Eginhard</strong>, <em>Vie de Charlemagne</em>, IX<sup>e</sup> siècle.</p>
+                </div>
+
+                <!-- DANSS Form exercise -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 text-xs">
+                    <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl space-y-1">
+                        <strong class="text-indigo-900 font-bold block">1. Date (D) :</strong>
+                        <select id="danss-date" class="w-full text-xs p-1.5 bg-white border border-indigo-300 rounded-lg">
+                            <option value="">-- Choisir --</option>
+                            <option value="IXe siècle">IXe siècle</option>
+                            <option value="1789">1789</option>
+                            <option value="-3300">3300 av. J.-C.</option>
+                        </select>
+                    </div>
+                    <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl space-y-1">
+                        <strong class="text-indigo-900 font-bold block">2. Auteur (A) :</strong>
+                        <select id="danss-auteur" class="w-full text-xs p-1.5 bg-white border border-indigo-300 rounded-lg">
+                            <option value="">-- Choisir --</option>
+                            <option value="Charlemagne">Charlemagne</option>
+                            <option value="Eginhard">Eginhard</option>
+                            <option value="Anonyme">Anonyme</option>
+                        </select>
+                    </div>
+                    <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl space-y-1">
+                        <strong class="text-indigo-900 font-bold block">3. Nature (N) :</strong>
+                        <select id="danss-nature" class="w-full text-xs p-1.5 bg-white border border-indigo-300 rounded-lg">
+                            <option value="">-- Choisir --</option>
+                            <option value="Texte (récit historique)">Texte (récit historique)</option>
+                            <option value="Carte géographique">Carte géographique</option>
+                            <option value="Graphique statistique">Graphique statistique</option>
+                        </select>
+                    </div>
+                    <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl space-y-1">
+                        <strong class="text-indigo-900 font-bold block">4. Source (S) :</strong>
+                        <select id="danss-source" class="w-full text-xs p-1.5 bg-white border border-indigo-300 rounded-lg">
+                            <option value="">-- Choisir --</option>
+                            <option value="Vie de Charlemagne (livre)">Livre "Vie de Charlemagne"</option>
+                            <option value="Manuel d'histoire">Manuel d'histoire</option>
+                            <option value="Site internet">Site internet</option>
+                        </select>
+                    </div>
+                    <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl space-y-1">
+                        <strong class="text-indigo-900 font-bold block">5. Sujet (S) :</strong>
+                        <select id="danss-sujet" class="w-full text-xs p-1.5 bg-white border border-indigo-300 rounded-lg">
+                            <option value="">-- Choisir --</option>
+                            <option value="La construction de la chapelle">Charlemagne et la construction de la chapelle</option>
+                            <option value="La conquête des Amériques">La conquête des Amériques</option>
+                            <option value="La Révolution française">La Révolution française</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <button onclick="checkDanssExercise()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold text-xs transition">
+                        Vérifier ma présentation DANSS ✔️
+                    </button>
+                    <span id="danss-feedback" class="text-xs font-bold"></span>
+                </div>
+
+                <!-- Generated sentence output -->
+                <div id="danss-output-box" class="hidden p-3 bg-emerald-50 border border-emerald-300 rounded-xl text-xs text-emerald-950">
+                    <strong class="block text-emerald-800 font-bold mb-1">🎉 Bravo ! Ta phrase de présentation DANSS rédigée :</strong>
+                    <p id="danss-output-text" class="italic"></p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TAB 3: QUIZ & TESTS -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <!-- Game Mode Selector -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button onclick="startQuizMode('general')" class="p-4 bg-white hover:bg-sky-50 border-2 border-slate-200 hover:border-sky-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">🌍</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-sky-600">QCM Général Histoire</h3>
+                        <p class="text-xs text-slate-500">Frise chronologique, 5 périodes, dates clés et repères historiques.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-sky-600">Lancer le Test (10 questions) →</span>
+                </button>
+
+                <button onclick="startQuizMode('romans')" class="p-4 bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">🏛️</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-amber-600">Master Chiffres Romains</h3>
+                        <p class="text-xs text-slate-500">Écriture des nombres de I à XXI, additions, soustractions et calcul des siècles.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-amber-600">Défi Chiffres Romains →</span>
+                </button>
+
+                <button onclick="startQuizMode('danss')" class="p-4 bg-white hover:bg-indigo-50 border-2 border-slate-200 hover:border-indigo-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">📝</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-indigo-600">Expert Méthode DANSS</h3>
+                        <p class="text-xs text-slate-500">Identifier la Date, l'Auteur, la Nature, la Source et le Sujet d'un document.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-indigo-600">Test Méthode DANSS →</span>
+                </button>
+            </div>
+
+            <!-- Quiz Display Box -->
+            <div id="quiz-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hidden">
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <span id="quiz-progress" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Question 1/10</span>
+                    <span id="quiz-score" class="text-xs font-bold bg-sky-100 text-sky-800 px-3 py-1 rounded-full">Score : 0/10</span>
+                </div>
+
+                <div id="quiz-body">
+                    <!-- Questions injected dynamically -->
+                </div>
+
+                <div id="quiz-feedback" class="mt-4 p-4 rounded-xl hidden text-sm font-medium"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-q-btn" onclick="nextQuestion()" class="hidden bg-sky-600 hover:bg-sky-700 text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow transition">
+                        Question suivante ➔
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        Histoire-Géographie - Application de Révision : Frise, Chiffres Romains & Méthode DANSS
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Tab switching function
+        function switchTab(tabId) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            if (tabId === 'tools') {
+                initRomanPractice();
+            }
+        }
+
+        // --- ROMAN NUMERAL CONVERTER & HELPERS ---
+        function toRoman(num) {
+            const lookup = {
+                M: 1000, CM: 900, D: 500, CD: 400,
+                C: 100, XC: 90, L: 50, XL: 40,
+                X: 10, IX: 9, V: 5, IV: 4, I: 1
+            };
+            let roman = '';
+            for (let i in lookup) {
+                while (num >= lookup[i]) {
+                    roman += i;
+                    num -= lookup[i];
+                }
+            }
+            return roman;
+        }
+
+        function getCentury(year) {
+            if (year <= 0) return "Avant J.-C.";
+            const century = Math.ceil(year / 100);
+            const romanC = toRoman(century);
+            return century === 1 ? "Ier siècle" : `${romanC}e siècle`;
+        }
+
+        function convertRoman() {
+            const input = parseInt(document.getElementById('roman-input').value);
+            const resEl = document.getElementById('roman-result');
+            const centEl = document.getElementById('century-result');
+
+            if (isNaN(input) || input < 1 || input > 3000) {
+                resEl.innerText = "Saisir un nombre entre 1 et 3000";
+                centEl.innerText = "-";
+                return;
+            }
+
+            resEl.innerText = toRoman(input);
+            centEl.innerText = getCentury(input);
+        }
+
+        function initRomanPractice() {
+            const container = document.getElementById('roman-practice-container');
+            const sampleNumbers = [4, 9, 14, 19, 21, 16];
+            container.innerHTML = '';
+
+            sampleNumbers.forEach(n => {
+                const div = document.createElement('div');
+                div.className = "p-3 bg-amber-50 rounded-xl border border-amber-200 flex flex-col space-y-1";
+                div.innerHTML = `
+                    <span class="font-bold text-slate-800">Nombre : ${n}</span>
+                    <input type="text" placeholder="En chiffres romains" id="prac-rom-${n}" class="p-1.5 border border-amber-300 rounded bg-white text-xs font-mono font-bold uppercase">
+                    <button onclick="checkRomanSingle(${n})" class="mt-1 bg-amber-600 hover:bg-amber-700 text-white font-semibold py-1 px-2 rounded text-[11px] transition">Vérifier</button>
+                    <span id="prac-feedback-${n}" class="text-[11px] font-bold"></span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function checkRomanSingle(num) {
+            const userAns = document.getElementById(`prac-rom-${num}`).value.trim().toUpperCase();
+            const correctAns = toRoman(num);
+            const fb = document.getElementById(`prac-feedback-${num}`);
+
+            if (userAns === correctAns) {
+                fb.className = "text-[11px] font-bold text-emerald-600";
+                fb.innerText = "✅ Bravo !";
+            } else {
+                fb.className = "text-[11px] font-bold text-red-600";
+                fb.innerText = `❌ Réponse : ${correctAns}`;
+            }
+        }
+
+        // --- DANSS EXERCISE ---
+        function checkDanssExercise() {
+            const date = document.getElementById('danss-date').value;
+            const auteur = document.getElementById('danss-auteur').value;
+            const nature = document.getElementById('danss-nature').value;
+            const source = document.getElementById('danss-source').value;
+            const sujet = document.getElementById('danss-sujet').value;
+
+            const fb = document.getElementById('danss-feedback');
+            const outBox = document.getElementById('danss-output-box');
+            const outText = document.getElementById('danss-output-text');
+
+            if (date === "IXe siècle" && auteur === "Eginhard" && nature === "Texte (récit historique)" && source === "Vie de Charlemagne (livre)" && sujet === "La construction de la chapelle") {
+                fb.className = "text-xs font-bold text-emerald-600";
+                fb.innerText = "✅ Parfait ! Tout est exact.";
+                
+                outText.innerText = `« Le document (N) est un texte (récit historique) écrit par Eginhard (A) au IXe siècle (D). Il est extrait du livre "Vie de Charlemagne" (S). L'auteur parle de la construction de la chapelle du palais de Charlemagne (S). »`;
+                outBox.classList.remove('hidden');
+            } else {
+                fb.className = "text-xs font-bold text-red-600";
+                fb.innerText = "❌ Attention, certaines informations sont incorrectes ! Vérifie avec ton cours.";
+                outBox.classList.add('hidden');
+            }
+        }
+
+        // --- QUESTION BANKS FOR QUIZZES (>60 QUESTIONS) ---
+        const questionBankGeneral = [
+            { q: "Dans quel sens se lit une frise chronologique ?", options: ["De gauche à droite (du plus ancien au plus récent)", "De droite à gauche (du plus récent au plus ancien)", "De bas en haut", "Dans n'importe quel sens"], answer: 0, explain: "La frise se lit toujours de gauche à droite, en allant des périodes les plus anciennes vers les plus récentes." },
+            { q: "Quelle date marque la fin de la Préhistoire et le début de l'Antiquité ?", options: ["-3300 (Naissance de l'écriture)", "476 (Chute de Rome)", "1492 (Découverte de l'Amérique)", "1789 (Révolution française)"], answer: 0, explain: "L'apparition de l'écriture vers -3300 av. J.-C. marque le début de l'Histoire et de l'Antiquité." },
+            { q: "Quel événement marquant survient en 476 ?", options: ["La chute de l'Empire Romain d'Occident", "La découverte de l'Amérique", "La Révolution Française", "La naissance de l'écriture"], answer: 0, explain: "L'année 476 marque la chute de l'Empire romain d'Occident et la fin de l'Antiquité." },
+            { q: "Quelle période historique s'étend de 476 à 1492 ?", options: ["Le Moyen Âge", "L'Antiquité", "Les Temps Modernes", "L'Époque Contemporaine"], answer: 0, explain: "Le Moyen Âge dure environ 1000 ans, entre 476 et 1492." },
+            { q: "Quel événement marque le début des Temps Modernes en 1492 ?", options: ["La découverte de l'Amérique", "La Révolution Française", "La chute de l'Empire Romain", "La naissance de l'écriture"], answer: 0, explain: "En 1492, Christophe Colomb découvre l'Amérique, ce qui fait basculer l'Histoire dans les Temps Modernes." },
+            { q: "En quelle année débute l'Époque Contemporaine ?", options: ["1789 (Révolution Française)", "1492", "476", "-3300"], answer: 0, explain: "La Révolution Française de 1789 marque le début de l'Époque Contemporaine." },
+            { q: "Sur une frise, à quoi servent les figurés de surface (couleurs) ?", options: ["À représenter les périodes", "À indiquer les dates précises", "À marquer le temps long", "À illustrer des cartes"], answer: 0, explain: "Les figurés de surface (zones colorées) servent à délimiter les grandes périodes." },
+            { q: "Sur une frise, à quoi servent les figurés ponctuels (points/tirets) ?", options: ["À indiquer une date précise", "À représenter une période", "À marquer une flèche", "À faire joli"], answer: 0, explain: "Un point ou un tiret (figuré ponctuel) permet de repérer un événement à une date précise." },
+            { q: "Sur une frise, à quoi servent les figurés linéaires (flèches) ?", options: ["À représenter les temps longs", "À colorier une période", "À marquer une date exacte", "À rien"], answer: 0, explain: "Les flèches (figurés linéaires) indiquent la durée et la continuité dans le temps long." },
+            { q: "Quelle période vient juste APRÈS les Temps Modernes ?", options: ["L'Époque Contemporaine", "Le Moyen Âge", "L'Antiquité", "La Préhistoire"], answer: 0, explain: "Après les Temps Modernes (1492-1789) vient l'Époque Contemporaine (de 1789 à aujourd'hui)." },
+            { q: "Combien de grandes périodes historiques étudie-t-on après la Préhistoire ?", options: ["4 périodes (Antiquité, Moyen Âge, Temps Modernes, Époque Contemporaine)", "2 périodes", "10 périodes", "3 périodes"], answer: 0, explain: "Il y a 4 grandes périodes historiques : Antiquité, Moyen Âge, Temps Modernes et Époque Contemporaine." },
+            { q: "Quel événement a eu lieu en 1789 ?", options: ["La Révolution Française", "La chute de l'Empire Romain", "La découverte de l'Amérique", "La construction des pyramides"], answer: 0, explain: "La Révolution Française a eu lieu en 1789." },
+            { q: "Quelle période se situe entre l'Antiquité et les Temps Modernes ?", options: ["Le Moyen Âge", "L'Époque Contemporaine", "La Préhistoire", "La Renaissance"], answer: 0, explain: "Le Moyen Âge se situe au milieu, entre l'Antiquité et les Temps Modernes." },
+            { q: "En quelle année s'achève l'Antiquité ?", options: ["476", "1492", "1789", "-3300"], answer: 0, explain: "L'Antiquité s'achève en l'an 476." },
+            { q: "La Préhistoire se termine vers :", options: ["-3300 av. J.-C.", "476 apr. J.-C.", "1492", "0"], answer: 0, explain: "La Préhistoire se termine avec la naissance de l'écriture vers -3300 av. J.-C." }
+        ];
+
+        const questionBankRomans = [
+            { q: "Combien vaut le chiffre romain V ?", options: ["5", "1", "10", "50"], answer: 0, explain: "V vaut 5." },
+            { q: "Combien vaut le chiffre romain X ?", options: ["10", "5", "1", "100"], answer: 0, explain: "X vaut 10." },
+            { q: "Combien vaut le chiffre romain I ?", options: ["1", "5", "10", "0"], answer: 0, explain: "I vaut 1." },
+            { q: "Comment écrit-on 4 en chiffres romains ?", options: ["IV", "IIII", "VI", "IX"], answer: 0, explain: "4 s'écrit IV (5 - 1 = 4)." },
+            { q: "Comment écrit-on 9 en chiffres romains ?", options: ["IX", "VIIII", "XI", "IV"], answer: 0, explain: "9 s'écrit IX (10 - 1 = 9)." },
+            { q: "Comment écrit-on 14 en chiffres romains ?", options: ["XIV", "XIIII", "XVI", "XIX"], answer: 0, explain: "14 s'écrit XIV (X = 10 et IV = 4)." },
+            { q: "Comment écrit-on 19 en chiffres romains ?", options: ["XIX", "XVIIII", "XXI", "XVIV"], answer: 0, explain: "19 s'écrit XIX (X = 10 et IX = 9)." },
+            { q: "Combien vaut XVIII en chiffres arabes ?", options: ["18", "16", "22", "13"], answer: 0, explain: "XVIII = 10 + 5 + 1 + 1 + 1 = 18." },
+            { q: "Comment écrit-on 21 en chiffres romains ?", options: ["XXI", "XIXI", "VVI", "XVVI"], answer: 0, explain: "21 s'écrit XXI (10 + 10 + 1 = 21)." },
+            { q: "Règle : Si I est placé DEVANT V ou X, fait-on une addition ou une soustraction ?", options: ["Une soustraction (ex: IV = 5-1 = 4)", "Une addition", "Une multiplication", "Une division"], answer: 0, explain: "Quand I est devant V ou X, on le soustrait (IV = 4, IX = 9)." },
+            { q: "Règle : Si I est placé DERRIÈRE V ou X, fait-on une addition ou une soustraction ?", options: ["Une addition (ex: VI = 5+1 = 6)", "Une soustraction", "Une division", "Aucun des deux"], answer: 0, explain: "Quand I est derrière V ou X, on l'ajoute (VI = 6, XI = 11)." },
+            { q: "Combien de fois maximum peut-on répéter le chiffre I à la suite ?", options: ["3 fois maximum (ex: III = 3)", "4 fois", "2 fois", "Autant qu'on veut"], answer: 0, explain: "On ne peut répéter I que 3 fois maximum à la suite. 4 s'écrit IV !" },
+            { q: "À quel siècle appartient l'année 814 (mort de Charlemagne) ?", options: ["IXe siècle", "VIIIe siècle", "VIIe siècle", "Xe siècle"], answer: 0, explain: "814 fait partie du IXe siècle (8 + 1 = 9)." },
+            { q: "À quel siècle appartient l'année 1492 ?", options: ["XVe siècle", "XIVe siècle", "XVIe siècle", "XIIIe siècle"], answer: 0, explain: "1492 fait partie du XVe siècle (14 + 1 = 15)." },
+            { q: "À quel siècle appartient l'année 1789 ?", options: ["XVIIIe siècle", "XVIIe siècle", "XIXe siècle", "XVIe siècle"], answer: 0, explain: "1789 fait partie du XVIIIe siècle (17 + 1 = 18)." },
+            { q: "Comment écrit-on 15ème siècle en chiffres romains ?", options: ["XVe siècle", "XIVe siècle", "XVIe siècle", "VXe siècle"], answer: 0, explain: "15 s'écrit XV, donc XVe siècle." },
+            { q: "Combien vaut XV en chiffres arabes ?", options: ["15", "12", "20", "25"], answer: 0, explain: "X (10) + V (5) = 15." },
+            { q: "Comment écrit-on 12 en chiffres romains ?", options: ["XII", "IIX", "VVII", "XVIII"], answer: 0, explain: "12 = X + II = XII." }
+        ];
+
+        const questionBankDanss = [
+            { q: "Que signifie la lettre D dans la méthode DANSS ?", options: ["Date (ou siècle du document)", "Description", "Début", "Document"], answer: 0, explain: "D correspond à la Date (la période ou l'année où le document a été réalisé)." },
+            { q: "Que signifie la lettre A dans la méthode DANSS ?", options: ["Auteur (la personne qui a réalisé le document)", "Analyse", "Année", "Argument"], answer: 0, explain: "A correspond à l'Auteur." },
+            { q: "Que signifie la lettre N dans la méthode DANSS ?", options: ["Nature (le type de document : texte, carte...)", "Nom", "Numéro", "Nationalité"], answer: 0, explain: "N correspond à la Nature du document." },
+            { q: "Que signifie le premier S dans la méthode DANSS ?", options: ["Source (d'où vient le document)", "Sujet", "Siècle", "Sommaire"], answer: 0, explain: "Le premier S correspond à la Source (livre, musée, journal...)." },
+            { q: "Que signifie le deuxième S dans la méthode DANSS ?", options: ["Sujet (de quoi parle le document)", "Source", "Signature", "Style"], answer: 0, explain: "Le deuxième S correspond au Sujet (l'idée principale du document)." },
+            { q: "Dans l'expression « Vie de Charlemagne par Eginhard », « Vie de Charlemagne » est :", options: ["La Source (le livre)", "L'Auteur", "La Date", "La Nature"], answer: 0, explain: "« Vie de Charlemagne » est l'ouvrage dont est extrait le texte, c'est donc la Source." },
+            { q: "Dans l'expression « D'après Eginhard », Eginhard est :", options: ["L'Auteur", "Le Sujet", "La Nature", "La Source"], answer: 0, explain: "Eginhard est la personne qui a écrit l'œuvre, c'est l'Auteur." },
+            { q: "Si le document est une peinture ou un texte, cela correspond à sa :", options: ["Nature", "Source", "Date", "Auteur"], answer: 0, explain: "Le type de document (texte, photo, carte...) définit sa Nature." },
+            { q: "Pour dire de quoi parle l'auteur dans le document, on présente son :", options: ["Sujet", "Auteur", "Date", "Nature"], answer: 0, explain: "Le Sujet explique de quoi traite le document." },
+            { q: "Laquelle de ces propositions est la phrase type complète pour DANSS ?", options: ["Le document (N) est un [Nature] écrit par [Auteur] au [Date], extrait de [Source]. L'auteur parle de [Sujet].", "Le document est très joli et vieux.", "L'auteur parle de la guerre en 1492.", "Date, Auteur, Nature, Source, Sujet."], answer: 0, explain: "C'est la phrase d'introduction officielle recommandée pour présenter un document !" }
+        ];
+
+        // Quiz Engine State
+        let activeQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuizMode(mode) {
+            currentQuestionIndex = 0;
+            score = 0;
+
+            let bank = [];
+            if (mode === 'general') bank = [...questionBankGeneral];
+            else if (mode === 'romans') bank = [...questionBankRomans];
+            else if (mode === 'danss') bank = [...questionBankDanss];
+
+            // Pick 10 random questions
+            activeQuestions = bank.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+            document.getElementById('quiz-container').classList.remove('hidden');
+            updateScoreDisplay();
+            renderCurrentQuestion();
+        }
+
+        function updateScoreDisplay() {
+            document.getElementById('quiz-score').innerText = `Score : ${score}/${activeQuestions.length}`;
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuestionIndex + 1}/${activeQuestions.length}`;
+        }
+
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const body = document.getElementById('quiz-body');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            let html = `
+                <div class="mb-4">
+                    <span class="text-xs font-semibold px-2.5 py-1 bg-sky-100 text-sky-800 rounded-full">Histoire-Géo - Entraînement</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-2">${q.q}</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            `;
+
+            // Shuffle options visually while retaining correct index match
+            const optsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.answer }));
+            // Shuffle
+            optsWithIndex.sort(() => 0.5 - Math.random());
+
+            optsWithIndex.forEach((item) => {
+                html += `
+                    <button onclick="checkAnswer(${item.isCorrect}, this)" class="quiz-opt-btn text-left p-4 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-semibold transition">
+                        ${item.text}
+                    </button>
+                `;
+            });
+
+            html += `</div>`;
+            body.innerHTML = html;
+        }
+
+        function checkAnswer(isCorrect, btnElement) {
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+            const q = activeQuestions[currentQuestionIndex];
+
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                score++;
+                btnElement.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-4 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `✅ <strong>Excellente réponse !</strong><br><span class="text-xs">${q.explain}</span>`;
+            } else {
+                btnElement.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                feedback.className = "mt-4 p-4 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200";
+                feedback.innerHTML = `❌ <strong>Mauvaise réponse !</strong><br><span class="text-xs">${q.explain}</span>`;
+            }
+
+            feedback.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            updateScoreDisplay();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < activeQuestions.length) {
+                updateScoreDisplay();
+                renderCurrentQuestion();
+            } else {
+                renderFinalScore();
+            }
+        }
+
+        function renderFinalScore() {
+            const body = document.getElementById('quiz-body');
+            document.getElementById('next-q-btn').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const percentage = Math.round((score / activeQuestions.length) * 100);
+            let badge = "🏆 Champion de l'Histoire !";
+            let message = "Impressionnant ! Tu maîtrises parfaitement la frise chronologique, la conversion des chiffres romains et la méthode DANSS.";
+
+            if (percentage < 50) {
+                badge = "💪 Réévise tes fiches de cours !";
+                message = "Relis les repères chronologiques, les règles de calcul des chiffres romains et réessaie le quiz.";
+            } else if (percentage < 80) {
+                badge = "👍 Très bon travail !";
+                message = "Bon score ! Encore un peu d'entraînement et tu seras imbattable sur l'analyse de documents et les dates.";
+            }
+
+            body.innerHTML = `
+                <div class="text-center py-6">
+                    <span class="text-5xl mb-3 block">${percentage >= 80 ? '🏆' : (percentage >= 50 ? '🥈' : '📜')}</span>
+                    <h3 class="text-2xl font-bold font-fun text-slate-800">${badge}</h3>
+                    <p class="text-lg font-semibold text-sky-600 mt-1">Score final : ${score} / ${activeQuestions.length} (${percentage}%)</p>
+                    <p class="text-sm text-slate-600 mt-2 max-w-md mx-auto">${message}</p>
+                    <button onclick="startQuizMode('general')" class="mt-6 bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow transition">
+                        Rejouer un nouveau test aléatoire 🔄
+                    </button>
+                </div>
+            `;
+        }
+
+        window.onload = function() {
+            switchTab('notes');
+        };
+    </script>
+</body>
+</html>
