@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammaire : Les Constituants de la Phrase (GS, GV, CC)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, .font-fun { font-family: 'Fredoka', cursive; }
+        .tab-btn.active {
+            background-color: #7c3aed;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.3);
+        }
+        .tag-gs { background-color: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+        .tag-gv { background-color: #dcfce7; color: #166534; border: 1px solid #86efac; }
+        .tag-cct { background-color: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .tag-ccl { background-color: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+        .tag-ccm { background-color: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+    </style>
+</head>
+<body class="h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-violet-700 via-indigo-700 to-purple-800 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="text-4xl">📚</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wide">Grammaire : Les Constituants de la Phrase</h1>
+                    <p class="text-xs text-violet-200">Groupe Sujet (GS), Groupe Verbal (GV) &amp; Compléments Circonstanciels (CC)</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-black/20 p-1 rounded-xl backdrop-blur-md gap-1 text-sm font-semibold">
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn active px-3 py-1.5 rounded-lg transition-all duration-200">
+                    📖 Leçon &amp; Méthodes
+                </button>
+                <button onclick="switchTab('lab')" id="tab-lab" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🔬 Labo d'Analyse
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3 py-1.5 rounded-lg transition-all duration-200">
+                    🎯 Tests &amp; Quizzes
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full">
+
+        <!-- TAB 1: REVISION NOTES -->
+        <section id="sec-notes" class="space-y-6">
+            
+            <!-- Intro Banner -->
+            <div class="bg-violet-100 border-l-4 border-violet-600 p-4 rounded-r-xl shadow-sm">
+                <h2 class="text-lg font-bold text-violet-900 font-fun">💡 De quoi est composée une phrase simple ?</h2>
+                <p class="text-sm text-violet-800">
+                    Une phrase minimale est composée d'un <strong>Groupe Sujet (GS)</strong> et d'un <strong>Groupe Verbal (GV)</strong>. On peut y ajouter des <strong>Compléments Circonstanciels (CC)</strong> pour donner des précisions sur les circonstances.
+                </p>
+            </div>
+
+            <!-- Grid Cards for Grammar rules -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card 1: Groupe Sujet (GS) -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition space-y-3">
+                    <div class="flex items-center gap-2 text-blue-700">
+                        <span class="text-2xl">👤</span>
+                        <h3 class="text-xl font-bold font-fun">1. Le Groupe Sujet (GS)</h3>
+                    </div>
+                    <p class="text-xs text-slate-600">
+                        Il indique <strong>qui fait l'action</strong> ou de qui/quoi on parle.
+                    </p>
+
+                    <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 space-y-2 text-xs text-blue-950">
+                        <strong class="font-bold block text-blue-900">🔍 Comment le repérer ?</strong>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Poser la question : <em>« Qui est-ce qui... ? »</em> ou <em>« Qu'est-ce qui... ? »</em></li>
+                            <li>Encadrer par : <strong>« C'est ... qui »</strong> (ou <em>« Ce sont ... qui »</em>).</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs">
+                        <strong class="text-slate-700 block mb-1">Exemple :</strong>
+                        <p class="italic">« <span class="font-bold text-blue-700">Le grand chien noir</span> aboie dans le jardin. »</p>
+                        <p class="text-[11px] text-slate-500 mt-1">➔ <em>C'est</em> <strong>le grand chien noir</strong> <em>qui</em> aboie.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Groupe Verbal (GV) -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition space-y-3">
+                    <div class="flex items-center gap-2 text-emerald-700">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-xl font-bold font-fun">2. Le Groupe Verbal (GV)</h3>
+                    </div>
+                    <p class="text-xs text-slate-600">
+                        Il indique <strong>ce que fait le sujet</strong> ou ce qu'on dit sur lui. Son noyau est le <strong>verbe conjugué</strong>.
+                    </p>
+
+                    <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200 space-y-2 text-xs text-emerald-950">
+                        <strong class="font-bold block text-emerald-900">⚠️ Propriété essentielle :</strong>
+                        <p>Le GV est <strong>NON SUPPRIMABLE</strong> et <strong>NON DÉPLAÇABLE</strong> ! Sans lui, la phrase n'a plus de sens.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs">
+                        <strong class="text-slate-700 block mb-1">Exemple :</strong>
+                        <p class="italic">« Les élèves <span class="font-bold text-emerald-700">écoutent attentivement la leçon</span>. »</p>
+                        <p class="text-[11px] text-slate-500 mt-1">➔ Le verbe est <em>écoutent</em>, complété par <em>la leçon</em>.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Compléments Circonstanciels (CC) -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition space-y-3">
+                    <div class="flex items-center gap-2 text-amber-700">
+                        <span class="text-2xl">📍</span>
+                        <h3 class="text-xl font-bold font-fun">3. Les Compléments Circonstanciels (CC)</h3>
+                    </div>
+                    <p class="text-xs text-slate-600">
+                        Ils donnent des précisions sur les <strong>circonstances</strong> de l'action (quand, où, comment...).
+                    </p>
+
+                    <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 space-y-2 text-xs text-amber-950">
+                        <strong class="font-bold block text-amber-900">✨ Le test des CC :</strong>
+                        <p>Ils sont <strong>SUPPRIMABLES</strong> et <strong>DÉPLAÇABLES</strong> (en début, milieu ou fin de phrase).</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs">
+                        <strong class="text-slate-700 block mb-1">Exemple :</strong>
+                        <p class="italic">« <span class="font-bold text-amber-700">Ce matin</span>, Julie mange une pomme <span class="font-bold text-amber-700">dans la cuisine</span>. »</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Deep Dive: Les 4 principaux CC -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-lg font-bold text-slate-800 font-fun mb-3 flex items-center gap-2">
+                    <span>🎯</span> Les différents types de Compléments Circonstanciels (CC)
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                    <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 space-y-1">
+                        <span class="px-2 py-0.5 rounded font-bold bg-amber-200 text-amber-900 uppercase text-[10px]">CCT</span>
+                        <h4 class="font-bold text-slate-800">CC de Temps</h4>
+                        <p class="text-slate-600">Répond à la question : <strong>QUAND ?</strong> / <strong>Depuis combien de temps ?</strong></p>
+                        <p class="italic text-amber-800 pt-1">Ex : <u>Demain</u>, <u>pendant l'été</u>, <u>à 8 heures</u>.</p>
+                    </div>
+
+                    <div class="p-3 bg-pink-50 rounded-xl border border-pink-200 space-y-1">
+                        <span class="px-2 py-0.5 rounded font-bold bg-pink-200 text-pink-900 uppercase text-[10px]">CCL</span>
+                        <h4 class="font-bold text-slate-800">CC de Lieu</h4>
+                        <p class="text-slate-600">Répond à la question : <strong>OÙ ?</strong> / <strong>Vers où ? / D'où ?</strong></p>
+                        <p class="italic text-pink-800 pt-1">Ex : <u>À l'école</u>, <u>sur la table</u>, <u>en France</u>.</p>
+                    </div>
+
+                    <div class="p-3 bg-indigo-50 rounded-xl border border-indigo-200 space-y-1">
+                        <span class="px-2 py-0.5 rounded font-bold bg-indigo-200 text-indigo-900 uppercase text-[10px]">CCM</span>
+                        <h4 class="font-bold text-slate-800">CC de Manière</h4>
+                        <p class="text-slate-600">Répond à la question : <strong>COMMENT ?</strong> / <strong>De quelle façon ?</strong></p>
+                        <p class="italic text-indigo-800 pt-1">Ex : <u>Lentement</u>, <u>avec joie</u>, <u>en silence</u>.</p>
+                    </div>
+
+                    <div class="p-3 bg-purple-50 rounded-xl border border-purple-200 space-y-1">
+                        <span class="px-2 py-0.5 rounded font-bold bg-purple-200 text-purple-900 uppercase text-[10px]">CCC / CC-Moy</span>
+                        <h4 class="font-bold text-slate-800">Cause / Moyen</h4>
+                        <p class="text-slate-600">Répond à : <strong>POURQUOI ?</strong> (Cause) ou <strong>AVEC QUOI ?</strong> (Moyen)</p>
+                        <p class="italic text-purple-800 pt-1">Ex : <u>À cause de la pluie</u>, <u>avec un marteau</u>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table of Comparison / Manipulations -->
+            <div class="bg-slate-900 text-slate-100 p-5 rounded-2xl shadow-sm space-y-3">
+                <h3 class="text-base font-bold text-amber-300 font-fun">⚡ Résumé des tests de manipulation grammaticaux</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-slate-300 border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-700 text-amber-400 font-bold">
+                                <th class="py-2 px-3">Constituant</th>
+                                <th class="py-2 px-3">Peut-on le SUPPRIMER ?</th>
+                                <th class="py-2 px-3">Peut-on le DÉPLACER ?</th>
+                                <th class="py-2 px-3">Question ou Test magique</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr>
+                                <td class="py-2 px-3 font-bold text-blue-400">Groupe Sujet (GS)</td>
+                                <td class="py-2 px-3 text-red-400">❌ Non (essentiel)</td>
+                                <td class="py-2 px-3 text-red-400">❌ Non (devant le verbe)</td>
+                                <td class="py-2 px-3">« Qui est-ce qui... ? » / « C'est ... qui »</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-bold text-emerald-400">Groupe Verbal (GV)</td>
+                                <td class="py-2 px-3 text-red-400">❌ Non (essentiel)</td>
+                                <td class="py-2 px-3 text-red-400">❌ Non</td>
+                                <td class="py-2 px-3">« Que fait le sujet ? » (Contient le verbe)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-bold text-amber-400">Complément Circonstanciel (CC)</td>
+                                <td class="py-2 px-3 text-emerald-400">Oui (facultatif)</td>
+                                <td class="py-2 px-3 text-emerald-400">Oui (début, milieu, fin)</td>
+                                <td class="py-2 px-3">« Quand ? Où ? Comment ? Pourquoi ? »</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TAB 2: INTERACTIVE SENTENCE LAB -->
+        <section id="sec-lab" class="hidden space-y-6">
+
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                <div class="flex items-center gap-2 text-violet-700">
+                    <span class="text-2xl">🔬</span>
+                    <div>
+                        <h2 class="text-xl font-bold font-fun">Laboratoire d'Analyse de Phrase</h2>
+                        <p class="text-xs text-slate-500">Cliquez sur chaque groupe de mots pour analyser son rôle dans la phrase.</p>
+                    </div>
+                </div>
+
+                <!-- Sentence selector -->
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="font-bold py-1.5 text-slate-700">Choisir une phrase d'exemple :</span>
+                    <button onclick="loadSentence(0)" class="px-3 py-1.5 bg-slate-100 hover:bg-violet-100 hover:text-violet-800 rounded-lg font-semibold border transition">Phrase 1</button>
+                    <button onclick="loadSentence(1)" class="px-3 py-1.5 bg-slate-100 hover:bg-violet-100 hover:text-violet-800 rounded-lg font-semibold border transition">Phrase 2</button>
+                    <button onclick="loadSentence(2)" class="px-3 py-1.5 bg-slate-100 hover:bg-violet-100 hover:text-violet-800 rounded-lg font-semibold border transition">Phrase 3</button>
+                    <button onclick="loadSentence(3)" class="px-3 py-1.5 bg-slate-100 hover:bg-violet-100 hover:text-violet-800 rounded-lg font-semibold border transition">Phrase 4</button>
+                </div>
+
+                <!-- Interactive Sentence Viewer -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center space-y-4">
+                    <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Phrase à analyser</p>
+                    <div id="sentence-display" class="flex flex-wrap justify-center gap-2 text-lg font-semibold">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Feedback detail box -->
+                <div id="lab-details" class="p-4 bg-violet-50 border border-violet-200 rounded-xl text-xs space-y-2 hidden">
+                    <!-- Injected details -->
+                </div>
+            </div>
+
+            <!-- Mini Interactive Exercise: Rapid Drill -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                <h3 class="text-base font-bold text-slate-800 font-fun flex items-center gap-2">
+                    <span>⚡</span> Entraînement rapide : Identifiez le groupe en gras
+                </h3>
+
+                <div id="quick-practice-box" class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3 text-xs">
+                    <!-- Injected dynamically -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TAB 3: QUIZ & TESTS -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <!-- Quiz Mode Selector -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button onclick="startQuizMode('general')" class="p-4 bg-white hover:bg-violet-50 border-2 border-slate-200 hover:border-violet-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">🎯</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-violet-600">Grand QCM Général</h3>
+                        <p class="text-xs text-slate-500">Reconnaître GS, GV, CC de Temps, Lieu, Manière et Cause dans des phrases.</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-violet-600">Lancer (10 questions au hasard) →</span>
+                </button>
+
+                <button onclick="startQuizMode('cc')" class="p-4 bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">📍</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-amber-600">Spécial Compléments (CC)</h3>
+                        <p class="text-xs text-slate-500">Distinguer CCT (Quand ?), CCL (Où ?), CCM (Comment ?) et CCC (Pourquoi ?).</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-amber-600">Défi Compléments →</span>
+                </button>
+
+                <button onclick="startQuizMode('manipulation')" class="p-4 bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-500 rounded-2xl text-left transition flex flex-col justify-between group shadow-sm">
+                    <div>
+                        <span class="text-3xl mb-2 block">🛠️</span>
+                        <h3 class="font-bold text-slate-800 group-hover:text-emerald-600">Test de Manipulation</h3>
+                        <p class="text-xs text-slate-500">Tests de suppression, déplacement et encadrement (« C'est... qui »).</p>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold text-emerald-600">Test de Manipulation →</span>
+                </button>
+            </div>
+
+            <!-- Quiz Display Box -->
+            <div id="quiz-container" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hidden">
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <span id="quiz-progress" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Question 1/10</span>
+                    <span id="quiz-score" class="text-xs font-bold bg-violet-100 text-violet-800 px-3 py-1 rounded-full">Score : 0/10</span>
+                </div>
+
+                <div id="quiz-body">
+                    <!-- Questions injected dynamically -->
+                </div>
+
+                <div id="quiz-feedback" class="mt-4 p-4 rounded-xl hidden text-sm font-medium"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-q-btn" onclick="nextQuestion()" class="hidden bg-violet-600 hover:bg-violet-700 text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow transition">
+                        Question suivante ➔
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        Grammaire Française - Les Constituants de la Phrase (GS, GV, CC)
+    </footer>
+
+    <!-- JavaScript Engine -->
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            if (tabId === 'lab') {
+                loadSentence(0);
+                initQuickPractice();
+            }
+        }
+
+        // --- SENTENCE LAB DATA & LOGIC ---
+        const labSentences = [
+            {
+                text: "Chaque matin, le petit chat noir boit son lait dans la cuisine.",
+                blocks: [
+                    { word: "Chaque matin,", type: "CCT", title: "Complément Circonstanciel de Temps (CCT)", desc: "Répond à la question 'Quand ?'. Il peut être déplacé ou supprimé.", tagClass: "tag-cct" },
+                    { word: "le petit chat noir", type: "GS", title: "Groupe Sujet (GS)", desc: "Désigne qui fait l'action. On peut dire : 'C'est le petit chat noir qui boit...'", tagClass: "tag-gs" },
+                    { word: "boit son lait", type: "GV", title: "Groupe Verbal (GV)", desc: "Contient le verbe 'boit' et son complément d'objet 'son lait'. Il est essentiel.", tagClass: "tag-gv" },
+                    { word: "dans la cuisine.", type: "CCL", title: "Complément Circonstanciel de Lieu (CCL)", desc: "Répond à la question 'Où ?'. Il est déplaçable et supprimable.", tagClass: "tag-ccl" }
+                ]
+            },
+            {
+                text: "Dans la forêt, les randonneurs marchent silencieusement.",
+                blocks: [
+                    { word: "Dans la forêt,", type: "CCL", title: "Complément Circonstanciel de Lieu (CCL)", desc: "Indique l'endroit (Où ?).", tagClass: "tag-ccl" },
+                    { word: "les randonneurs", type: "GS", title: "Groupe Sujet (GS)", desc: "Qui est-ce qui marche ? Ce sont les randonneurs.", tagClass: "tag-gs" },
+                    { word: "marchent", type: "GV", title: "Groupe Verbal (GV)", desc: "Noyau de la phrase (Verbe conjugué).", tagClass: "tag-gv" },
+                    { word: "silencieusement.", type: "CCM", title: "Complément Circonstanciel de Manière (CCM)", desc: "Indique comment ils marchent (De quelle façon ?).", tagClass: "tag-ccm" }
+                ]
+            },
+            {
+                text: "En raison du gel, les voitures roulent avec prudence.",
+                blocks: [
+                    { word: "En raison du gel,", type: "CCC", title: "Complément Circonstanciel de Cause (CCC)", desc: "Indique la raison / le pourquoi de l'action.", tagClass: "tag-cct" },
+                    { word: "les voitures", type: "GS", title: "Groupe Sujet (GS)", desc: "Sujet de la phrase.", tagClass: "tag-gs" },
+                    { word: "roulent", type: "GV", title: "Groupe Verbal (GV)", desc: "Action principale.", tagClass: "tag-gv" },
+                    { word: "avec prudence.", type: "CCM", title: "Complément Circonstanciel de Manière (CCM)", desc: "Comment roulent-elles ? Avec prudence.", tagClass: "tag-ccm" }
+                ]
+            },
+            {
+                text: "Hier soir, le magicien a réalisé un tour incroyable sur scène.",
+                blocks: [
+                    { word: "Hier soir,", type: "CCT", title: "Complément Circonstanciel de Temps (CCT)", desc: "Quand ? Hier soir.", tagClass: "tag-cct" },
+                    { word: "le magicien", type: "GS", title: "Groupe Sujet (GS)", desc: "C'est le magicien qui a réalisé le tour.", tagClass: "tag-gs" },
+                    { word: "a réalisé un tour incroyable", type: "GV", title: "Groupe Verbal (GV)", desc: "Verbe 'a réalisé' + COD 'un tour incroyable'.", tagClass: "tag-gv" },
+                    { word: "sur scène.", type: "CCL", title: "Complément Circonstanciel de Lieu (CCL)", desc: "Où ? Sur scène.", tagClass: "tag-ccl" }
+                ]
+            }
+        ];
+
+        function loadSentence(index) {
+            const data = labSentences[index];
+            const display = document.getElementById('sentence-display');
+            const details = document.getElementById('lab-details');
+
+            details.classList.add('hidden');
+            display.innerHTML = '';
+
+            data.blocks.forEach((block) => {
+                const btn = document.createElement('button');
+                btn.className = `px-3 py-2 rounded-xl transition cursor-pointer font-bold ${block.tagClass} hover:opacity-80`;
+                btn.innerText = block.word;
+                btn.onclick = () => showLabDetails(block);
+                display.appendChild(btn);
+            });
+        }
+
+        function showLabDetails(block) {
+            const details = document.getElementById('lab-details');
+            details.classList.remove('hidden');
+            details.innerHTML = `
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase ${block.tagClass}">${block.type}</span>
+                    <strong class="text-sm text-slate-900">${block.title}</strong>
+                </div>
+                <p class="text-slate-700">${block.desc}</p>
+                <div class="text-[11px] text-slate-500 pt-1 border-t border-violet-200">
+                    Niveau d'analyse : <strong>${block.word}</strong>
+                </div>
+            `;
+        }
+
+        // --- QUICK PRACTICE DRILL ---
+        const quickDrills = [
+            { sentence: "Pendant l'orage, [le vieux chêne] est tombé.", target: "le vieux chêne", correct: "GS", explain: "C'est 'le vieux chêne' qui est tombé (Qui est-ce qui ?)." },
+            { sentence: "Les enfants jouent [dans la cour de récréation].", target: "dans la cour de récréation", correct: "CCL", explain: "Indique le lieu où se déroule l'action (Où ?)." },
+            { sentence: "[Soudain], la porte s'ouvrit à grand bruit.", target: "Soudain", correct: "CCT", explain: "Indique le moment (Quand ?)." },
+            { sentence: "Le cuisinier [prépare un délicieux gâteau].", target: "prépare un délicieux gâteau", correct: "GV", explain: "C'est l'action faite par le sujet (non supprimable)." }
+        ];
+
+        let currentDrillIdx = 0;
+
+        function initQuickPractice() {
+            renderQuickDrill();
+        }
+
+        function renderQuickDrill() {
+            const drill = quickDrills[currentDrillIdx];
+            const container = document.getElementById('quick-practice-box');
+
+            let htmlSentence = drill.sentence.replace('[', '<span class="px-2 py-0.5 bg-violet-200 text-violet-900 font-bold rounded">').replace(']', '</span>');
+
+            container.innerHTML = `
+                <p class="text-sm font-semibold text-slate-800">Dans la phrase : ${htmlSentence}</p>
+                <p class="text-xs text-slate-600">Quelle est la fonction du groupe surligné ?</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+                    <button onclick="checkDrill('GS')" class="p-2 bg-white hover:bg-blue-50 border border-slate-300 rounded-lg font-bold text-blue-700">Groupe Sujet (GS)</button>
+                    <button onclick="checkDrill('GV')" class="p-2 bg-white hover:bg-emerald-50 border border-slate-300 rounded-lg font-bold text-emerald-700">Groupe Verbal (GV)</button>
+                    <button onclick="checkDrill('CCT')" class="p-2 bg-white hover:bg-amber-50 border border-slate-300 rounded-lg font-bold text-amber-700">CC de Temps (CCT)</button>
+                    <button onclick="checkDrill('CCL')" class="p-2 bg-white hover:bg-pink-50 border border-slate-300 rounded-lg font-bold text-pink-700">CC de Lieu (CCL)</button>
+                </div>
+                <div id="drill-fb" class="mt-2 text-xs font-bold hidden"></div>
+            `;
+        }
+
+        function checkDrill(userAns) {
+            const drill = quickDrills[currentDrillIdx];
+            const fb = document.getElementById('drill-fb');
+            fb.classList.remove('hidden');
+
+            if (userAns === drill.correct) {
+                fb.className = "mt-2 text-xs font-bold text-emerald-600";
+                fb.innerText = `✅ Excellent ! ${drill.explain}`;
+            } else {
+                fb.className = "mt-2 text-xs font-bold text-red-600";
+                fb.innerText = `❌ Incorrect. La bonne réponse était ${drill.correct}. ${drill.explain}`;
+            }
+
+            setTimeout(() => {
+                currentDrillIdx = (currentDrillIdx + 1) % quickDrills.length;
+                renderQuickDrill();
+            }, 3000);
+        }
+
+        // --- QUESTION BANK (>60 QUESTIONS) ---
+        const questionBankGeneral = [
+            { q: "Dans la phrase : « Hier, Paul a mangé une pomme », quel est le Groupe Sujet (GS) ?", options: ["Paul", "Hier", "a mangé une pomme", "une pomme"], answer: 0, explain: "C'est Paul qui a mangé une pomme (Qui est-ce qui ?)." },
+            { q: "Dans la phrase : « Dans le jardin, les oiseaux chantent », quel est le Complément Circonstanciel de Lieu (CCL) ?", options: ["Dans le jardin", "les oiseaux", "chantent", "les oiseaux chantent"], answer: 0, explain: "'Dans le jardin' répond à la question 'Où ?'." },
+            { q: "Quelle est la fonction de 'chaque dimanche' dans : « Chaque dimanche, nous rendons visite à nos grands-parents » ?", options: ["CC de Temps (CCT)", "CC de Lieu (CCL)", "Groupe Sujet (GS)", "Groupe Verbal (GV)"], answer: 0, explain: "'Chaque dimanche' répond à la question 'Quand ?'." },
+            { q: "Dans la phrase : « Le jeune athlète court rapidement », quelle est la fonction de 'rapidement' ?", options: ["CC de Manière (CCM)", "CC de Temps (CCT)", "Groupe Sujet", "CC de Lieu"], answer: 0, explain: "'Rapidement' indique comment (de quelle façon) l'athlète court." },
+            { q: "Dans la phrase : « Léa et son frère construisent une cabane », quel est le Groupe Verbal (GV) ?", options: ["construisent une cabane", "Léa et son frère", "une cabane", "construisent"], answer: 0, explain: "Le GV contient le verbe conjugué et ses compléments essentiels." },
+            { q: "Quelle question pose-t-on pour trouver le Groupe Sujet (GS) ?", options: ["Qui est-ce qui... ? / Qu'est-ce qui... ?", "Où... ?", "Quand... ?", "Comment... ?"], answer: 0, explain: "On pose la question 'Qui est-ce qui... ?' ou on encadre par 'C'est... qui'." },
+            { q: "Est-ce qu'un Complément Circonstanciel (CC) peut être supprimé sans détruire la phrase ?", options: ["Oui, toujours (il est facultatif)", "Non, c'est impossible", "Uniquement s'il est au début", "Seulement le CCT"], answer: 0, explain: "Par définition, un CC est facultatif : on peut le supprimer et la phrase reste correcte." },
+            { q: "Dans la phrase : « À cause de la pluie, le match est annulé », quelle est la fonction de 'À cause de la pluie' ?", options: ["CC de Cause (CCC)", "CC de Temps", "CC de Manière", "Groupe Sujet"], answer: 0, explain: "'À cause de la pluie' donne la raison/cause de l'annulation (Pourquoi ?)." },
+            { q: "Dans : « Avec son couteau, le cuisinier coupe les légumes », quelle est la fonction de 'Avec son couteau' ?", options: ["CC de Moyen / Instrument", "CC de Lieu", "Groupe Sujet", "Groupe Verbal"], answer: 0, explain: "'Avec son couteau' indique l'outil ou le moyen utilisé." },
+            { q: "Peut-on déplacer le Groupe Verbal (GV) au début de la phrase ?", options: ["Non, le GV n'est pas déplaçable", "Oui, toujours", "Seulement si le sujet est court", "Oui avec une virgule"], answer: 0, explain: "Le Groupe Verbal est essentiel et fixe dans la structure de la phrase." },
+            { q: "Dans : « Les avions volent dans le ciel pur », quel est le Groupe Sujet ?", options: ["Les avions", "dans le ciel pur", "volent", "volent dans le ciel"], answer: 0, explain: "Ce sont 'les avions' qui volent." },
+            { q: "Dans : « Tôt ce matin, le réveil a sonné », quelle est la fonction de 'Tôt ce matin' ?", options: ["CC de Temps (CCT)", "CC de Lieu (CCL)", "Groupe Verbal", "Groupe Sujet"], answer: 0, explain: "Répond à la question 'Quand ?'." },
+            { q: "Dans : « Mon meilleur ami habite à Paris », quelle est la fonction de 'à Paris' ?", options: ["CC de Lieu (CCL)", "CC de Temps (CCT)", "Groupe Sujet", "CC de Manière"], answer: 0, explain: "Répond à la question 'Où ?'." },
+            { q: "Dans : « L'élève écrit soigneusement dans son cahier », quelle est la fonction de 'soigneusement' ?", options: ["CC de Manière (CCM)", "CC de Lieu", "CC de Temps", "Groupe Sujet"], answer: 0, explain: "Répond à la question 'Comment / De quelle façon ?'." },
+            { q: "Dans : « Demain, les astronautes décolleront vers la Lune », quel est le Groupe Verbal ?", options: ["décolleront vers la Lune", "les astronautes", "Demain", "vers la Lune"], answer: 0, explain: "Le GV est constitué du verbe décolleront + son complément vers la Lune." },
+            { q: "Dans la phrase « Le chat dort », y a-t-il un Complément Circonstanciel ?", options: ["Non, c'est une phrase minimale (GS + GV)", "Oui, 'dort'", "Oui, 'Le chat'", "Oui, c'est un CCT"], answer: 0, explain: "Cette phrase comporte uniquement un GS (Le chat) et un GV (dort)." },
+            { q: "Dans : « Au milieu de la nuit, le loup hurle », quel est le CCT ?", options: ["Au milieu de la nuit", "le loup", "hurle", "le loup hurle"], answer: 0, explain: "Indique le moment (Quand ?)." },
+            { q: "Dans : « Juliette mange une glace avec délectation », quelle est la fonction de 'avec délectation' ?", options: ["CC de Manière", "CC de Lieu", "CC de Temps", "Groupe Sujet"], answer: 0, explain: "Indique de quelle manière elle mange sa glace." },
+            { q: "Comment peut-on encadrer le sujet dans : « Les enfants jouent » ?", options: ["Ce sont les enfants qui jouent", "C'est jouent les enfants", "Jouent ce sont les enfants", "Les enfants c'est jouent"], answer: 0, explain: "Au pluriel, on encadre par 'Ce sont ... qui'." },
+            { q: "Dans : « En été, la chaleur est intense », quelle est la fonction de 'En été' ?", options: ["CC de Temps (CCT)", "CC de Lieu (CCL)", "Groupe Sujet", "Groupe Verbal"], answer: 0, explain: "Répond à 'Quand ?'." }
+        ];
+
+        const questionBankCC = [
+            { q: "« Sur le toit de la maison », le chat miaule. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Lieu (CCL)", "CC de Temps (CCT)", "CC de Manière (CCM)", "CC de Cause (CCC)"], answer: 0, explain: "Indique le lieu (Où ?)." },
+            { q: "Le cheval galope « à toute vitesse ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Manière (CCM)", "CC de Lieu (CCL)", "CC de Temps (CCT)", "CC de Cause"], answer: 0, explain: "Indique la façon dont galope le cheval (Comment ?)." },
+            { q: "« En 1945 », la guerre s'est terminée. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Temps (CCT)", "CC de Lieu (CCL)", "CC de Manière", "CC de Moyen"], answer: 0, explain: "Indique une date/un moment (Quand ?)." },
+            { q: "L'artiste peint « avec un pinceau fin ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Moyen / Instrument", "CC de Lieu", "CC de Temps", "CC de Cause"], answer: 0, explain: "Indique l'outil ou le moyen utilisé pour peindre." },
+            { q: "Le garçon pleure « par peur du noir ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Cause (CCC)", "CC de Manière", "CC de Lieu", "CC de Temps"], answer: 0, explain: "Indique la raison/cause des pleurs (Pourquoi ?)." },
+            { q: "« Dans la bibliothèque », le silence est obligatoire. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Lieu (CCL)", "CC de Temps", "CC de Manière", "CC de Cause"], answer: 0, explain: "Indique l'endroit (Où ?)." },
+            { q: "« Pendant trois heures », nous avons révisé. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Temps (CCT)", "CC de Lieu", "CC de Manière", "CC de Cause"], answer: 0, explain: "Indique la durée (Pendant combien de temps ?)." },
+            { q: "Elle chante « comme un rossignol ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Manière (CCM)", "CC de Lieu", "CC de Temps", "CC de Cause"], answer: 0, explain: "Indique de quelle manière elle chante." },
+            { q: "« Devant le cinéma », mes amis m'attendent. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Lieu (CCL)", "CC de Temps", "CC de Manière", "CC de Cause"], answer: 0, explain: "Indique le lieu de rendez-vous." },
+            { q: "« Grâce à ses efforts », il a réussi son examen. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Cause (CCC)", "CC de Lieu", "CC de Temps", "CC de Manière"], answer: 0, explain: "Indique la cause positive de la réussite." },
+            { q: "Le train arrivera « dans dix minutes ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Temps (CCT)", "CC de Lieu", "CC de Manière", "CC de Cause"], answer: 0, explain: "Indique le moment d'arrivée." },
+            { q: "Il a découpé le papier « avec des ciseaux ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Moyen", "CC de Lieu", "CC de Temps", "CC de Cause"], answer: 0, explain: "Indique l'instrument." },
+            { q: "« À la montagne », la neige tombe en abondance. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Lieu (CCL)", "CC de Temps", "CC de Manière", "CC de Cause"], answer: 0, explain: "Indique l'endroit." },
+            { q: "Le vent souffle « violemment ». Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Manière (CCM)", "CC de Lieu", "CC de Temps", "CC de Cause"], answer: 0, explain: "Indique comment souffle le vent." },
+            { q: "« À la fin du film », tout le monde a applaudi. Quelle est la fonction du groupe entre guillemets ?", options: ["CC de Temps (CCT)", "CC de Lieu", "CC de Manière", "CC de Cause"], answer: 0, explain: "Indique le moment." }
+        ];
+
+        const questionBankManipulation = [
+            { q: "Si on supprime 'dans le parc' dans : « Les enfants jouent dans le parc », la phrase reste-t-elle correcte ?", options: ["Oui (« Les enfants jouent » est une phrase correcte)", "Non, la phrase devient incorrecte", "Seulement si on ajoute un mot", "Non car le verbe disparait"], answer: 0, explain: "'dans le parc' est un CC de lieu facultatif." },
+            { q: "Peut-on déplacer 'Ce matin' à la fin de la phrase dans : « Ce matin, le soleil brille » ?", options: ["Oui (« Le soleil brille ce matin »)", "Non, un CCT doit toujours être au début", "Non, le sens change totalement", "Uniquement au milieu"], answer: 0, explain: "Les CC sont librement déplaçables dans la phrase." },
+            { q: "Peut-on supprimer le groupe verbal dans une phrase ?", options: ["Non, le verbe est le noyau essentiel de la phrase", "Oui, s'il y a un CC", "Oui, toujours", "Seulement au présent"], answer: 0, explain: "Sans Groupe Verbal, il n'y a plus de phrase grammaticale." },
+            { q: "Comment encadrer le sujet dans : « Mon frère répare son vélo » ?", options: ["C'est mon frère qui répare son vélo.", "C'est son vélo qui répare mon frère.", "C'est répare qui mon frère son vélo.", "Mon frère c'est qui répare."], answer: 0, explain: "La formule magique pour identifier le sujet est 'C'est ... qui'." },
+            { q: "Dans : « Soudain, un éclair illumine le ciel », que se passe-t-il si on déplace 'Soudain' ?", options: ["La phrase « Un éclair illumine le ciel soudain » reste correcte.", "La phrase devient fausse.", "Le sujet change.", "Le verbe s'efface."], answer: 0, explain: "'Soudain' est un CCT déplaçable." },
+            { q: "Si on supprime le Groupe Sujet dans « Le chat dort », que reste-t-il ?", options: ["Une phrase incomplète (« dort » n'a plus de sujet)", "Une phrase parfaite", "Un CC", "Un groupe nominal"], answer: 0, explain: "Le Groupe Sujet est obligatoire pour former une phrase complète." },
+            { q: "Quelle manipulation permet de vérifier qu'un groupe est un Complément Circonstanciel ?", options: ["La suppression et le déplacement", "L'encadrement par 'C'est... qui'", "Le remplacement par 'il'", "La mise au pluriel"], answer: 0, explain: "Si on peut le supprimer et le déplacer, c'est un Complément Circonstanciel." },
+            { q: "Dans : « Les vagues frappent le rocher avec force », peut-on déplacer 'avec force' au début ?", options: ["Oui (« Avec force, les vagues frappent le rocher »)", "Non c'est interdit", "Non le sens devient opposé", "Seulement en poésie"], answer: 0, explain: "'avec force' est un CCM que l'on peut déplacer en tête de phrase." },
+            { q: "Que se passe-t-il si on entoure 'Paul' par 'C'est... qui' dans « Paul mange » ?", options: ["On obtient « C'est Paul qui mange », ce qui prouve que Paul est le sujet.", "On obtient une phrase fausse.", "Paul devient un CC.", "Rien."], answer: 0, explain: "C'est la méthode d'identification du Groupe Sujet." },
+            { q: "Est-ce que le COD (ex: 'une pomme' dans 'il mange une pomme') est déplaçable au début comme un CC ?", options: ["Non, on ne dit pas 'Une pomme il mange'", "Oui toujours", "Seulement le dimanche", "Oui en changeant le verbe"], answer: 0, explain: "Le COD fait partie du Groupe Verbal et n'est pas librement déplaçable comme un CC." }
+        ];
+
+        // Quiz Engine State
+        let activeQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuizMode(mode) {
+            currentQuestionIndex = 0;
+            score = 0;
+
+            let bank = [];
+            if (mode === 'general') bank = [...questionBankGeneral];
+            else if (mode === 'cc') bank = [...questionBankCC];
+            else if (mode === 'manipulation') bank = [...questionBankManipulation];
+
+            // Pick 10 random questions
+            activeQuestions = bank.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+            document.getElementById('quiz-container').classList.remove('hidden');
+            updateScoreDisplay();
+            renderCurrentQuestion();
+        }
+
+        function updateScoreDisplay() {
+            document.getElementById('quiz-score').innerText = `Score : ${score}/${activeQuestions.length}`;
+            document.getElementById('quiz-progress').innerText = `Question ${currentQuestionIndex + 1}/${activeQuestions.length}`;
+        }
+
+        function renderCurrentQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const body = document.getElementById('quiz-body');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            let html = `
+                <div class="mb-4">
+                    <span class="text-xs font-semibold px-2.5 py-1 bg-violet-100 text-violet-800 rounded-full">Grammaire - Constituants de la phrase</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-2">${q.q}</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            `;
+
+            // Options mapping with original index check
+            const optsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.answer }));
+            optsWithIndex.sort(() => 0.5 - Math.random());
+
+            optsWithIndex.forEach((item) => {
+                html += `
+                    <button onclick="checkAnswer(${item.isCorrect}, this)" class="quiz-opt-btn text-left p-4 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-semibold transition">
+                        ${item.text}
+                    </button>
+                `;
+            });
+
+            html += `</div>`;
+            body.innerHTML = html;
+        }
+
+        function checkAnswer(isCorrect, btnElement) {
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextBtn = document.getElementById('next-q-btn');
+            const q = activeQuestions[currentQuestionIndex];
+
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                score++;
+                btnElement.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+                feedback.className = "mt-4 p-4 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
+                feedback.innerHTML = `✅ <strong>Excellente réponse !</strong><br><span class="text-xs">${q.explain}</span>`;
+            } else {
+                btnElement.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                feedback.className = "mt-4 p-4 rounded-xl text-sm font-medium bg-red-50 text-red-800 border border-red-200";
+                feedback.innerHTML = `❌ <strong>Mauvaise réponse !</strong><br><span class="text-xs">${q.explain}</span>`;
+            }
+
+            feedback.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            updateScoreDisplay();
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < activeQuestions.length) {
+                updateScoreDisplay();
+                renderCurrentQuestion();
+            } else {
+                renderFinalScore();
+            }
+        }
+
+        function renderFinalScore() {
+            const body = document.getElementById('quiz-body');
+            document.getElementById('next-q-btn').classList.add('hidden');
+            document.getElementById('quiz-feedback').classList.add('hidden');
+
+            const percentage = Math.round((score / activeQuestions.length) * 100);
+            let badge = "🏆 Champion de Grammaire !";
+            let message = "Impressionnant ! Tu maîtrises parfaitement l'analyse de phrase, le sujet, le verbe et les compléments circonstanciels.";
+
+            if (percentage < 50) {
+                badge = "💪 Encore un peu de révision !";
+                message = "Relis bien la fiche de cours sur le test des CC (suppression/déplacement) et réessaie le quiz.";
+            } else if (percentage < 80) {
+                badge = "👍 Très bon travail !";
+                message = "Bon score ! Tu différencies bien les constituants principaux de la phrase.";
+            }
+
+            body.innerHTML = `
+                <div class="text-center py-6">
+                    <span class="text-5xl mb-3 block">${percentage >= 80 ? '🏆' : (percentage >= 50 ? '🥈' : '📜')}</span>
+                    <h3 class="text-2xl font-bold font-fun text-slate-800">${badge}</h3>
+                    <p class="text-lg font-semibold text-violet-600 mt-1">Score final : ${score} / ${activeQuestions.length} (${percentage}%)</p>
+                    <p class="text-sm text-slate-600 mt-2 max-w-md mx-auto">${message}</p>
+                    <button onclick="startQuizMode('general')" class="mt-6 bg-violet-600 hover:bg-violet-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow transition">
+                        Rejouer une nouvelle série aléatoire 🔄
+                    </button>
+                </div>
+            `;
+        }
+
+        window.onload = function() {
+            switchTab('notes');
+        };
+    </script>
+</body>
+</html>
